@@ -1,0 +1,20 @@
+{
+  "name": "davi",
+  "version": "1.0.0",
+  "description": "wild code scool project #1",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch  src/sass/style.scss ./style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zolotou/DAVI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zolotou/DAVI/issues"
+  },
+  "homepage": "https://github.com/Zolotou/DAVI#readme"
+}
