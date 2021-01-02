@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+    <link rel="stylesheet" href="src/sass/style.css">
+    <link rel="stylesheet" href="src/sass/codemirror.css">
+    <link rel="stylesheet" href="src/sass/material-darker.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" href="./src/assets/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Welcome page</title>
+</head>
+
+<body>
+    <h1></h1>
+    <div class="welcom-img">
+        <div class="wrapper">
+            <img src="./src/assets/DAVI.png" alt="logo">
+        </div>
+    </div>
+    <header class="header">
+        <div class="wrapper  header-wrapper">
+            <div class="header__logo">
+                <img class="logo_img" src="./src/assets/DAVI.png" alt="logo">
+            </div>
+            <div class="header__burger">
+
+                <span class="burger-menu_lines"></span>
+            </div>
+            <nav class="burger-menu">
+                <a href="#" class="burger-menu_link">HTML</a>
+                <a href="#" class="burger-menu_link">CSS</a>
+                <a href="#" class="burger-menu_link">JS</a>
+                <a href="#" class="burger-menu_link">Other</a>
+            </nav>
+
+
+
+
+            <nav class="header__navigation">
+                <ul class="navigation">
+                    <li class="navigation__link">HTML</li>
+                    <li class="navigation__link">CSS</li>
+                    <li class="navigation__link">JS</li>
+                    <li class="navigation__link">Other</li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <section class="JS sectionBlue">
+        <div class="wrapper">
+            <div class="section-card">
+                <div class="section__img">
+                    <div class="descriptionSection">
+                        <h2 class="section-title">JavaScript Playground</h2>
+
+                        <p class="section__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, rem explicabo architecto
+                            debitis
+                            magnam quaerat.
+                            Possimus sunt veritatis inventore molestiae ex perferendis voluptas nobis, ratione eveniet
+                            id fugiat
+                            iste ea!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Maxime,
+                        </p>
+                    </div>
+
+                    <div class="section-image"> <img src="../src/assets/jslogo.png"></div>
+                </div>
+                <div class="jsPlayground">
+                    <div class="source">
+
+                        <input type="radio" name="radiotabs" id="htmlEditor" checked><label
+                            for="htmlEditor">HTML</label>
+                        <input type="radio" name="radiotabs" id="cssEditor"><label for="cssEditor">CSS</label>
+                        <input type="radio" name="radiotabs" id="jsEditor"><label for="jsEditor">JavaScript</label>
+
+                        <textarea id="htmlarea" class="html">
+<p>К блоку ниже применятся анимации для свойств: width, height, background-color, transform. Наведите на него, чтоб увидеть, как они анимируются.</p>
+<p>Клик по элементу приведёт к срабатыванию EventListener и обработке события 'click'. </p>
+<div class="box"></div></textarea>
+
+                        <textarea id="cssarea" class="css">
+.box {
+      border-style: solid;
+      border-width: 1px;
+      display: block;
+      margin: 20px;
+      width: 100px;
+      height: 100px;
+      background-color: #0000FF;
+    -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+      transition: width 2s, height 2s, background-color 2s, transform 2s;
+        }
+                        
+.box:hover {
+      background-color: #FFCCCC;
+      width: 200px;
+      height: 200px;
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+      }</textarea>
+
+                        <textarea id="jsarea" class="js">
+const box = document.querySelector('.box');
+box.onclick = () => { 
+box.style.backgroundColor = 'green';
+box.innerHTML = '<span style="color:white; font-size: 1.7rem">Зеленый квадрат Залевского</span>';
+ }</textarea>
+                    </div>
+                    <div class="sandbox">
+                        <button id="run">Run the code »</button>
+                        <iframe class="iframe" sandbox="allow-scripts allow-same-origin"></iframe>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="wrapper">
+            2020 Minsk (c) All Rights reseved
+        </div>
+    </footer>
+    <script src="./src/js/codemirror/codemirror.js"></script>
+    <script src="./src/js/codemirror/mode/javascript/javascript.js"></script>
+    <script src="./src/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="./src/js/codemirror/mode/css/css.js"></script>
+    <script src="./src/js/codemirror/mode/xml/xml.js"></script>
+    <script src="./src/js/index.js"></script>
+    <script src="./src/js/js.js"></script>
+</body>
+
+</html>

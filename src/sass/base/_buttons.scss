@@ -1,29 +1,33 @@
-// стили для кнопок
-.button{
-    margin-left: 40%;
-    max-width: 198px;
-    height: 41px;
-background-color: $color-light;
-border: 1px solid $color-title;
-    color: $color-title;
-    font-size: 17px;
-   margin-top: 98px;
-    @extend %transition;
-    &:hover{
-        background-color: $color-section;
-        transform: scale(1.02)
-    }
-    @include media-surface{
-        margin-left: 20%;
-    }
-    @include media-mobilesmall{
-        max-width: 120px;
-        margin-left: 5px;
-    }
-
+.sectionBlue {
+  button {
+    background-color: $color-light;
+  }
 }
-.sectionBlue{
-    &_button{
-        background-color: $color-section;
-    }
+button {
+  border: 1px solid #b6c6ce;
+  font-size: 17px;
+  max-width: 132px;
+  position: absolute;
+  right: 15px;
+  bottom: 60px;
+  background: #ffff;
+  border-radius: 4px;
+  box-shadow: 0 5px 0#b6c6ce;
+  color: $color-title;
+  cursor: pointer;
+  margin-top: 14px;
+  outline: 0;
+  padding: 12px 20px;
+  transition: all 0.1s linear;
+  @include media-surface {
+    margin-left: 20%;
+  }
+  @include media-mobilesmall {
+    max-width: 120px;
+    margin-left: 5px;
+  }
+  &:active {
+    box-shadow: 0 2px 0 #b6c6ce;
+    transform: translateY(3px);
+  }
 }

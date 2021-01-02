@@ -1,12 +1,10 @@
 //стили для логотипа
-.logo_img{
-width: 100px;
-height: 100px;
-@include media-mobile{
-    >img{
-    width: 60px;
-}
-}
-
-
+.logo_img {
+    width: 100px;
+    height: 100px;
+    @include media-mobile {
+        > img {
+            width: 60px;
+        }
+    }
 }

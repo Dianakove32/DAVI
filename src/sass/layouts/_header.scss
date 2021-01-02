@@ -2,11 +2,20 @@
     background-color: $main-header-color;
     position: sticky;
     top: 0;
+    z-index: 90;
+
+    &-wrapper{
+        color:$color-light;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
  }
- .header-wrapper{
- color:$color-light;
-     height: 100px;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
- }
+//  .header-wrapper{
+//  color:$color-light;
+//      height: 100px;
+//      display: flex;
+//      justify-content: space-between;
+//      align-items: center;
+//  }
