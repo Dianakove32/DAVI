@@ -421,6 +421,15 @@ ul {
   transition: all 0.3s ease-out;
 }
 
+.img5, .img4, .img3, .img2, .img1 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 245px;
+  border-top-left-radius: 6%;
+  border-top-right-radius: 6%;
+}
+
 html {
   font-size: 10px;
 }
@@ -435,6 +444,10 @@ h2 {
   color: #0F119E;
 }
 
+h3 {
+  font-size: 2rem;
+}
+
 .logo_img {
   width: 100px;
   height: 100px;
@@ -445,11 +458,11 @@ h2 {
   }
 }
 
-.sectionBlue button {
+.sectionBlue .button {
   background-color: #ffffff;
 }
 
-button {
+.button {
   border: 1px solid #b6c6ce;
   font-size: 17px;
   max-width: 132px;
@@ -467,17 +480,17 @@ button {
   transition: all 0.1s linear;
 }
 @media (max-width: 526px) {
-  button {
+  .button {
     margin-left: 20%;
   }
 }
 @media (max-width: 320px) {
-  button {
+  .button {
     max-width: 120px;
     margin-left: 5px;
   }
 }
-button:active {
+.button:active {
   box-shadow: 0 2px 0 #b6c6ce;
   transform: translateY(3px);
 }
@@ -629,6 +642,53 @@ body.lock {
 .modal_title {
   font-size: 25px;
   font-weight: bold;
+}
+
+.slider-track {
+  transition: 0.2s;
+}
+
+.map {
+  margin-top: 20px;
+}
+.map > button {
+  all: unset;
+  background: #b6c6ce;
+  cursor: pointer;
+  margin: 0 7px;
+  position: relative;
+  user-select: none;
+  border-radius: 100%;
+  height: 10px;
+  width: 10px;
+}
+.map > button.active:after {
+  background: #ffffff;
+  content: "";
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  border-radius: 100%;
+  height: 0.5em;
+  width: 0.5em;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F6FA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b6c6ce;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
 }
 
 .welcom-img {
@@ -868,6 +928,11 @@ footer {
   display: block;
 }
 
+.sectionHeading {
+  display: block;
+  text-decoration: underline;
+}
+
 textarea {
   display: block;
   flex: 1 1 auto;
@@ -880,6 +945,25 @@ textarea {
   justify-content: space-between;
   font-size: 1.5rem;
   align-items: flex-start;
+  width: 100%;
+}
+
+.sandboxLinks {
+  display: block;
+  padding: 10px;
+  width: 100%;
+}
+
+.linksList {
+  display: block;
+}
+
+.linksList li {
+  font-size: 1.7rem;
+  padding: 0.2em 0.5em;
+  min-width: 60px;
+  background-color: green;
+  cursor: pointer;
 }
 
 .source, .sandbox {
@@ -894,7 +978,7 @@ textarea {
   width: 100%;
   height: 300px;
   background-color: white;
-  border-width: 0px;
+  border: 3px solid #b6c6ce;
 }
 
 input {
@@ -914,21 +998,27 @@ input {
   border-radius: unset;
   width: auto;
   max-width: none;
-}
-
-.source label:hover {
-  background: #4e4e4e;
-  cursor: pointer;
-  color: whitesmoke;
+  transition: background-color 0.5s;
 }
 
 .sandbox button {
   background: #4caf50;
   color: whitesmoke;
-  transition: background-color 0.5s;
+  box-shadow: 0 3px 0 #b6c6ce;
 }
 
 .sandbox button:hover {
+  background: #4e4e4e;
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+.sandbox button:active {
+  font-weight: bold;
+  box-shadow: none;
+}
+
+.source label:hover {
   background: #4e4e4e;
   cursor: pointer;
   color: whitesmoke;
@@ -938,6 +1028,12 @@ input:checked + label {
   font-weight: bold;
   background: #212121;
   color: whitesmoke;
+}
+
+input:active + label:active {
+  font-weight: bold;
+  box-shadow: 0 2px 0 #b6c6ce;
+  transform: translateY(3px);
 }
 
 .flex {
@@ -955,12 +1051,18 @@ input:checked + label {
   display: block;
 }
 
+.slider-container {
+  display: flex;
+  grid-gap: 1em;
+  overflow: hidden;
+  max-width: 100%;
+  overflow: auto;
+}
+
 .cards-wrapper {
   display: flex;
-  max-width: 1100px;
-  width: 100vw;
-  overflow: auto;
-  justify-content: space-between;
+  grid-gap: 1em;
+  transition: all 1s ease-in-out;
 }
 @media (max-width: 768px) {
   .cards-wrapper {
@@ -974,7 +1076,8 @@ input:checked + label {
 }
 
 .topic-card {
-  max-width: 370px;
+  border-radius: 6%;
+  width: 370px;
   height: 342px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 9px;
@@ -985,8 +1088,28 @@ input:checked + label {
 }
 .topic-card > img {
   max-width: 370px;
-  height: 230px;
+  height: 245px;
   margin: auto 0;
+}
+
+.img1 {
+  background-image: url("/src/assets/sect1-1.jpg");
+}
+
+.img2 {
+  background-image: url("/src/assets/sec1-2.png");
+}
+
+.img3 {
+  background-image: url("/src/assets/sec1-3.jpg");
+}
+
+.img4 {
+  background-image: url("/src/assets/sec1-2.png");
+}
+
+.img5 {
+  background-image: url(/src/assets/sect1-1.jpg);
 }
 
 /*# sourceMappingURL=style.css.map */

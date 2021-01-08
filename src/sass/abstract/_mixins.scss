@@ -1,3 +1,10 @@
+@mixin circle($i) {
+    border-radius: 100%;
+    height: $i;
+    width: $i;
+  }
+
+
 @mixin media-laptop {
     @media (max-width: $content-width) { @content; }
 }

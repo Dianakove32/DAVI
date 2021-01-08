@@ -1,4 +1,8 @@
-textarea {
+.sectionHeading {
+display:block;
+text-decoration: underline;
+}
+  textarea {
     display: block;
     flex: 1 1 auto;
     margin: 0 0 10px 0;
@@ -9,7 +13,26 @@ textarea {
   justify-content: space-between;
   font-size: 1.5rem;
   align-items: flex-start;
+  width: 100%;
 }
+.sandboxLinks {
+  display: block;
+  padding: 10px;
+  width: 100%;
+}
+.linksList {
+display:block;
+
+}
+
+.linksList li {
+  font-size: 1.7rem;
+  padding: 0.2em 0.5em;
+  min-width: 60px;
+  background-color: green;
+  cursor: pointer;
+}
+
 .source, .sandbox {
   margin: 5px;
   flex: 1 1 48%;
@@ -21,7 +44,8 @@ textarea {
   width: 100%;
   height: 300px;
   background-color: white;
-  border-width: 0px;
+  border: 3px solid #b6c6ce;
+
 }
 input {
     display: none;
@@ -39,18 +63,24 @@ input {
     border-radius: unset;
     width: auto;
     max-width: none;
-  }
-.source label:hover {
-    background: #4e4e4e;
-    cursor: pointer;
-    color: whitesmoke;
+    transition: background-color .5s;
+    
   }
   .sandbox button {
     background: #4caf50;
     color: whitesmoke;
-    transition: background-color .5s;
+    box-shadow: 0 3px 0 #b6c6ce;
   }
   .sandbox button:hover {
+    background: #4e4e4e;
+    cursor: pointer;
+    color: whitesmoke;
+  }
+  .sandbox button:active {
+    font-weight: bold;
+    box-shadow: none;
+  }
+  .source label:hover {
     background: #4e4e4e;
     cursor: pointer;
     color: whitesmoke;
@@ -60,6 +90,11 @@ input:checked + label {
     font-weight: bold;
     background: #212121;
     color: whitesmoke;
+  }
+  input:active + label:active {
+    font-weight: bold;
+    box-shadow: 0 2px 0 #b6c6ce;
+    transform: translateY(3px);
   }
   .flex {
     display: flex;
