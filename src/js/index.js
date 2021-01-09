@@ -1,9 +1,9 @@
 //burger
 const btn = document.querySelector('.header__burger');
-const menu = document.querySelector('.burger-menu')
+const menuBur = document.querySelector('.burger-menu')
 btn.addEventListener('click', function () {
   btn.classList.toggle('active');
-  menu.classList.toggle('active');
+  menuBur.classList.toggle('active');
   document.body.classList.toggle('lock')
 })
 
@@ -31,7 +31,7 @@ window.onclick=function(e){
     }
 }
 
-//Software Testing - Base Course (Svyatoslav Kulikov).pdfconst buttonsWrapper = document.querySelector(".map");
+//slider
 const buttonsWrapper = document.querySelector(".map");
 const slides = document.querySelector(".slider-track");
 
@@ -52,3 +52,12 @@ buttonsWrapper.addEventListener("click", e => {
     }
   }
 });
+
+//scroll
+const menu=document.querySelector('.navigation')
+
+console.log(menu)
+menu.addEventListener('click', (event)=>{
+menu.querySelectorAll('a').forEach(el => el.classList.remove('active'));
+  event.target.classList.add('active');
+})
