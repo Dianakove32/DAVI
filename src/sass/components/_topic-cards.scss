@@ -25,6 +25,11 @@
   box-shadow: $shadow;
   margin: 9px;
   box-shadow: $shadow;
+  transform: scale(0);
+  @extend %transitionAnime;
+  &.activeAnime{
+    transform: scale(1);
+  }
   > a {
     display: inline-block;
   }

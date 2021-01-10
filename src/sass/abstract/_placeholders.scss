@@ -1,6 +1,9 @@
 %transition {
     transition: all .3s ease-out;
 }
+%transitionAnime{
+    transition: all 0.8s ease 0s;
+}
 %img-cards{
     background-repeat: no-repeat;
     background-size: cover;

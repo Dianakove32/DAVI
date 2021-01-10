@@ -14,6 +14,10 @@
 .section-image {
     margin: 0px 10px;
     max-width: 150px;
+    @extend %transitionAnime;
+     .activeAnime{
+      transform: scale(1);
+    }
     > img {
         width: 150px;
 
