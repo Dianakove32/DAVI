@@ -19,6 +19,7 @@
 @import "layouts/header";
 @import "layouts/columns";
 @import "layouts/footer";
+@import "layouts/aboutUs";
 
  @import "components/cssSection";
  @import "components/hello";
@@ -28,3 +29,8 @@
   @import "components/otherSection";
   @import "components/jsSection";
   @import "components/topic-cards";
+  @import "components/welcomeWindow";
+  @import "components/welcomeImage";
+  
+  @import "components/html-inform";
+  @import "components/_workshop";

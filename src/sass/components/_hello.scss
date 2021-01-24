@@ -11,14 +11,17 @@
     }
 }
 .hello-text {
-    transform: translate(0px,120%);
-    opacity: 0;
-    transition: all 0.8s ease 0;
+   position: absolute;
+    // transform: translate(0px,0%);
+    // opacity: 1;
+top: 40%;
+left: 18%;
+color: #ffffff;
     @extend %transitionAnime;
     max-width: 760px;
     width: 100%;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     padding: 0px 20px 30px 20px;
     &.activeAnime{
         transform: translate(0px,0px);

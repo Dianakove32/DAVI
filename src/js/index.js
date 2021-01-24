@@ -1,3 +1,4 @@
+import welcome from './welcome_window.js'
 //burger
 const btn = document.querySelector('.header__burger');
 const menuBur = document.querySelector('.burger-menu')
@@ -33,85 +34,152 @@ window.onclick = function (e) {
 
 //slider
 const buttonsWrapper = document.querySelector(".map");
-const slides = document.querySelector(".slider-track");
+if (buttonsWrapper !== null) {
+  /*checking if the buttonsWrapper is not null, i.e. the node with class .map exists in the dom tree.*/
+  const slides = document.querySelector(".slider-track");
 
-buttonsWrapper.addEventListener("click", e => {
-  if (e.target.nodeName === "BUTTON") {
-    Array.from(buttonsWrapper.children).forEach(item =>
-      item.classList.remove("active")
-    );
-    if (e.target.classList.contains("first")) {
-      slides.style.transform = "translateX(-0%)";
-      e.target.classList.add("active");
-    } else if (e.target.classList.contains("second")) {
-      slides.style.transform = "translateX(-33%)";
-      e.target.classList.add("active");
-    } else if (e.target.classList.contains('third')) {
-      slides.style.transform = 'translatex(-50%)';
-      e.target.classList.add('active');
+  buttonsWrapper.addEventListener("click", e => {
+    if (e.target.nodeName === "BUTTON") {
+      Array.from(buttonsWrapper.children).forEach(item =>
+        item.classList.remove("active")
+      );
+      if (e.target.classList.contains("first")) {
+        slides.style.transform = "translateX(-0%)";
+        e.target.classList.add("active");
+      } else if (e.target.classList.contains("second")) {
+        slides.style.transform = "translateX(-33%)";
+        e.target.classList.add("active");
+      } else if (e.target.classList.contains('third')) {
+        slides.style.transform = 'translatex(-50%)';
+        e.target.classList.add('active');
+      }
     }
+  })
+}
+
+//check if user already exist
+
+document.addEventListener("DOMcontentLoaded", checkUser());
+
+function checkUser() {
+  let userName = localStorage.getItem('userName');
+  console.log(userName)
+  if (userName != null) {
+    document.querySelector('.welcome-user').innerHTML = `Welcome back ${localStorage.getItem('userName')}`;
+    document.querySelector('.welcome-user-level').innerHTML = `Your level is still ${localStorage.getItem('levelOfUser')}`
   }
-});
+  else {
+    welcome();
+  }
+}
 
-//scroll
-const menu = document.querySelector('.navigation')
-
-console.log(menu)
-menu.addEventListener('click', (event) => {
-  menu.querySelectorAll('a').forEach(el => el.classList.remove('active'));
-  event.target.classList.add('active');
+// reset the user statistic
+let reset = document.querySelector('.welcome-reset-button');
+reset.addEventListener('click', () => {
+  localStorage.removeItem('userName');
+  localStorage.removeItem('levelofUser');
+  window.location.reload(false);;
 })
 
-//scrolling
+// get the Api quote
+async function getQuote() {
+  const url = "https://api.adviceslip.com/advice"
+  const data = await fetch(url);
+  const result = await data.json();
+  document.querySelector('.welcome-api').textContent = result.slip.advice;
+}
+getQuote();
+
+//Scroll
+const headerWrapperHeight = document.querySelector('.header-wrapper').offsetHeight;
+const anchors = document.querySelectorAll('.navigation a');
+//smoothScroll.onClick
+
+anchors.forEach(anchor => {
+  anchor.addEventListener('click', (event) => {
+    event.preventDefault();
+    anchors.forEach(el => el.classList.remove('active')); // очистим все классы элементов меню от active
+    anchor.classList.add('active'); // добавим active к тому, по которому кликнули
+    const blockID = anchor.getAttribute('href').substr(1); // получим id блока, к которому будем скроллить
+    const block = document.getElementById(blockID); // найдем узел нужного блока в DOM
+    window.scrollTo({
+      top: block.offsetTop - headerWrapperHeight,
+      behavior: 'smooth',
+    })
+  })
+})
+
+//Changing the active point in menu while scrolling
+
 document.addEventListener('scroll', onScroll);
 function onScroll(event) {
-  const currentPosition = window.scrollY;
-  const sect = document.querySelectorAll('section')
-  const link = document.querySelectorAll('.navigation a');
+  const currentPosition = window.scrollY + headerWrapperHeight; // + высота фиксированного меню (можно указать offsetHeight меню в шапке)
+  const sect = document.querySelectorAll('section');
+  // const link = document.querySelectorAll('.navigation a');
   sect.forEach((el) => {
+    // console.log(el.offsetTop);
     if (el.offsetTop <= currentPosition && el.offsetTop + el.offsetHeight > currentPosition) {
-      link.forEach((a) => {
+      anchors.forEach((a) => {
         a.classList.remove('active');
         if (el.getAttribute('id') === a.getAttribute('href').substr(1)) {
           a.classList.add('active');
         }
       })
     }
-
   })
-
 }
 
-const animItems=document.querySelectorAll('.activeItemanime')
-if (animItems.length > 0){
-  window.addEventListener('scroll',animOnScroll);
-  function animOnScroll(params){
+const animItems = document.querySelectorAll('.activeItemanime')
+if (animItems.length > 0) {
+  window.addEventListener('scroll', animOnScroll);
+  function animOnScroll() {
     for (let index = 0; index < animItems.length; index++) {
       const animItem = animItems[index];
       const animItemHeight = animItem.offsetHeight; //get height of item
       const animItemOffset = offset(animItem).top;
       const animStart = 4;
       //высота окна браузера - высота анимированного обекта / коофициент
-let animItemPoint = window.innerHeight - animItemHeight / animStart;
+      let animItemPoint = window.innerHeight - animItemHeight / animStart;
       //иногда аниминированный объект выше высоты браузера => перестроить момент старт
-      if (animItemHeight > window.innerHeight){
+      if (animItemHeight > window.innerHeight) {
         animItemPoint = window.innerHeight - window.innerHeight / animStart;
       }
       // если прокрутили больше,чем позиция щбъекта - точка старта, но меньше чем позиция объекта - его высота
-      if (pageYOffset > (animItemOffset - animItemPoint) && pageYOffset< (animItemOffset - animItemHeight)){
-animItem.classList.add('activeAnime')
+      if (pageYOffset > (animItemOffset - animItemPoint) && pageYOffset < (animItemOffset - animItemHeight)) {
+        animItem.classList.add('activeAnime')
       } else {
         //если не нужно анимировать при возврате к началу страницы
-      if  (!animItem.classList.contains('anim-no-hide')){
-        animItem.classList.remove('activeAnime')}
+        if (!animItem.classList.contains('anim-no-hide')) {
+          animItem.classList.remove('activeAnime')
+        }
       }
     }
   }
 }
 
-function offset(el){
-  const rect=el.getBoundingClientRect(),
-  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  return {top: rect.top + scrollTop, left: rect.left + screenLeft}
+function offset(el) {
+  const rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  return { top: rect.top + scrollTop, left: rect.left + screenLeft }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  let navline = document.querySelector('.nav_line');
+  let navItem = document.querySelectorAll('.navigation__link');
+  navline.style.width = `${navItem[0].offsetWidth}px`;
+  navItem.forEach(el => {
+    el.addEventListener('mouseenter', (e) => {
+      navline.style.width = `${e.currentTarget.offsetWidth}px`;
+      navline.style.left = `${e.currentTarget.offsetLeft}px`;
+    });
+  })
+
+})
+
+
+
+
+
+particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;

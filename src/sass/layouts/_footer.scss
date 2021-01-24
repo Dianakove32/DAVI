@@ -1,7 +1,64 @@
-footer {
-    background-color:$main-header-color;
-    height: 60px;
+.footer {
+  background-color: $main-header-color;
+
+  height: 200px;
+  @include media-tablet{
+    height: 200px;
+  }
+  @include media-mobile{
+    height: 300px;
+  }
+
+  .wrapper {
+    color: $color-light;
+    height: 100px;
     display: flex;
-    justify-content: center;
-    padding-top: 30px;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-light;
+    flex-direction: column;
+
+  }
 }
+
+.footer-link {
+  padding: 0 10px;
+margin: 7px;
+  > a {
+    color: $color-light;
+    text-decoration: none;
+
+    &:hover {
+      color: aqua;
+    }
+  }
+  @include media-tablet{
+    font-size:1.5rem;
+
+  }
+
+}
+
+.footer__navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 500 px;
+  font-size: 2rem;
+  @include media-mobile{
+     flex-direction: column;
+
+  }
+}
+
+.icon {
+width: 40px;
+height: 40px;
+margin-left: 50px;
+}
+
+.facebook{
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+

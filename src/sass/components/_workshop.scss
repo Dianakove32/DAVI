@@ -1,0 +1,97 @@
+.wrapper-workshop {
+    flex-direction: column;
+    padding: 14px;
+    padding-top: 50px;
+
+}
+.workshop-text {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    @include media-surface{
+        font-size: 1.6rem;
+        text-align: justify;
+    }
+    @include media-mobile{
+        font-size: 1.5rem;
+    }
+}
+.workshop-tags {
+    margin-bottom: 31px;
+    @include media-tablet {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+
+.outPut__workshop {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 96px;
+    overflow-y: auto;
+    //  max-width:1000px;
+    height: 440px;
+    @include media-tablet{
+        overflow-y: auto;
+
+    }
+    @include media-surface{
+        overflow-y: auto;
+ }
+    .contentBt {
+        position: relative;
+        margin: 10px 20px;
+        &_hidden {
+            display: none;
+        }
+
+
+        .label {
+            width: 250px;
+
+            position: relative;
+            padding: 10px;
+            background: #e1e5e9;
+            cursor: pointer;
+            color: #36393b;
+            font-size: 1.5rem;
+            &::before {
+                content: "+";
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                font-size: 2.5 em;
+            }
+
+
+        }
+
+        .contentTask {
+            width: 250px;
+
+            position: relative;
+
+            background-color: #ffffff;
+            color: black;
+            font-size: 1.6rem;
+            height: 0;
+            overflow: hidden;
+            transition: 0.5s;
+            overflow-y: auto;
+            @include media-tablet{
+            width:200px ;
+                        }
+        }
+
+    }
+}
+.contentBt.activTask .contentTask {
+    height: 100px;
+    padding: 10px;
+}
+.contentBt.activTask .label::before {
+    content: "-";
+}

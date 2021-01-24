@@ -1,201 +1,197 @@
 const tegs=[
     {
         teg: " html  " ,
-        descriptio: ' Указывает программе просмотра страниц, что это HTML документ',
+        descriptio: ' Defines an HTML document',
     },
     {
         teg: "head",
-        descriptio: 'Определяет место, где помещается различная информация не отображаемая в теле документа. ',
+        descriptio: 'Contains metadata/information for the document ',
     },
      {
         teg: "body",
-        descriptio: 'Определяет видимую часть документа',
+        descriptio: '	Defines the documents body',
     },
      {
         teg: "title",
-        descriptio: 'Помещает название документа в оглавление программы просмотра страниц',
+        descriptio: '	Defines a title for the document',
     },
     {
         teg:'a',
-        descriptio: 'Тег является одним из важных элементов HTML и предназначен для создания ссылок ',
+        descriptio: 'Defines a hyperlink',
     },
     {
         teg:'b',
-        descriptio: 'Устанавливает жирное начертание шрифта',
+        descriptio: 'Defines bold text',
     },
     {
         teg: 'br',
-        descriptio: 'Вставляет перевод   строки.',
+        descriptio: 'Inserts a single line break',
     },
     {
         teg:'blockquote',
-        descriptio: 'Тег предназначен для выделения длинных цитат внутри документа',
+        descriptio: 'tag specifies a section that is quoted from another source',
     },
     {
         teg:'button',
-        descriptio: 'Тег создает на веб-странице кнопки ',
+        descriptio: 'tag defines a clickable button ',
     },
     {
         teg:'caption',
-        descriptio: 'Тег предназначен для создания заголовка к таблице и может размещаться только внутри контейнера table',
+        descriptio: 'tag defines a table caption',
     },
     {
         teg:'code',
-        descriptio: 'Тег предназначен для отображения одной или нескольких строк текста, который представляет собой программный код',
+        descriptio: 'Tag is used to define a piece of computer code',
     },
     {
         teg:'div',
-        descriptio: 'Элемент является блочным элементом и предназначен для выделения фрагмента документа с целью изменения вида содержимого. ',
+        descriptio: 'tag defines a division or a section in an HTML document ',
     },
     {
         teg: 'em',
-        descriptio: 'Используется для выделения из текста слова (наклонный или жирный текст)',
+        descriptio: 'tag is used to define emphasized text',
     },
     {
         teg:'form',
-        descriptio: 'Тег устанавливает форму на веб-странице. Форма предназначена для обмена данными между пользователем и сервером',
+        descriptio: 'tag is used to create an HTML form for user input',
     },
     {
         teg:'footer',
-        descriptio: 'Тег задаёт «подвал» сайта или раздела, в нём может располагаться имя автора, дата документа, контактная и правовая информация.',
+        descriptio: 'tag defines a footer for a document or section',
     },
     {
         teg:'header',
-        descriptio: 'Тег  задает «шапку» сайта или раздела, в которой обычно располагается заголовок',
+        descriptio: 'element represents a container for introductory content or a set of navigational links',
     },
     {
         teg:'hr',
-        descriptio: 'Рисует горизонтальную линию, которая по своему виду зависит от используемых параметров, а также браузера',
+        descriptio: 'tag defines a thematic break in an HTML page ',
     },
     {
-        teg: 'h1',
-        descriptio: 'Создает САМЫЙ БОЛЬШОЙ заголовок (как отдельный абзац)',
+        teg: 'h1 - h6',
+        descriptio: ' tags are used to define HTML headings',
     },
-     {
-        teg: 'h6',
-        descriptio: 'Создает САМЫЙ МАЛЕНЬКИЙ заголовок',
-    },
-    {
+      {
         teg:'i',
-        descriptio: 'Устанавливает курсивное начертание шрифта',
+        descriptio: 'tag defines a part of text in an alternate voice or mood',
     },
     {
         teg:'img',
-        descriptio: 'Тег предназначен для отображения на веб-странице изображений в графическом формате GIF, JPEG или PNG',
+        descriptio: 'tag is used to embed an image in an HTML page',
     },
     {
         teg:'input',
-        descriptio: 'Тег является одним из разносторонних элементов формы и позволяет создавать разные элементы интерфейса и обеспечить взаимодействие с пользователем',
+        descriptio: 'tag specifies an input field where the user can enter data',
     },
     {
         teg:'label',
-        descriptio: 'Тег <label> устанавливает связь между определенной меткой, в качестве которой обычно выступает текст, и элементом формы (<input, <select, <textarea)',
+        descriptio: ' tag defines a label for several elements',
     },
     {
         teg: 'li',
-        descriptio: 'Определяет каждый элемент списка и присваивает номер',
+        descriptio: ' tag defines a list item',
     },
     {
         teg:'link',
-        descriptio: 'Устанавливает связь с внешним документом вроде файла со стилями или со шрифтами',
+        descriptio: 'tag defines the relationship between the current document and an external resource',
     },
     {
         teg:'map',
-        descriptio: 'Тег <map> служит контейнером для элементов <area>, которые определяют активные области для карт-изображений',
+        descriptio: 'tag is used to define an image map',
     },
     {
         teg:'nav',
-        descriptio: 'Тег задает навигацию по сайту',
+        descriptio: 'tag defines a set of navigation links',
     },    {
         teg:'object',
-        descriptio: 'Элемент сообщает браузеру, как загружать и отображать объекты, которые исходно браузер не понимает',
+        descriptio: 'tag defines a container for an external resource',
     },
     {
         teg: 'ol',
-        descriptio: 'Создает нумерованный список',
+        descriptio: 'tag defines an ordered list.An ordered list can be numerical or alphabetical',
     },
     {
         teg: 'option',
-        descriptio: 'Указывает каждый отдельный элемент меню',
+        descriptio: 'tag defines an option in a select list',
     },
     {
         teg:'output',
-        descriptio: 'Определяет область в которую выводится информация, преимущественно с помощью скриптов',
+        descriptio: 'tag is used to represent the result of a calculation (like one performed by a script)',
     },
     {
         teg:'p',
-        descriptio: 'Определяет текстовый абзац',
+        descriptio: 'tag defines a paragraph',
     },
     {
         teg:'pre',
-        descriptio: 'Элемент определяет блок предварительно форматированного текста',
+        descriptio: 'tag defines preformatted text',
     },
     {
         teg:'script',
-        descriptio: 'Тег предназначен для описания скриптов, может содержать ссылку на программу или ее текст на определенном языке',
+        descriptio: 'tag is used to embed a client-side script ',
     },
     {
         teg:'section',
-        descriptio: 'Задаёт раздел документа, может применяться для блока новостей, контактной информации, глав текста, вкладок в диалоговом окне и др',
+        descriptio: ' tag defines a section in a document',
     },
     {
         teg:'span',
-        descriptio: 'Тег <span> предназначен для определения строчных элементов документа',
+        descriptio: ' tag is an inline container used to mark up a part of a text, or a part of a document',
     },
     {
         teg:'strong',
-        descriptio: 'Тег предназначен для акцентирования текста. Браузеры отображают такой текст жирным начертанием',
+        descriptio: 'tag is used to define text with strong importance',
     },
     {
         teg:'style',
-        descriptio: 'Тег применяется для определения стилей элементов веб-страницы',
+        descriptio: 'tag is used to define style information (CSS) for a document',
     },
     {
         teg: 'table',
-        descriptio: 'Создает таблицу.',
+        descriptio: ' tag defines an HTML table',
     },
      {
         teg: 'tr',
-        descriptio: 'Определяет строку в таблице.',
+        descriptio: 'tag defines a row in an HTML table',
     },
      {
         teg: 'td',
-        descriptio: 'Определяет отдельную ячейку в таблице.',
+        descriptio: 'tag defines a standard data cell in an HTML table',
     },
      {
         teg: 'th',
-        descriptio: 'Определяет заголовок таблицы (нормальная ячейка с отцентрованным жирным текстом)',
+        descriptio: ' tag defines a header cell in an HTML table',
     },
     {
         teg:'tbody',
-        descriptio: 'Элемент предназначен для хранения одной или нескольких строк таблицы',
+        descriptio: 'tag is used to group the body content in an HTML table',
     },
     {
         teg:'thead',
-        descriptio: 'Элемент предназначен для хранения одной или нескольких строк, которые представлены вверху таблицы',
+        descriptio: 'tag is used to group header content in an HTML table',
     },
     {
         teg:'textarea',
-        descriptio: 'Поле  представляет собой элемент формы для создания области, в которую можно вводить несколько строк текста.',
+        descriptio: 'tag defines a multi-line text input control',
     },
     {
         teg:'tfoot',
-        descriptio: 'Элемент предназначен для хранения одной или нескольких строк, которые представлены внизу таблицы',
+        descriptio: 'tag is used to group footer content in an HTML table',
     },
     {
         teg:'title',
-        descriptio: 'Определяет заголовок документа. Элемент <title> не является частью документа и не показывается напрямую на веб-странице',
+        descriptio: 'tag defines the title of the document',
     },
     {
         teg: 'ul',
-        descriptio: 'Создает ненумерованный список',
+        descriptio: 'tag defines an unordered (bulleted) list',
     },
     {
         teg:'video',
-        descriptio: 'Добавляет, воспроизводит и управляет настройками видеоролика на веб-странице',
+        descriptio: ' tag is used to embed video content in a document, such as a movie clip or other video streams.',
     },  {
         teg:'xmp',
-        descriptio: 'Тег отображает содержимое контейнера «как есть» и шрифтом фиксированной ширины',
+        descriptio: 'tag defines preformatted text',
     },
 ]
 
@@ -208,9 +204,11 @@ const tegs=[
     for (let key of tegs) {
         let divMain = document.createElement('div')
         divMain.classList.add('divMain')
+
         divMain.innerHTML = key.teg;
         let p = document.createElement('div')
         p.classList.add('descriptio')
+
         p.innerHTML = key.descriptio
         divMain.appendChild(p)
         parent.appendChild(divMain)
@@ -233,5 +231,3 @@ divM.forEach(element => {
     })
 })
 
-const count = (a,b) => a + b;
-count(2,3)

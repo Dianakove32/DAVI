@@ -1,8 +1,4 @@
-.sectionHeading {
-display:block;
-text-decoration: underline;
-}
-  textarea {
+ textarea {
     display: block;
     flex: 1 1 auto;
     margin: 0 0 10px 0;
@@ -21,7 +17,8 @@ text-decoration: underline;
   width: 100%;
 }
 .linksList {
-display:block;
+  display: flex;
+  flex-wrap: wrap;
 
 }
 
@@ -29,12 +26,20 @@ display:block;
   font-size: 1.7rem;
   padding: 0.2em 0.5em;
   min-width: 60px;
-  background-color: green;
   cursor: pointer;
+  text-decoration: underline dotted 1px;
 }
-
+.linksList li:hover {
+  text-decoration: underline 1px;
+}
+.linksList li:focus {
+  background-color: #CCCCCC;
+}
+.selected {
+  color: red;
+}
 .source, .sandbox {
-  margin: 5px;
+  margin: 2rem .5rem .5rem;
   flex: 1 1 48%;
   min-width: 300px;
   text-align: left;
@@ -47,9 +52,10 @@ display:block;
   border: 3px solid #b6c6ce;
 
 }
-input {
-    display: none;
-  }
+#jsEditor, #htmlEditor, #cssEditor {
+     display: none;
+   }
+   
 .source label, .sandbox button {
     padding: 0.2em 0.5em;
     font-size: 2rem;
@@ -107,4 +113,69 @@ input:checked + label {
   } 
   #htmlEditor:checked~#htmlarea + div, #cssEditor:checked~#cssarea + div, #jsEditor:checked~#jsarea + div {
     display: block;
+  }
+  .accordion{
+    display: block;
+    background-color: #eee;
+    color: #000;
+    cursor: pointer;
+    padding: 0.4em 0.5em;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  .accordion:after {
+    content: '\002B'; /* Unicode character for "plus" sign (+) */
+    font-size: 2rem;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .accordion-active, .accordion:hover{
+background-color: #ccc;
+  }
+  .accordion-active:after {
+    content: "\2212"; /* Unicode character for "minus" sign (-) */
+  }
+
+  .accordion-panel {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  .jsSection {
+flex: 1 1 48%;
+margin: .5rem;
+  }
+  .reference {
+    display: block;
+    padding: 2rem;
+    width: 100%;
+    font-size: 1.7rem;
+    background-color: white;
+    border: #CCC solid 2px;
+    border-radius: 4px;
+  }
+  .reference ul {
+    list-style-type: disc;
+    margin: 10px 0 20px;
+    padding-left: 4rem;
+  }
+  .reference ul li {
+    margin-top: 7px;
+  }
+  .reference ul li span {
+    font-weight: 700;
+  }
+
+  code {
+    padding: 2px 4px;
+    color: #333;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    font-family: Courier,monospace;
   }

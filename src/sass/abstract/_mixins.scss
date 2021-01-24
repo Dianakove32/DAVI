@@ -4,6 +4,12 @@
     width: $i;
   }
 
+  @mixin font ($size, $height: $size, $weight: bold, $style: normal) {
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+    line-height: $height;
+}
 
 @mixin media-laptop {
     @media (max-width: $content-width) { @content; }

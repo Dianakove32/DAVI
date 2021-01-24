@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "wild code scool project #1",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "style": "sass --watch  src/sass/style.scss src/sass/style.css",
+    "style": "sass --watch  src/sass/style.scss style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

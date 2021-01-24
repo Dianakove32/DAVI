@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
-    <link rel="stylesheet" href="src/sass/style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="src/sass/codemirror.css">
     <link rel="stylesheet" href="src/sass/material-darker.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="icon" href="./src/assets/favicon.ico">
+    <link rel="icon" href="src/assets/favicon.ico">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -19,7 +19,7 @@
     <header class="header">
         <div class="wrapper  header-wrapper">
             <div class="header__logo">
-            <a href="index.html#logo1 ">  <img class="logo_img" src="./src/assets/DAVI.png" alt="logo"></a>
+                <a href="index.html#logo1 "> <img class="logo_img" src="src/assets/DAVI.png" alt="logo"></a>
             </div>
             <div class="header__burger">
                 <span class="burger-menu_lines"></span>
@@ -32,10 +32,10 @@
             </nav>
             <nav class="header__navigation">
                 <ul class="navigation">
-                    <a class="navigation__link " href="index.html#html" >HTML</a>
-                    <a class="navigation__link" href="#css">CSS</a>
-                      <a  class="navigation__link active" href="#js">JS</a>
-                    <a class="navigation__link" href="#other">Other</a>
+                    <a class="navigation__link " href="index.html#html">HTML</a>
+                    <a class="navigation__link" href="index.html#css">CSS</a>
+                    <a class="navigation__link active" href="index.html#js">JS</a>
+                    <a class="navigation__link" href="index.html#other">Other</a>
                 </ul>
             </nav>
         </div>
@@ -47,24 +47,30 @@
                     <div class="descriptionSection">
                         <h1 class="section-title">JavaScript Notes</h1>
 
+                        <p class="section__text">JavaScript is the most popular and widely used client-side scripting
+                            language. Client-side scripting refers to scripts that run within your web browser.
+                            JavaScript is designed to add interactivity and dynamic effects to the web pages by
+                            manipulating the content returned from a web server.</p>
+
                         <p class="section__text">
                             This section contains an extensive collection of practice examples demonstrating the various
                             techniques and features of the JavaScript language in real action.
                         </p>
                     </div>
 
-                    <div class="section-image"> <img src="../src/assets/jslogo.png"></div>
+                    <div class="section-image"> <img src="src/assets/jslogo.png"></div>
                 </div>
                 <div class="sandboxLinks">
                     <div class="linksList">
                     </div>
                 </div>
+                <div class="reference"></div>
                 <div class="jsPlayground">
                     <div class="source">
 
-                        <input type="radio" name="radiotabs" id="jsEditor" checked><label
-                            for="jsEditor">JavaScript</label>
-                        <input type="radio" name="radiotabs" id="htmlEditor"><label for="htmlEditor">HTML</label>
+                        <input type="radio" name="radiotabs" id="jsEditor"><label for="jsEditor">JavaScript</label>
+                        <input type="radio" name="radiotabs" id="htmlEditor" checked><label
+                            for="htmlEditor">HTML</label>
                         <input type="radio" name="radiotabs" id="cssEditor"><label for="cssEditor">CSS</label>
                         <textarea id="jsarea" class="js">test</textarea>
                         <textarea id="htmlarea" class="html">Test</textarea>
@@ -72,7 +78,8 @@
                     </div>
                     <div class="sandbox">
                         <button id="run">Run the code »</button>
-                        <iframe class="iframe" sandbox="allow-scripts allow-same-origin"></iframe>
+                        <iframe class="iframe"
+                            sandbox="allow-downloads allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>
                     </div>
 
                 </div>
@@ -82,26 +89,47 @@
     </section>
     <footer class="footer">
         <div class="wrapper">
-            2020 Minsk (c) All Rights reseved
-        </div>
+            <ul class="footer__navigation active">
+                <li class="footer-link">
+                    <a href="About.html">About Us</a>
+                </li>
+                <li class="footer-link">
+                    <a href="FAQ.html">FAQ</a>
+                </li>
+                <li class="footer-link">
+                    <a href="News.html">News</a>
+                </li>
+                <li class="footer-link">
+                    <a href="Contact.html">Contact Us</a>
+                </li>
+                <li class="footer-link">
+                    <a href="Privacy.html">Pivacy Policy</a>
+                </li>
+            </ul>
+            <div class="flex-container_image">
+                <img class="facebook" src="./src/assets/facebook.svg" alt="Facebook-logo" />
+                <img class="icon instagram" src="./src/assets/Instagram.svg" alt="Instagram-logo" />
+                <img class="icon twitter" src="./src/assets/twitter.svg" alt="Twitter-logo" />
+            </div>
+            <p> 2020 Minsk (c) All Rights reseved Wild code school</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.13.0/beautify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.13.0/beautify-css.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.13.0/beautify-html.min.js"></script>
-    <script src="./src/js/codemirror/codemirror.js"></script>
-    <script src="./src/js/codemirror/mode/javascript/javascript.js"></script>
-    <script src="./src/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
-    <script src="./src/js/codemirror/mode/css/css.js"></script>
-    <script src="./src/js/codemirror/mode/xml/xml.js"></script>
-    <script src="./src/js/codemirror/addon/selection/active-line.js"></script>
-    <script src="./src/js/codemirror/addon/edit/closebrackets.js"></script>
-    <script src="./src/js/codemirror/addon/edit/closetag.js"></script>
-    <script src="./src/js/codemirror/addon/edit/matchbrackets.js"></script>
-    <script src="./src/js/codemirror/addon/fold/xml-fold.js"></script>
-    <script src="./src/js/codemirror/addon/edit/matchtags.js"></script>
-    <script src="./src/js/index.js"></script>
-    <script src="./src/js/js.js"></script>
+    <script src="src/js/codemirror/codemirror.js"></script>
+    <script src="src/js/codemirror/mode/javascript/javascript.js"></script>
+    <script src="src/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="src/js/codemirror/mode/css/css.js"></script>
+    <script src="src/js/codemirror/mode/xml/xml.js"></script>
+    <script src="src/js/codemirror/addon/selection/active-line.js"></script>
+    <script src="src/js/codemirror/addon/edit/closebrackets.js"></script>
+    <script src="src/js/codemirror/addon/edit/closetag.js"></script>
+    <script src="src/js/codemirror/addon/edit/matchbrackets.js"></script>
+    <script src="src/js/codemirror/addon/fold/xml-fold.js"></script>
+    <script src="src/js/codemirror/addon/edit/matchtags.js"></script>
+    <script src="src/js/index.js"></script>
+    <script src="src/js/js.js"></script>
 </body>
 
 </html>

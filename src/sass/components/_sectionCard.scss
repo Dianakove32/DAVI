@@ -2,17 +2,32 @@
     background-color: $color-section;
 }
 .section-card {
+    padding-bottom: 100px;
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 135px 10px;
+    padding: 20px 10px;
     width: 100%;
     //text-align: center;
     // padding: 50px 10px 120px 10px;
     align-items: center;
 }
 .section-image {
-    margin: 0px 10px;
+    margin: 0px 10px;.wrapper-workshop {
+        flex-direction: column;
+    }
+    .workshop-text {
+        font-size: 1.8rem;
+    }
+    .workshop-tags {
+        margin-bottom: 31px;
+        @include media-tablet {
+            justify-content: center;
+        }
+    }
+
+
+
     max-width: 150px;
     @extend %transitionAnime;
      .activeAnime{
@@ -53,7 +68,7 @@
         @include media-mobile {
             max-width: 345px;
             height: 96px;
-            overflow: hidden;
+            overflow: auto;
             text-align: justify;
         }
     }

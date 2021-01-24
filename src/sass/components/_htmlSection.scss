@@ -1,3 +1,9 @@
+.wrapper-html{
+flex-direction: column;
+padding-top: 20px;
+ background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUZkpYhRVMx_dQF8Ac_ngvDec2TSaeZPZ4Uw&usqp=CAU);
+ background-size: cover;
+}
 #parent {
     padding: 25px 5px;
     display: flex;
@@ -12,13 +18,13 @@
     height: 100px;
  //   border: 1px solid black;
     font-size: 1.4rem;
-
     color:$main-header-color;
     padding:5px;
     margin: 7px;
     position: relative;
+
     &:hover {
-        cursor: pointer;
+        transform: scale(1.04);
     }
 }
 .tegs {
@@ -43,6 +49,7 @@ box-shadow: $shadow;
     color: $main-header-color;
     padding: 5px;
     margin: 5px;
+
 }
 .invisible {
     visibility: hidden;
@@ -51,3 +58,4 @@ box-shadow: $shadow;
 .visible {
     display: block;
 }
+

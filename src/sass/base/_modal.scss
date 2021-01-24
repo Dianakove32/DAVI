@@ -1,4 +1,5 @@
 .modal {
+
     display: none;
     position: fixed;
     z-index: 3;
@@ -9,7 +10,8 @@
     background: rgba(0, 0, 0, 0.6);
 
     &_content {
-        background-color: $color-section;
+        border-radius:40px ;
+        background-color: rgb(204, 233, 248);
         margin: 15% auto;
         padding: 20px;
         border: 1px solid rgb(165, 161, 161);
@@ -20,6 +22,7 @@
         height: 400px;
         overflow-y: auto;
         text-align: left;
+        color: $color-title;
         @extend %transitionAnime;
 
           transform: scale(1);
@@ -50,9 +53,13 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 15px;
+
+
     }
     &_title {
         font-size: 25px;
         font-weight: bold;
+color: $color-title;
+
     }
 }
