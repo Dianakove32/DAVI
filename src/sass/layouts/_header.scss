@@ -6,11 +6,15 @@
 
     &-wrapper{
         color:$color-light;
-            height: 100px;
+            height: 80px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex: 1 0 auto;
         }
+ }
+ .header__logo {
+     flex: 0 0 auto;
  }
 //  .header-wrapper{
 //  color:$color-light;
@@ -19,3 +23,8 @@
 //      justify-content: space-between;
 //      align-items: center;
 //  }
+/*
+.op {
+    opacity: 0.5;
+}
+*/

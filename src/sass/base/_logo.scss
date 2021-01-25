@@ -1,7 +1,8 @@
 //стили для логотипа
 .logo_img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    margin: 0 0 0 28px;
     @include media-mobile {
         > img {
             width: 60px;

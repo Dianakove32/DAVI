@@ -1,60 +1,126 @@
+const modalHeader = document.querySelector('.modal-header');
+const modalContent = document.querySelector('.modal-content');
+const modalFooter = document.querySelector('.modal-footer');
+
+function createEl(type, identifier = '', classes = [], innerText = '') {
+    const resultElement = document.createElement(type);
+    if (identifier !== undefined) resultElement.id = identifier;
+
+    if (classes.length > 0) {
+        for (let cl of classes) {
+            resultElement.classList.add(cl);
+        }
+    }
+    if (innerText !== undefined) resultElement.innerHTML = innerText;
+
+    return resultElement;
+}
 export default function welcome() {
-    const welcomeTitle = document.querySelector('.welcom-img');
-    const welcomeBody = document.querySelector('body');
     let welcomePopup;
     let inputPopup;
     let welcomeButton;
     let nameUser;
-    let welcomeWindow;
-    let all
     let welcomeUser;
 
 
     welcomeScreen();
 
     function welcomeScreen() {
-        welcomeWindow = document.createElement('div');
-        welcomeWindow.className = 'welcome-popup-background';
-        welcomeWindow.insertAdjacentHTML('afterbegin', '<div class="welcome-popup"><h2>Welcome Traveler!</br>What is your Nickname:</h2><input  class="welcome-input" type="text" placeholder="name"/><div id="welcome-button"><h2>I am ready</h2></div></div>');
-        welcomeBody.appendChild(welcomeWindow);
-        welcomeButton = document.getElementById('welcome-button');
-        welcomePopup = document.querySelector('.welcome-popup');
-        all = document.querySelectorAll(".wrapper, footer, .welcom-img, .header");
-        for (let i = 0; i < all.length; i++) {
-            all[i].style.display = "none";
-        }
-
+        modalHeader.innerHTML = "Welcome Traveller!";
+        modalContent.insertAdjacentHTML('afterbegin', '<div class="welcome"><h3>Enter your Nickname:</h3><input class="welcome-input" type="text" placeholder="name"/></div>');
         createUser();
     }
 
     function createUser() {
+        welcomeButton = createEl("button", "welcome-button", ["button", "success"], "Continue");
+        welcomeButton.disabled = true;
+        modalFooter.append(welcomeButton);
         inputPopup = document.querySelector('.welcome-input');
-        inputPopup.addEventListener('keydown', (e) => {
-            welcomeButton.className = 'welcome-button';
+        welcomePopup = document.querySelector('.welcome');
+        inputPopup.addEventListener('keyup', (e) => {
+            if (inputPopup.value !== "") {
+                welcomeButton.disabled = false;
+            } else {
+                welcomeButton.disabled = true;
+            }
         })
-        welcomeButton.addEventListener('click', ()=>{
+        welcomeButton.addEventListener('click', () => {
             nameUser = inputPopup.value;
-            welcomePopup.innerHTML ="";
-            welcomePopup.insertAdjacentHTML('afterbegin',`<h2>Choose your level ${nameUser}:</h2><div class="smash"><div class="welcome-smash1">
-            </div><div class="welcome-smash2"></div></div>`)
+            welcomePopup.innerHTML = "";
+            modalFooter.innerHTML = "";
+            welcomePopup.innerHTML = `<h3>Choose your level ${nameUser}:</h3><div class="smash"><div class="welcome-smash1">
+            </div><div class="welcome-smash2"></div></div>`;
             const noobButton = document.querySelector(".welcome-smash1");
             const proButton = document.querySelector(".welcome-smash2");
-            noobButton.addEventListener('click', () =>{
-                enterThePage("newbie")})
+            noobButton.addEventListener('click', () => {
+                enterThePage("newbie");
+            })
             proButton.addEventListener('click', () => {
-                enterThePage("intermidiate")})
+                enterThePage("intermidiate");
+            })
         })
-       
+
     }
 
     function enterThePage(level) {
-        for (let i of all){
-            i.style.display = 'flex';
-        }
-        welcomeUser = document.querySelector('.welcome-user');
-        welcomeUser.innerHTML = `Well ${nameUser} \n your level is: ${level}`;
-        welcomeBody.removeChild(welcomeWindow);
-        localStorage.setItem('userName', `${nameUser}`);
-        localStorage.setItem('levelOfUser', `${level}`)
+        document.getElementById("avatar").style.display = "block";
+        document.getElementById("sign-in").style.display = "none";
+
+        //  modalHeader.innerHTML = `Well, ${nameUser} your level is: ${level} `;
+        localStorage.setItem('userName', `${nameUser} `);
+        localStorage.setItem('levelOfUser', `${level} `);
+        checkUser();
+        // нужно очищать окно при нажатии на кнопку
     }
 }
+
+// Switch avatars
+function swapAvatar(isLogged) {
+    document.getElementById("avatar").style.display = "block";
+    document.getElementById("sign-in").style.display = "none";
+}
+
+//check if user already exists 
+
+document.addEventListener("DOMcontentLoaded", checkUser());
+function checkUser() {
+    let userName = localStorage.getItem('userName');
+    //   console.log(userName)
+    if (userName != null) {
+        document.getElementById("avatar").style.display = "inline";
+        document.getElementById("sign-in").style.display = "none";
+        modalHeader.innerHTML = `Welcome, <span>${localStorage.getItem('userName')}</span>`;
+        modalContent.innerHTML = "";
+        modalContent.insertAdjacentHTML('afterbegin', `<h3 class="welcome-user-level"> Your level is ${localStorage.getItem('levelOfUser')}</h3><h3>Check this quote:</h3>
+        <p class="welcome-api"></p>
+        <h3>Don't worry, be happy!</h3>
+        <p>We do not collect or use the information you provided here.</p>
+        <p>All your personal data is stored in the Local Storage of your browser of your local computer.</p>
+            `);
+        const paranojaButton = createEl("label", "", ["button", "beware", "welcome-reset-button"], "Delete my data and log me out");
+        paranojaButton.for = "modal-css";
+        modalFooter.append(paranojaButton);
+        // reset the user statistic
+        paranojaButton.addEventListener('click', () => {
+            setTimeout(() => {
+                localStorage.removeItem('userName');
+                localStorage.removeItem('levelofUser');
+                window.location.reload(false);
+            }, 1000);
+
+        });
+    }
+    else {
+        welcome();
+    }
+}
+
+
+// get the Api quote
+async function getQuote() {
+    const url = "https://api.adviceslip.com/advice"
+    const data = await fetch(url);
+    const result = await data.json();
+    document.querySelector('.welcome-api').textContent = result.slip.advice;
+}
+getQuote(); 

@@ -1,47 +1,44 @@
 .sectionBlue {
-  .button {
-    background-color: $color-light;
+  button {
+    background-color: #FFF;
   }
 }
-.button {
+button {
   border: 1px solid #b6c6ce;
-  font-size: 17px;
-  max-width: 132px;
-  right: 15px;
-  bottom: 35px;
-  background: #ffff;
+  font-size: 1.5rem;
+  background-color: #fff;
   border-radius: 4px;
   box-shadow: 0 5px 0#b6c6ce;
   color: $color-title;
-  margin-top: 14px;
+  margin: 4px;
   outline: 0;
   padding: 12px 20px;
-  transition: all 0.1s linear;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
 
 
   &:active {
     box-shadow: 0 2px 0 #b6c6ce;
     transform: translateY(3px);
   }
-
-
 }
-.button:hover {
+label.sign-in {
+  padding: 6px 12px;
+  font-size: 1.5rem;
+  background-color: rgb(42, 159, 218);
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  box-shadow: none;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
 
-
-  animation-name: changeColorGreen;
-  animation-iteration-count: infinite;
-  animation-duration:1s ;
-
+  &:active{
+    box-shadow: 0 2px 0 #b6c6ce;
+    transform: translateY(3px);
   }
-  @keyframes changeColorGreen {
-  0% {
-  background-color: $color-light;
+  &:hover {
+    background-color:  #f39b30;
   }
-  50% {
-  background-color:  #b6c6ce;
-  }
-  100% {
-  background-color: $color-light;
-  }
-  }
+}

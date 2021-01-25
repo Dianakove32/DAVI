@@ -6,7 +6,7 @@
 .Html-inform {
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: #F1F6FA;
+  //  background-color: #F1F6FA;
 }
 .introduction-container {
 
@@ -16,7 +16,9 @@
         flex-direction: column;
     }
 }
+
 .introduction-links {
+
     background: rgb(245, 245, 245);
     box-shadow: $shadow;
     border-radius: 20px;

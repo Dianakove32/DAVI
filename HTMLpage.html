@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>HTML</title>
 </head>
 
 <body>
+
     <header class="header">
         <div class="wrapper  header-wrapper">
             <div class="header__logo">
@@ -18,40 +19,27 @@
                 <span class="burger-menu_lines"></span>
             </div>
             <nav class="burger-menu">
-                <a href="index.html#html" class="burger-menu_link">HTML</a>
-                <a href="index.html#css" class="burger-menu_link">CSS</a>
-                <a href="index.html#js" class="burger-menu_link">JS</a>
-                <a href="index.html#other" class="burger-menu_link">Other</a>
+                <a href="index.html#html" class="burger-menu_link">main</a>
+                <a href="#introduction" class="burger-menu_link">Introduction to HTM</a>
+                <a href="#workshop" class="burger-menu_link">Workshop</a>
+                <a href="#tegs" class="burger-menu_link">Other</a>
             </nav>
             <div class="nav">
                  <nav class="header__navigation">
-                <ul class="navigation">
-                    <a class="navigation__link active" href="index.html#html">HTML</a>
-                    <a class="navigation__link" href="index.html#css">CSS</a>
-                    <a class="navigation__link" href="index.html#js">JS</a>
-                    <a class="navigation__link" href="index.html#other">Other</a>
+                <ul class="nav-page">
+                    <a class="navigation__link " href="index.html#html">Main</a>
+                    <a class="navigation__link" href="#introduction">Introduction to HTM</a>
+                    <a class="navigation__link" href="#workshop">Workshop</a>
+                    <a class="navigation__link" href="#tegs">HTML tegs</a>
                 </ul>
             </nav>
-<nav class="header-navigation-page">
-    <ul class='nav-page'>
-        <a class="navigation__link " href="#tegs" class="nav-page__link">HTML tegs</a>
-        <a class="navigation__link" href="#introduction" class="nav-page__link">Introduction to HTML</a>
-        <a class="navigation__link" href="#workshop" class="nav-page__link">Workshop</a>
-    </ul>
-</nav>
+
             </div>
 
         </div>
 
     </header>
-    <section id="tegs" class="html-tegs">
-        <div class="wrapper wrapper-html">
-            <h2>HTML tegs</h2>
-            <div id="parent">
 
-            </div>
-        </div>
-    </section>
     <section id="introduction" class="Html-inform">
         <div class="wrapper HTML-wrapper">
             <h2>Introduction to HTML</h2>
@@ -98,26 +86,26 @@
 </p>
 <p><b> To see the result of the example in action, follow these steps.</b>
    </p>
-<ul>
-    <li>- In Windows, open Notepad (<i>Start> Run></i>  type notepad or <i> Start> Programs> Accessories>Notepad</i> ).</li>
-    <li>- Type or copy the code in Notepad (Fig. 1.1).</li>
-    <li>- Save the finished document (<i>File> Save As</i>  ...) under the name c: \ www \ example11.html, and be sure to set the file type in the save dialog box: All files and UTF-8 encoding. Please note that the file extension must be exactly html.</li>
-    <li>- Launch Internet Explorer (<i>Start> Run></i>  type “iexplore” or <i>Start> Programs> Internet Explorer</i> ).</li>
-    <li>- In your browser, select the <i>File></i>  Open menu item and specify the path to your file.</li>
-    <li>- If everything is done correctly, then in the browser you will see the result.</li>
+<ul class="intro-ul">
+    <li>  In Windows, open Notepad (<i>Start> Run></i>  type notepad or <i> Start> Programs> Accessories>Notepad</i> ).</li>
+    <li>  Type or copy the code in Notepad (Fig. 1.1).</li>
+    <li>  Save the finished document (<i>File> Save As</i>  ...) under the name c: \ www \ example11.html, and be sure to set the file type in the save dialog box: All files and UTF-8 encoding. Please note that the file extension must be exactly html.</li>
+    <li>  Launch Internet Explorer (<i>Start> Run></i>  type “iexplore” or <i>Start> Programs> Internet Explorer</i> ).</li>
+    <li>  In your browser, select the <i>File></i>  Open menu item and specify the path to your file.</li>
+    <li>  If everything is done correctly, then in the browser you will see the result.</li>
 </ul>
     </div>
                     <div class="outPut-html__info tools">
   <p>
     To work efficiently, you cannot do without necessary and familiar tools, including when writing HTML code. Therefore, for the initial development of web pages or even a small site - this is the name of a set of pages linked by links and a single design, we need the following programs.
   </p>
-            <ul>
-                <li>- Text editor.</li>
-                <li>- Browser for viewing results.</li>
-                <li>- Validator is a program for checking HTML syntax and detecting errors in the code.</li>
-                <li>- Graphics editor.</li>
-                <li>- HTML tag reference.</li>
-            </ul>
+            <ol class="intro-ol">
+                <li>  Text editor.</li>
+                <li>  Browser for viewing results.</li>
+                <li>  Validator is a program for checking HTML syntax and detecting errors in the code.</li>
+                <li> Graphics editor.</li>
+                <li>  HTML tag reference.</li>
+            </ol>
  </div>
                     <div class="outPut-html__info types of tags">
  <p>
@@ -331,7 +319,7 @@ It turns out a disappointing picture - there is no particular need to spend time
 </div>
         </div>
     </section>
-    <section id="workshop" class="workshop" id="particles-js">
+    <section id="workshop" class="workshop">
 <div class="wrapper wrapper-workshop">
     <h2>Workshop</h2>
     <p class="workshop-text">
@@ -378,38 +366,38 @@ It turns out a disappointing picture - there is no particular need to spend time
                 </div>
                 </div>
 <div class="contentBt">
-    <div class="label">Image  in the shadows L</div>
+    <div class="label"> Solve the problem with flexes</div>
     <div class="contentTask">
-         Display the image so that there is a shadow around it</div>
+          <img style="width: 100%;" src="./src/assets/flexMaket.png" alt=""></div>
 
 <div class="strategy__tags tags">
     <span class="tag tag_colored">Low compl</span>
 </div>
        </div>
 <div class="contentBt">
-    <div class="label">Nested lists L</div>
-    <div class="contentTask">Using tag nesting, make a list </div>
+    <div class="label">layout</div>
+    <div class="contentTask"><img style="width: 90%;" src="./src/assets/maket4.png" alt=""> </div>
     <div class="strategy__tags tags">
         <span class="tag tag_colored">Low compl</span>
     </div>
 </div>
 <div class="contentBt">
-    <div class="label"> Concatenate table cells L</div>
-    <div class="contentTask">Create a table </div>
+    <div class="label"> Working with em</div>
+    <div class="contentTask">The text will vary in size depending on the size of the screen. Points: 480px, 800px.</div>
     <div class="strategy__tags tags">
         <span class="tag tag_colored">Low compl</span>
     </div>
 </div>
 <div class="contentBt">
-    <div class="label"> Hand drawn frame L</div>
-    <div class="contentTask">Use the attached frame picture to make a width-scalable box with a hand-drawn border </div>
+    <div class="label"> Working with media queries</div>
+    <div class="contentTask">The text will have different colors depending on the screen size. Points: 480px, 800px </div>
     <div class="strategy__tags tags">
         <span class="tag tag_colored">Low compl</span>
     </div>
 </div>
 <div class="contentBt">
-    <div class="label">Cut corners M</div>
-    <div class="contentTask">Add small square corners to the block </div>
+    <div class="label">layout </div>
+    <div class="contentTask"><img src="./src/assets/vfrtn5.png"  style="width: 90%;"> </div>
     <div class="strategy__tags tags">
         <span class="tag tag_colored">Medium</span>
     </div>
@@ -456,40 +444,44 @@ It turns out a disappointing picture - there is no particular need to spend time
 </div>
 
     </section>
-    <div id="particles-js">
-        <footer class="footer">
-            <div class="wrapper">
-                <ul class="footer__navigation active">
-                    <li class="footer-link">
-                        <a href="About.html">About Us</a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="FAQ.html">FAQ</a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="News.html">News</a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="Contact.html">Contact Us</a>
-                    </li>
-                    <li class="footer-link">
-                        <a href="Privacy.html">Pivacy Policy</a>
-                    </li>
-                </ul>
-                <div class="flex-container_image">
-                    <img class="facebook" src="./src/assets/facebook.svg" alt="Facebook-logo" />
-                    <img class="icon instagram" src="./src/assets/Instagram.svg" alt="Instagram-logo" />
-                    <img class="icon twitter" src="./src/assets/twitter.svg" alt="Twitter-logo" />
-                </div>
-                <p> 2020 Minsk (c) All Rights reseved Wild code school</p>
-        </footer>
-    </div>
+    <section id="tegs" class="html-tegs">
+        <div class="wrapper wrapper-html">
+            <h2>HTML tegs</h2>
+            <div id="parent">
 
-
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="wrapper">
+            <ul class="footer__navigation active">
+                <li class="footer-link">
+                    <a href="About.html">About Us</a>
+                </li>
+                <li class="footer-link">
+                    <a href="FAQ.html">FAQ</a>
+                </li>
+                <li class="footer-link">
+                    <a href="News.html">News</a>
+                </li>
+                <li class="footer-link">
+                    <a href="Contact.html">Contact Us</a>
+                </li>
+                <li class="footer-link">
+                    <a href="Privacy.html">Pivacy Policy</a>
+                </li>
+            </ul>
+            <div class="flex-container_image">
+                <img class="facebook" src="./src/assets/facebook.svg" alt="Facebook-logo" />
+                <img class="icon instagram" src="./src/assets/Instagram.svg" alt="Instagram-logo" />
+                <img class="icon twitter" src="./src/assets/twitter.svg" alt="Twitter-logo" />
+            </div>
+            <p> 2020 Minsk (c) All Rights reseved Wild code school</p>
+    </footer>
     <script src="src/js/htmlSection.js"></script>
     <script src="src/js/introductionHTMLsection.js"></script>
     <script src="src/js/index.js"></script>
-    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
 </body>
 
 </html>
