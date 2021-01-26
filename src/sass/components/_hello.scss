@@ -12,25 +12,28 @@
 }
 .hello-text {
     position: absolute;
-    top: 30%;
-    left: 30%;
-color: #ffffff;
+    color: #ffffff;
+
     @extend %transitionAnime;
     max-width: 760px;
     width: 100%;
     text-align: center;
     font-size: 3.5rem;
-    padding: 0px 20px 30px 20px;
+    padding: 20px;
     &.activeAnime{
         transform: translate(0px,0px);
     opacity: 1;
     }
     @include media-tablet {
-        text-align: justify;
+        max-width: 560px;
         font-size: 2rem;
     }
     @include media-mobile {
         font-size: 1.5rem;
-        text-align: justify;
+        text-align: center;
+        left: 0;
     }
+}
+.hello-text p {
+    margin-bottom: 30px;
 }

@@ -16,11 +16,14 @@
 
 <body>
     <div id="particles-js">
-
-    </div> <p class="hello-text activeItemanime">How to start programming? What courses to choose and books to read?
-            DAVI will help you to become a programmer. Pro already? Upgrade your skills for the new career
-            opportunities!
-        </p>
+        <div class="hello-text activeItemanime">
+            <p>How to start programming? What courses to choose and books to read?
+                DAVI will help you to become a programmer.</p>
+            <p>Pro already? Upgrade your skills for the new career
+                opportunities!
+            </p>
+        </div>
+    </div>
 
     <!-- <div class="loading">
         <div class="dot"></div>
@@ -72,7 +75,15 @@
     <label for="modal-css" class="modal-css-bg"></label>
     <div class="modal-container">
         <label for="modal-css" class="close">
-            ❌
+            <svg id="outlined" style="width:36px; height: 36px; fill: red" viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg">
+                <title />
+                <g id="Fill">
+                    <path d="M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,26A12,12,0,1,1,28,16,12,12,0,0,1,16,28Z" />
+                    <polygon
+                        points="19.54 11.05 16 14.59 12.46 11.05 11.05 12.46 14.59 16 11.05 19.54 12.46 20.95 16 17.41 19.54 20.95 20.95 19.54 17.41 16 20.95 12.46 19.54 11.05" />
+                </g>
+            </svg>
         </label>
         <h2 class="modal-header"></h2>
         <article class="modal-content-wrapper">
@@ -89,11 +100,9 @@
 
     <section class="hello">
         <div class="wrapper wrapper-hello">
+
             <div class="imgDavi"> <img src="./src/assets/DAVI2.png" alt="" srcset=""> </div>
-            <p class="hello-text activeItemanime">How to start programming? What courses to choose and books to read?
-                DAVI will help you to become a programmer. Pro already? Upgrade your skills for the new career
-                opportunities!
-            </p>
+
         </div>
     </section>
 
@@ -101,14 +110,15 @@
         <div class="wrapper">
             <div class="section-card">
                 <div class="section__img">
-                    <div class="descriptionSection">
+                    <div class="descriptionMain">
                         <h2 class="section-title">HTML </h2>
+                        <div class="intro-text"> <p  >Learn HTML to design your website in simple and easy steps ranging from basic to complex concepts. Our HTML tutorials will teach you how to create a personal website.
 
-                        <p class="section__text activeItemanime anim-no-hide">
-                           <b>Hypertext Markup Language (HTML)</b>  is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
-                        </p>
+                         HTML is the primary programming language for web development. Here you will find out the basic information you need to get started. After studying the basic theory, you can consolidate your knowledge with practice in the workshop section. also on the site you will find a list of tags and a collection of useful links</p>
+                      </div>
+
                     </div>
-                    <div class="section-image activeItemanime"> <img src=" ./src/assets/html-logo.png"></div>
+
 
                 </div>
                 <div class="slider-container">
@@ -144,7 +154,7 @@
                     </div>
 
                 </div>
-                <button class="button hover__light" onclick="location.href='HTMLpage.html'">Learn more</button>
+                <button class="button hover__light" onclick="location.href='HTMLpage.html#html'">Learn more</button>
             </div>
         </div>
     </section>
@@ -152,24 +162,25 @@
         <div class="wrapper">
             <div class="section-card">
                 <div class="section__img">
-                    <div class="descriptionSection">
-                        <h2 class="section-title">CSS - sceleton of your page</h2>
+                    <div class="descriptionMain">
+                        <h2 class="section-title">CSS  </h2>
+<div>
+    <p class="intro-text">The purpose of CSS is to separate what determines the appearance of the page from its content. If a document was created using only HTML, then it defines not only each element, but also how it is displayed (color, font, block position, etc.). If cascading style sheets are connected, then HTML describes only the order of objects. And CSS is responsible for all their properties. In HTML, it is enough to write a class without listing all the styles each time. Go to the section for learn and practice</p>
 
-                        <p class="section__text activeItemanime">
-                         <b> Cascading Style Sheets (CSS)</b>   is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.  CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript
-                        </p>
+</div>
+
                     </div>
-                    <div class="section-image activeItemanime"> <img src=" ./src/assets/csslog.png"></div>
+
                 </div>
                 <div class="slider-container">
-                    <div class="topic-card activeItemanime anim-no-hide">
+                    <div onclick="location.href='css.html'" class="topic-card activeItemanime anim-no-hide">
                         <img src=" ./src/assets/sec2-3.webp" alt="">
-                        <h3>this</h3>
+                        <h3>Introduction to CSS </h3>
                     </div>
-                    <div class="topic-card activeItemanime anim-no-hide"> <img src=" ./src/assets/sec2-2.jpg" alt="">
-                        <h3>And this</h3>
+                    <div onclick="location.href='css.html#workshop'" class="topic-card activeItemanime anim-no-hide"> <img src=" ./src/assets/sec2-2.jpg" alt="">
+                        <h3>Workshop</h3>
                     </div>
-                    <div class="topic-card activeItemanime anim-no-hide"><img src=" ./src/assets/sec2-3.webp" alt="">
+                    <div onclick="location.href='css.html'" class="topic-card activeItemanime anim-no-hide"><img src=" ./src/assets/sec2-3.webp" alt="">
                         <h3>Also this</h3>
                     </div>
 
@@ -182,30 +193,37 @@
         <div class="wrapper">
             <div class="section-card activeItemanime anim-no-hide">
                 <div class="section__img">
-                    <div class="descriptionSection">
-                        <h2 class="section-title">JS - sceleton of your page</h2>
+                    <div class="descriptionMain">
+                        <h2 class="section-title">JavaScript</h2>
+                        <div>
 
-                        <p class="section__text activeItemanime">
-                           <b>JavaScript</b>   often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
-                        </p>
-                    </div>
 
-                    <div class="section-image "> <img class="activeItemanime" src=" ./src/assets/jslogo.png"></div>
+                        <p class="intro-text">
+                            <b> JavaScript</b> is the most popular and widely used client-side scripting
+                            language. Client-side scripting refers to scripts that run within your web browser.
+                            JavaScript is designed to add interactivity and dynamic effects to the web pages by
+                            manipulating the content returned from a web server.
+
+
+                            This section contains an extensive collection of practice examples demonstrating the various
+                            techniques and features of the JavaScript language in real action.
+</p>
+</div></div>
                 </div>
                 <div class="slider-container">
-                    <div class="topic-card activeItemanime anim-no-hide">
+                    <div onclick="location.href='js.html'" class="topic-card activeItemanime anim-no-hide">
                         <img src=" ./src/assets/sec3-1.jpg" alt="">
-                        <h3>this</h3>
+                        <h3>JavaScript Notes</h3>
                     </div>
-                    <div class="topic-card activeItemanime anim-no-hide"> <img src=" ./src/assets/sec3-2.jpg" alt="">
-                        <h3>And this</h3>
+                    <div onclick="location.href='js.html'" class="topic-card activeItemanime anim-no-hide"> <img src=" ./src/assets/sec3-2.jpg" alt="">
+                        <h3>Workshop</h3>
                     </div>
-                    <div class="topic-card activeItemanime anim-no-hide"><img src=" ./src/assets/sec3-3.png" alt="">
+                    <div onclick="location.href='js.html'" class="topic-card activeItemanime anim-no-hide"><img src=" ./src/assets/sec3-3.png" alt="">
                         <h3>Also this</h3>
                     </div>
 
                 </div>
-                <button class="button hover__light" onclick="location.href='js.html'">Learn more</button>
+<button class="button hover__light" onclick="location.href='js.html'">Learn more</button>
             </div>
         </div>
     </section>
@@ -322,7 +340,7 @@
             </p>
         </div>
     </div>
-    <script src=".//particles.js"></script>
+    <script src="./particles.js"></script>
     <script src="./src/js/app.js"></script>
     <script type="module" src="./src/js/index.js"></script>
 

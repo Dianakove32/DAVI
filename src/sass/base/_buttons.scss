@@ -22,6 +22,8 @@ button {
   }
 }
 label.sign-in {
+  display:block;
+  text-align: center;
   padding: 6px 12px;
   font-size: 1.5rem;
   background-color: rgb(42, 159, 218);
@@ -31,7 +33,7 @@ label.sign-in {
   border: none;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
-  font-weight: 500;
+  font-weight: 400;
   transition: background-color 0.3s ease-in, color 0.3s ease-in;
 
   &:active{
@@ -40,5 +42,6 @@ label.sign-in {
   }
   &:hover {
     background-color:  #f39b30;
+
   }
 }

@@ -468,6 +468,8 @@ h2 {
 
 h3 {
   font-size: 2rem;
+  padding-bottom: 30px;
+  padding-top: 10px;
 }
 
 .loading {
@@ -531,12 +533,15 @@ h3 {
 #particles-js {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #011d33;
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ---- stats.js ---- */
@@ -615,6 +620,8 @@ button:active {
 }
 
 label.sign-in {
+  display: block;
+  text-align: center;
   padding: 6px 12px;
   font-size: 1.5rem;
   background-color: #2a9fda;
@@ -624,7 +631,7 @@ label.sign-in {
   border: none;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
-  font-weight: 500;
+  font-weight: 400;
   transition: background-color 0.3s ease-in, color 0.3s ease-in;
 }
 label.sign-in:active {
@@ -769,8 +776,8 @@ body.lock {
   background: rgba(0, 0, 0, 0.8);
 }
 .modal_content {
-  border-radius: 40px;
-  background-color: #eef4f6;
+  border-radius: 10px;
+  background-color: #ffffff;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #a5a1a1;
@@ -846,7 +853,7 @@ label {
   opacity: 0;
   z-index: 10;
   visibility: hidden;
-  transition: background-color 250ms linear;
+  transition: background-color 300ms linear;
 }
 
 .modal-container {
@@ -862,19 +869,20 @@ label {
   border-radius: 4px;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
   transform: scale(0);
-  transition: transform 250ms ease;
+  transition: transform 300ms ease;
   visibility: hidden;
   z-index: 20;
 }
 .modal-container .close {
   position: relative;
+  text-align: center;
   float: right;
-  font-size: 18px;
-  transition: transform 500ms ease;
+  transition: transform 600ms ease;
   z-index: 100;
+  line-height: 0.5rem;
 }
 .modal-container .close:hover {
-  color: #3498db;
+  fill: #2ecc71;
   transform: rotate(540deg);
 }
 .modal-container h2 {
@@ -959,12 +967,12 @@ label {
   visibility: visible;
   background-color: black;
   opacity: 0.7;
-  transition: background-color 250ms linear;
+  transition: background-color 300ms linear;
 }
 #modal-css:checked ~ .modal-container {
   visibility: visible;
   transform: scale(1);
-  transition: transform 250ms ease;
+  transition: transform 300ms ease;
   z-index: 111;
 }
 
@@ -1493,14 +1501,12 @@ img {
 
 .hello-text {
   position: absolute;
-  top: 30%;
-  left: 30%;
   color: #ffffff;
   max-width: 760px;
   width: 100%;
   text-align: center;
   font-size: 3.5rem;
-  padding: 0px 20px 30px 20px;
+  padding: 20px;
 }
 .hello-text.activeAnime {
   transform: translate(0px, 0px);
@@ -1508,15 +1514,20 @@ img {
 }
 @media (max-width: 768px) {
   .hello-text {
-    text-align: justify;
+    max-width: 560px;
     font-size: 2rem;
   }
 }
 @media (max-width: 414px) {
   .hello-text {
     font-size: 1.5rem;
-    text-align: justify;
+    text-align: center;
+    left: 0;
   }
+}
+
+.hello-text p {
+  margin-bottom: 30px;
 }
 
 .sectionBlue {
@@ -1524,13 +1535,21 @@ img {
 }
 
 .section-card {
-  padding-bottom: 100px;
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 20px 10px;
+  padding: 20px 10px 40px 10px;
   width: 100%;
   align-items: center;
+}
+
+.descriptionMain {
+  font-size: 1.8rem;
+  padding: 20px;
+}
+.descriptionMain p {
+  margin-top: 20px;
+  text-align: justify;
 }
 
 .section-image {
@@ -1575,11 +1594,10 @@ img {
   }
 }
 .section__text {
-  max-width: 800px;
-  width: 100%;
+  color: #666060;
   text-align: left;
-  padding: 10px 10px 10px 0px;
-  font-size: 1.8rem;
+  padding: 0px 10px 50px 0px;
+  font-size: 1.6rem;
   text-align: left;
 }
 @media (max-width: 768px) {
@@ -1595,10 +1613,12 @@ img {
 }
 @media (max-width: 414px) {
   .section__text {
-    max-width: 345px;
-    height: 96px;
+    padding: 0;
+    padding-right: 10px;
+    height: 220px;
     overflow: auto;
     text-align: justify;
+    margin-bottom: 30px;
   }
 }
 
@@ -1699,11 +1719,24 @@ img {
   fill: #f39b30;
 }
 
+.html-tegs {
+  background-color: #011D33;
+}
+.html-tegs h2 {
+  margin-left: 13px;
+}
+
+.descriptionSection {
+  display: flex;
+  justify-content: space-between;
+}
+
 .wrapper-html {
   flex-direction: column;
   padding-top: 20px;
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUZkpYhRVMx_dQF8Ac_ngvDec2TSaeZPZ4Uw&usqp=CAU);
-  background-size: cover;
+}
+.wrapper-html h2 {
+  color: #F2F2F6;
 }
 
 #parent {
@@ -1720,8 +1753,9 @@ img {
   width: 220px;
   height: 100px;
   font-size: 1.4rem;
+  font-weight: bold;
   color: #011D33;
-  padding: 5px;
+  padding: 35px;
   margin: 7px;
   position: relative;
 }
@@ -1740,7 +1774,7 @@ img {
   top: 0;
   left: 0;
   z-index: 5;
-  background-color: #F2F2F6;
+  background-color: #6ae2ff;
   width: 200px;
   height: 100px;
   font-size: 1.4rem;
@@ -1758,6 +1792,35 @@ img {
 
 .visible {
   display: block;
+}
+
+#search {
+  margin-left: 13px;
+  max-width: 300px;
+  height: 40px;
+  font-size: 1.4rem;
+}
+
+#list {
+  background-color: aliceblue;
+}
+
+.tags-text {
+  margin-left: 13px;
+  color: #F2F2F6;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+@media (max-width: 526px) {
+  .tags-text {
+    font-size: 1.6rem;
+    text-align: justify;
+  }
+}
+@media (max-width: 414px) {
+  .tags-text {
+    font-size: 1.5rem;
+  }
 }
 
 textarea {
@@ -1967,6 +2030,7 @@ code {
 }
 
 .slider-container {
+  margin-bottom: 25px;
   display: flex;
   grid-gap: 1em;
   overflow: hidden;
@@ -1979,6 +2043,7 @@ code {
   }
 }
 .cards-wrapper {
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-evenly;
   grid-gap: 1em;
@@ -1997,6 +2062,7 @@ code {
 }
 
 .topic-card {
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
@@ -2235,9 +2301,13 @@ code {
   padding: 14px;
   padding-top: 50px;
 }
+.wrapper-workshop h2 {
+  margin-left: 13px;
+}
 
 .workshop-text {
   font-size: 1.8rem;
+  margin-left: 15px;
   margin-bottom: 15px;
 }
 @media (max-width: 526px) {
@@ -2253,6 +2323,7 @@ code {
 }
 
 .workshop-tags {
+  margin-left: 15px;
   margin-bottom: 31px;
 }
 @media (max-width: 768px) {

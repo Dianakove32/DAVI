@@ -2,10 +2,14 @@
     flex-direction: column;
     padding: 14px;
     padding-top: 50px;
+    h2{
+        margin-left: 13px;
+    }
 
 }
 .workshop-text {
     font-size: 1.8rem;
+    margin-left: 15px;
     margin-bottom: 15px;
     @include media-surface{
         font-size: 1.6rem;
@@ -16,6 +20,7 @@
     }
 }
 .workshop-tags {
+    margin-left: 15px;
     margin-bottom: 31px;
     @include media-tablet {
         flex-wrap: wrap;

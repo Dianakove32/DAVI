@@ -2,15 +2,23 @@
     background-color: $color-section;
 }
 .section-card {
-    padding-bottom: 100px;
+
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 20px 10px;
+    padding: 20px 10px 40px 10px;
     width: 100%;
-    //text-align: center;
+     //text-align: center;
     // padding: 50px 10px 120px 10px;
     align-items: center;
+}
+.descriptionMain{
+    font-size: 1.8rem;
+    padding: 20px;
+    p{
+        margin-top: 20px;
+        text-align: justify;
+    }
 }
 .section-image {
     margin: 0px 10px;.wrapper-workshop {
@@ -52,11 +60,13 @@
         }
     }
     &__text {
-        max-width: 800px;
-        width: 100%;
+       // max-width: 800px;
+       // width: 100%;
+       color: rgb(102, 96, 96);
         text-align: left;
-        padding: 10px 10px 10px 0px;
-        font-size: 1.8rem;
+
+        padding: 0px 10px 50px 0px;
+        font-size: 1.6rem;
         text-align: left;
         @include media-tablet {
             max-width: 570px;
@@ -66,10 +76,13 @@
             padding-right: 20px;
         }
         @include media-mobile {
-            max-width: 345px;
-            height: 96px;
+         //   max-width: 345px;
+         padding: 0;
+         padding-right: 10px;
+            height: 220px;
             overflow: auto;
             text-align: justify;
+            margin-bottom: 30px;
         }
     }
 }

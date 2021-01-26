@@ -1,8 +1,22 @@
+.html-tegs{
+//     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUZkpYhRVMx_dQF8Ac_ngvDec2TSaeZPZ4Uw&usqp=CAU);
+// background-size: cover;
+background-color: $main-header-color;
+h2{
+    margin-left: 13px;
+}
+}
+.descriptionSection{
+    display: flex;
+    justify-content: space-between;
+}
 .wrapper-html{
 flex-direction: column;
 padding-top: 20px;
- background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUZkpYhRVMx_dQF8Ac_ngvDec2TSaeZPZ4Uw&usqp=CAU);
- background-size: cover;
+h2{
+    color: $color-light;
+}
+
 }
 #parent {
     padding: 25px 5px;
@@ -18,8 +32,9 @@ padding-top: 20px;
     height: 100px;
  //   border: 1px solid black;
     font-size: 1.4rem;
+    font-weight: bold;
     color:$main-header-color;
-    padding:5px;
+    padding:35px;
     margin: 7px;
     position: relative;
 
@@ -38,7 +53,7 @@ visibility: hidden;
     top: 0;
     left: 0;
     z-index: 5;
-    background-color:$color-light;
+    background-color:#6ae2ff;
     width: 200px;
     height: 100px;
    // border: 1px solid black;
@@ -58,4 +73,26 @@ box-shadow: $shadow;
 .visible {
     display: block;
 }
+#search{
+    margin-left: 13px;
+   max-width: 300px;
+   height: 40px;
+   font-size: 1.4rem;
+}
+#list{
 
+    background-color: aliceblue;
+}
+.tags-text{
+    margin-left: 13px;
+    color:$color-light;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    @include media-surface{
+        font-size: 1.6rem;
+        text-align: justify;
+    }
+    @include media-mobile{
+        font-size: 1.5rem;
+    }
+}

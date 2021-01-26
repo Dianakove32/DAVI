@@ -10,8 +10,8 @@
     background: rgba(0, 0, 0, 0.8);
 
     &_content {
-        border-radius:40px ;
-        background-color: rgb(238, 244, 246);
+        border-radius:10px ;
+        background-color: #ffffff;
         margin: 15% auto;
         padding: 20px;
         border: 1px solid rgb(165, 161, 161);
@@ -66,7 +66,7 @@ color: $color-title;
 
 
 // One more modal script (no JS, just CSS)
-$base-duration: 500ms;
+$base-duration: 600ms;
 
 // Colors
 $color-1: #2c3e50;
@@ -123,15 +123,17 @@ label {
 
 	.close {
 		position: relative;
+		text-align: center;
 		float: right;
-		font-size: 18px;
 		transition: transform $base-duration ease;
 		z-index: 100;
+		line-height: 0.5rem;
 
 		&:hover {
-			color: $color-2;
+			fill: #2ecc71;
 			transform: rotate(540deg);
 		}
+		
 	}
 
 

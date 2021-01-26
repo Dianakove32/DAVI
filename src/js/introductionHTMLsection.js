@@ -62,7 +62,9 @@ for (let i = 0; i < acc.length; i++) {
 
         if (setClasses) {
             this.classList.toggle('activTask');
-            this.nextElementSibling.style.maxHeight = accPanel[i].scrollHeight + "px";
+            if(this.nextElementSibling) {
+                this.nextElementSibling.style.maxHeight = accPanel[i].scrollHeight + "px";
+            }
         }
     });
 }

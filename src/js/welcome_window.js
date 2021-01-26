@@ -105,7 +105,7 @@ function checkUser() {
             setTimeout(() => {
                 localStorage.removeItem('userName');
                 localStorage.removeItem('levelofUser');
-                window.location.reload(false);
+                window.location.reload();
             }, 1000);
 
         });
