@@ -2,7 +2,7 @@
     background-color: $main-header-color;
     position: sticky;
     top: 0;
-    z-index: 90;
+    z-index: 9;
 
     &-wrapper{
         color:$color-light;
@@ -11,6 +11,9 @@
             justify-content: space-between;
             align-items: center;
             flex: 1 0 auto;
+            @include media-tablet {
+                justify-content: flex-end;
+            }
         }
  }
  .header__logo {

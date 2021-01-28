@@ -1,165 +1,140 @@
-.burger-menu {
-    display: none;
+ /* MENU-MOBILE VERSION */
+ .mobile-menu {
+    display:none;
     @include media-tablet {
-        // position: fixed;
-        top: 10px;
-        position: absolute;
-        left: -100vw;
-        width: 100vw;
-        //height: 100vh;
-        background-color: $main-header-color;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        //padding: 20px;
-        &.active {
-            left: 0;
-            transition: all 0.3s ease 0s;
-            overflow-y: auto;
-            top: 85px;
-        }
+        display:block;
     }
-    &_link {
-        color: white;
-        text-decoration: none;
-        font-size: 2.8rem;
-        padding: 20px 40px;
-        border-top: 1px solid #c5dce8;
-        // border-bottom: 1px solid  #c5dce8;
-        &:hover {
-            cursor: pointer;
-            //   font-size: 3.8rem;
-            color: $main-header-color;
-            background-color: #c5dce8;
-            transition: all 0.5s linear 0.05s;
-        }
-    }
+  } 
+  .hidden-menu-ticker {
+      display:none;
+  }
+
+
+ 
+.btn-menu span {
+    display: block;
+    height: 3px;
+    background-color: rgb(42, 159, 218);
+    margin: 9px 0 0;
+    //transition: all .1s linear .23s;
+    position: relative;
+    z-index: 4;
+    transition: background-color 0.4s, linear .23s;
+}
+ 
+.btn-menu span.first {
+    margin-top: 0;
+}
+.btn-menu {
+    //color: rgb(42, 159, 218);
+    //border:1px solid #FFF;
+    padding: 0;
+    position: absolute;
+    top: 26px;
+    right: 25px;
+    cursor: pointer;
+    transition: right .23s;
+    z-index: 3;
+    width: 32px;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+&:hover span{
+    background-color:  rgb(243, 155, 48);
 }
 
-.header__burger {
-    span {
-        @include media-tablet {
-            position: absolute;
-            background-color: #fff;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            top: 9px;
-            z-index: 3;
-            transition: all 0.3s ease 0s;
-        }
-    }
-    @include media-tablet {
-        display: block;
-        position: relative;
-        width: 30px;
-        height: 20px;
-        margin-right: 10px;
-        z-index: 3;
-    }
-    &::before,
-    &::after {
-        @include media-tablet {
-            content: "";
-            background-color: #fff;
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            left: 0;
-            z-index: 3;
-            transition: all 0.3s ease 0s;
-        }
-    }
-    &::before {
-        top: 0;
-    }
-    &::after {
-        bottom: 0;
-    }
-
-    &.active {
-        &::before {
-            transform: rotate(45deg);
-            top: 9px;
-        }
-        &::after {
-            transform: rotate(-45deg);
-            bottom: 9px;
-        }
-         span {
-            transform: scale(0);
-        }
-    }
 }
-
-
-
-body.lock {
+.hidden-menu {
+    //display: block;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    top: 80px;
+    right: 0px;
+    transition: opacity .3s ease-in-out;
+    z-index: 2;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    clear: both;
+    background-color: #011d33;
+}
+ .hidden-menu ul {
+    list-style:none;
+    margin:0px;
+      clear: both;
+  text-align: center;
+  padding-inline-start: 0px;
+}
+.hidden-menu li {
+    padding: 0;
+}
+ 
+.hidden-menu li a {
+  display: block;
+  font-size: 2rem;
+  color:#F2F2F6;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0 5px;
+  padding: 8px;
+  border-bottom: 1px solid rgb(42, 159, 218, 0.1);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.hidden-menu li.active {
+  display: block;
+  font-size: 2.2rem;
+  color:rgb(42, 159, 218);
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0 5px;
+  padding: 8px;
+  border-bottom: 1px solid rgb(247 172 12 / 17%);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.hidden-menu li:last-child a {
+    border-bottom: none;
+}
+.hidden-menu li span:hover {
+    border-left: 1px solid red;
+}
+.hidden-menu li a:hover {
+  color:rgb(42, 159, 218);
+  //transform: scale(1.0);
+}
+.hidden-menu-ticker:checked ~ .btn-menu {
+    right: 25px;
+}
+.hidden-menu-ticker:checked ~ .hidden-menu {
+    right: 0;
+    display: block;
+    padding: 0 10px 10px 20px;
+   visibility: visible;
+    opacity: 1;
     overflow: hidden;
 }
-
-
-// .header__burger {
-//     &::before {
-//         top: 0;
-//     }
-//     &::after {
-//         bottom: 0;
-//     }
-// }
-// .burger-menu_link {
-//     color: white;
-//     text-decoration: none;
-//     font-size: 2.8rem;
-//     padding: 20px 40px;
-//     border-top: 1px solid #c5dce8;
-//     // border-bottom: 1px solid  #c5dce8;
-//     &:hover {
-//         cursor: pointer;
-//         //   font-size: 3.8rem;
-//         color: $main-header-color;
-//         background-color: #c5dce8;
-//         transition: all 0.5s linear 0.05s;
-//     }
-// }
-// .header__burger::before,
-// .header__burger::after {
-//     @include media-tablet {
-//         content: "";
-//         background-color: #fff;
-//         position: absolute;
-//         width: 100%;
-//         height: 2px;
-//         left: 0;
-//         z-index: 3;
-//         transition: all 0.3s ease 0s;
-//     }
-// }
-// .header__burger{
-//     span {
-//     @include media-tablet {
-//         position: absolute;
-//         background-color: #fff;
-//         left: 0;
-//         width: 100%;
-//         height: 2px;
-//         top: 9px;
-//         z-index: 3;
-//         transition: all 0.3s ease 0s;
-//     }
-// }
-// }
-// .header__burger::before {
-//     top: 0;
-// }
-// .header__burger::after {
-//     bottom: 0;
-// }
-
-// .burger-menu.active {
-// left: 0;
-// transition: all 0.3s ease 0s;
-// overflow-y: auto;
-// top: 95px;
-// }
-//active
+.hidden-menu-ticker ~ .btn-menu span.first {
+    top: 0px;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.first {
+    transform: rotate(-135deg);
+    top: 12px;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.second {
+    opacity: 0;
+}
+.hidden-menu-ticker ~ .btn-menu span.third {
+    top: 0px;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.third {
+    transform: rotate(135deg);
+    top: -12px;
+}

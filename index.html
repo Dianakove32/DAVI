@@ -58,16 +58,28 @@
                     <label id="sign-in" for="modal-css" class="button sign-in">Sign in
                     </label>
                 </div>
+                <!-- Mobile menu START -->
+                <div class="mobile-menu">
+                    <input type="checkbox" id="hmt" class="hidden-menu-ticker" />
+                    <label class="btn-menu" for="hmt">
+                        <span class="first"></span>
+                        <span class="second"></span>
+                        <span class="third"></span>
+                    </label>
+                    <nav class="hidden-menu">
+                        <span class="nav_line"></span>
+                        <ul>
+                            <li><a href="#html" class="burger-menu_link">HTML</a>
+                            </li>
+                            <li><a href="#css" class="burger-menu_link">CSS</a></li>
+                            <li><a href="#js" class="burger-menu_link">JS</a></li>
+                            <li><a href="#other" class="burger-menu_link">Other</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Mobile menu END -->
             </div>
-            <div class="header__burger">
-                <span class="burger-menu_lines"></span>
-            </div>
-            <nav class="burger-menu">
-                <a href="#html" class="burger-menu_link">HTML</a>
-                <a href="#css" class="burger-menu_link">CSS</a>
-                <a href="#js" class="burger-menu_link">JS</a>
-                <a href="#other" class="burger-menu_link">Other</a>
-            </nav>
+
         </div>
     </header>
     <input type="checkbox" id="modal-css" />
@@ -173,7 +185,9 @@
 
                 </div>
                 <div class="slider-container">
-                    <div onclick="location.href='css.html'" class="topic-card activeItemanime anim-no-hide">
+                    <div class="cards-wrapper slider-track">
+                    <div onclick="location.href='css.html'"
+                    class="topic-card activeItemanime anim-no-hide">
                         <img src=" ./src/assets/sec2-3.webp" alt="">
                         <h3>Introduction to CSS </h3>
                     </div>
@@ -183,8 +197,8 @@
                     <div onclick="location.href='css.html'" class="topic-card activeItemanime anim-no-hide"><img src=" ./src/assets/sec2-3.webp" alt="">
                         <h3>Also this</h3>
                     </div>
-
-                </div>
+ </div>
+</div>
                 <button class="button" onclick="location.href='css.html'">Learn more</button>
             </div>
         </div>
@@ -211,6 +225,7 @@
 </div></div>
                 </div>
                 <div class="slider-container">
+                    <div class="cards-wrapper slider-track">
                     <div onclick="location.href='js.html'" class="topic-card activeItemanime anim-no-hide">
                         <img src=" ./src/assets/sec3-1.jpg" alt="">
                         <h3>JavaScript Notes</h3>
@@ -218,10 +233,10 @@
                     <div onclick="location.href='js.html'" class="topic-card activeItemanime anim-no-hide"> <img src=" ./src/assets/sec3-2.jpg" alt="">
                         <h3>Workshop</h3>
                     </div>
-                    <div onclick="location.href='js.html'" class="topic-card activeItemanime anim-no-hide"><img src=" ./src/assets/sec3-3.png" alt="">
+                    <div onclick="location.href='js.html'" class="topic-card activeItemanime anim-no-hide"><img src=" ./src/assets/sec1-2.png" alt="">
                         <h3>Also this</h3>
                     </div>
-
+                </div>
                 </div>
 <button class="button hover__light" onclick="location.href='js.html'">Learn more</button>
             </div>
@@ -231,10 +246,10 @@
         <div class="wrapper">
             <div class="section-card">
                 <div class="section__img">
-                    <div class="descriptionSection">
-                        <h2 class="section-title">Other</h2>
-
-                        <p class="section__text activeItemanime">
+                    <div class="descriptionMain">
+                        <h2 class="section-title">GIT</h2>
+                        <div class="intro-text">
+                        <p  >
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, rem explicabo architecto
                             debitis
                             magnam quaerat.
@@ -244,11 +259,12 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, Lorem ipsum dolor sit amet
                             consectetur adipisicing elit. Maxime,
                         </p>
+
                     </div>
-                    <div class="section-image activeItemanime"><img src=" ./src/assets/html-logo.png" alt=""></div>
+                     </div>
                 </div>
                 <div class="slider-container ">
-
+                    <div class="cards-wrapper slider-track">
                     <div class="topic-card activeItemanime anim-no-hide"> <img src=" ./src/assets/sect1-1.jpg" alt="">
                         <h3>And this</h3>
                     </div>
@@ -259,7 +275,8 @@
                         <h3>Even this</h3>
                     </div>
                 </div>
-                <button class="button">Learn more</button>
+                </div>
+                <button class="button hover__light" onclick="location.href='other.html'">Learn more</button>
             </div>
         </div>
     </section>
@@ -297,7 +314,7 @@
                 HyperText Markup Language, расширенный язык разметки гипертекста), похожий на HTML, но различающийся с
                 ним по синтаксису. Чтобы браузер «не путался» и понимал, согласно какому стандарту отображать
                 веб-страницу и необходимо в первой строке кода задавать
-                <!DOCTYPE>.
+                !DOCTYPE.
 
                 Существует несколько видов !DOCTYPE , они различаются в зависимости от версии языка, на которого
                 ориентированы.

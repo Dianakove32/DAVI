@@ -1,34 +1,33 @@
 .slider-container {
   margin-bottom: 25px;
-    display: flex;
-    grid-gap: 1em;
-    overflow: hidden;
-    max-width: 100%;
-    flex-wrap: wrap;
-    //align-items: center;
-    @include media-tablet {
-     // height: 369px;
-     overflow: auto;
-    }
-    @include media-mobile {
-   //   height: 369px;
-    }
-
+  display: flex;
+  grid-gap: 1em;
+  //  overflow: hidden;
+  max-width: 100%;
+  flex-wrap: wrap;
+  //align-items: center;
+  @include media-tablet {
+    // height: 369px;
+    overflow: auto;
+  }
+  @include media-mobile {
+    //   height: 369px;
+  }
 }
 
 .cards-wrapper {
   margin-bottom: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    grid-gap: 1em;
-    transition: all 1s ease-in-out;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  grid-gap: 1em;
+  transition: all 1s ease-in-out;
+  flex-wrap: wrap;
   @include media-tablet {
-    height: 369px;
-   //overflow: auto;
+    //  height: 369px;
+    //overflow: auto;
   }
   @include media-mobile {
-    height: 369px;
+    //  height: 369px;
   }
 }
 .topic-card {
@@ -37,32 +36,35 @@
   flex-direction: column;
   background-color: #ffffff;
   border-radius: 6%;
- width: 315px;
+  width: 315px;
   //height: 342px;
   box-shadow: $shadow;
   margin: 9px;
   box-shadow: $shadow;
   transform: scale(0);
   @extend %transitionAnime;
-  &.activeAnime{
+  &.activeAnime {
     transform: scale(1);
   }
   > a {
     display: inline-block;
   }
   > img {
-   width: 100%;
- //   height: 245px;
-    margin: auto 0;
-}
-h3{
-  text-align: center;
-  color: $color-title;
-}
-&:hover{
-  transform: scale(1.03);
-  cursor: pointer;
-}
+    object-fit: fill;
+    @extend %img-cards;
+  }
+  h3 {
+    text-align: center;
+    color: $color-title;
+    margin: 15px 0px;
+  }
+  &:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+  @include media-mobile{
+    max-width: 270px;
+  }
 }
 
 .img1 {

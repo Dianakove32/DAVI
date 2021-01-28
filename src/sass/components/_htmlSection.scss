@@ -9,6 +9,10 @@ h2{
 .descriptionSection{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    @include media-laptop{
+        flex-direction: column-reverse;
+    }
 }
 .wrapper-html{
 flex-direction: column;
@@ -86,13 +90,15 @@ box-shadow: $shadow;
 .tags-text{
     margin-left: 13px;
     color:$color-light;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     margin-bottom: 15px;
+    margin-top: 15px;
+ margin-right: 10px;
     @include media-surface{
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         text-align: justify;
     }
     @include media-mobile{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }

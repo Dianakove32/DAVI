@@ -1,13 +1,4 @@
 import welcome from './welcome_window.js'
-//burger
-const btn = document.querySelector('.header__burger');
-const menuBur = document.querySelector('.burger-menu')
-btn.addEventListener('click', function () {
-  btn.classList.toggle('active');
-  menuBur.classList.toggle('active');
-  document.body.classList.toggle('lock')
-})
-
 //modal
 let linkModal = document.querySelectorAll("*[data-modal-btn]")
 for (let i = 0; i < linkModal.length; i++) {
@@ -24,6 +15,7 @@ for (let i = 0; i < linkModal.length; i++) {
   })
 }
 window.onclick = function (e) {
+
   if (e.target.hasAttribute('data-modal-window')) {
     let modals = document.querySelectorAll("*[data-modal-window]")
     for (let i = 0; i < modals.length; i++)
@@ -60,6 +52,9 @@ if (buttonsWrapper !== null) {
 //Scroll 
 const headerWrapperHeight = document.querySelector('.header-wrapper').offsetHeight;
 const anchors = document.querySelectorAll('.navigation a');
+const particlesBlockHeight = document.querySelector('#particles-js').offsetHeight; // высота блока с аницмацией
+const currentPosition = window.scrollY + headerWrapperHeight; // + высота фиксированного меню (можно указать offsetHeight меню в шапке)
+
 //smoothScroll.onClick
 anchors.forEach(anchor => {
   anchor.addEventListener('click', (event) => {
@@ -74,20 +69,14 @@ anchors.forEach(anchor => {
     })
   })
 })
-//Changing the active point in menu while scrolling
 
+//Changing the active point in menu while scrolling
 document.addEventListener('scroll', onScroll);
 function onScroll(event) {
-  const currentPosition = window.scrollY + headerWrapperHeight; // + высота фиксированного меню (можно указать offsetHeight меню в шапке)
-  /* if (currentPosition > 80) {
-     document.querySelector('.header').classList.add('op');
-   } else {
-     document.querySelector('.header').classList.remove('op');
-   } */
+
   const sect = document.querySelectorAll('section');
   // const link = document.querySelectorAll('.navigation a');
   sect.forEach((el) => {
-    // console.log(el.offsetTop);
     if (el.offsetTop <= currentPosition && el.offsetTop + el.offsetHeight > currentPosition) {
       anchors.forEach((a) => {
         a.classList.remove('active');
@@ -134,15 +123,27 @@ function offset(el) {
   return { top: rect.top + scrollTop, left: rect.left + screenLeft }
 }
 
+
+
+// Живая линия для мобильного меню
 document.addEventListener('DOMContentLoaded', () => {
+  // mobile menu positioning fix
+  /*   if (particlesBlockHeight > window.scrollY) { // если страницу прокрутили меньше, чем на высоту блока с частицами
+      document.querySelector('.hidden-menu').style.top = `${(particlesBlockHeight + headerWrapperHeight) - window.scrollY}px`;
+    } else {
+      document.querySelector('.hidden-menu').style.top = "80px";
+    }
+   */
 
   let navline = document.querySelector('.nav_line');
   let navItem = document.querySelectorAll('.navigation__link');
-  navline.style.width = `${navItem[0].offsetWidth}px`;
+  let headerNavigationBlock = document.querySelector('.header__navigation');
+  //navline.style.width = `${navItem[0].offsetWidth}px`;
   // navItem.forEach(el => {
   for (let i = 0; i < navItem.length; i++) {
 
     navItem[i].addEventListener('mouseenter', (e) => {
+
       navline.style.display = `inline`;
       navline.style.width = `${e.currentTarget.offsetWidth}px`;
       navline.style.left = `${e.currentTarget.offsetLeft}px`;
@@ -156,8 +157,18 @@ document.addEventListener('DOMContentLoaded', () => {
         navline.style.backgroundColor = `blue`;
       }
     });
-    //еще неплоход добавить событие на mouseleave, чтобы подчеркивание возвращалось к активному элементу
   }
+  //еще неплоход добавить событие на mouseleave, чтобы подчеркивание возвращалось к активному элементу
 
-  // })
+  /*   let navItemActive = document.querySelector('.active');
+    if (navItemActive !== undefined) {
+  
+      headerNavigationBlock.addEventListener('mouseleave', (e) => {
+        navline.style.display = `inline`;
+        navline.style.width = `${navItemActive.offsetWidth}px`;
+        navline.style.left = `${navItemActive.offsetLeft}px`;
+      })
+    } */
+
+
 })

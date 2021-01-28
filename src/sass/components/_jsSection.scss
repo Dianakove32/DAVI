@@ -92,12 +92,12 @@
     color: whitesmoke;
   }
   
-input:checked + label {
+.source input:checked + label {
     font-weight: bold;
     background: #212121;
     color: whitesmoke;
   }
-  input:active + label:active {
+  .source input:active + label:active {
     font-weight: bold;
     box-shadow: 0 2px 0 #b6c6ce;
     transform: translateY(3px);

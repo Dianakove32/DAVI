@@ -1,0 +1,29 @@
+.didYouKnow-card{
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .didYouKnow-choice{
+        display: flex;
+
+        .didYouKnow-button{
+            margin: 0px 20px;
+            padding: 0px 20px;
+            font-size: 2rem;
+            text-decoration: none;
+            color: white;
+            background-color: $color-title;
+
+            &:hover {
+                background-color: grey;
+            }
+        }
+
+        .didYouKnow-phrase {
+            word-wrap: wrap;
+        }
+    }
+}

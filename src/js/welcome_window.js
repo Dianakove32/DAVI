@@ -4,7 +4,7 @@ const modalFooter = document.querySelector('.modal-footer');
 
 function createEl(type, identifier = '', classes = [], innerText = '') {
     const resultElement = document.createElement(type);
-    if (identifier !== undefined) resultElement.id = identifier;
+    if (identifier !== '') resultElement.id = identifier;
 
     if (classes.length > 0) {
         for (let cl of classes) {
@@ -91,9 +91,7 @@ function checkUser() {
         document.getElementById("sign-in").style.display = "none";
         modalHeader.innerHTML = `Welcome, <span>${localStorage.getItem('userName')}</span>`;
         modalContent.innerHTML = "";
-        modalContent.insertAdjacentHTML('afterbegin', `<h3 class="welcome-user-level"> Your level is ${localStorage.getItem('levelOfUser')}</h3><h3>Check this quote:</h3>
-        <p class="welcome-api"></p>
-        <h3>Don't worry, be happy!</h3>
+        modalContent.insertAdjacentHTML('afterbegin', `<h3 class="welcome-user-level"> Your level is <span>${localStorage.getItem('levelOfUser')}</span></h3><h3>Check this quote: <i class="welcome-api"></i></h3>
         <p>We do not collect or use the information you provided here.</p>
         <p>All your personal data is stored in the Local Storage of your browser of your local computer.</p>
             `);

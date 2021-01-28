@@ -64,27 +64,31 @@
 
 }
 .nav-page{
+    text-align: center;
+    padding-left: 40px;
  @include media-tablet{
     display: flex;
     flex-direction: column;
     text-align: center;
     }
-    font-size: 2rem;
+    font-size: 1.4rem;
 }
 .user-area{
-    margin-right: 28px;
+    margin-right: 25px;
     flex: 0 0 auto;
     width: 100px;
     text-align: right;
+    @include media-tablet {
+        margin-right: 70px;
+    }
 }
 .user-area svg {
-    height: 36px;
-    width: 36px;
+    height: 46px;
+    width: 46px;
     vertical-align: sub;
-
-    margin-top: 0.4rem;
-
+    margin-top: 6px;
 }
+
 .user-area svg:hover {
     cursor: pointer;
 }

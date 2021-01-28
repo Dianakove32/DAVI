@@ -1,0 +1,71 @@
+.game-quiz {
+    
+    .quiz-start-button{
+        text-align: center;
+        margin: 30px;
+        padding: 10px;
+        border: 1px solid $main-header-color;
+        box-shadow: rgb(182, 198, 206) 0px 5px 0px;;
+
+        &:hover{
+            cursor: pointer;
+            color: grey;
+            border:  1px solid grey;
+            box-shadow: 0;
+        }
+    }
+
+    .quiz-start-score {
+        font-size: 1.8rem;
+    }
+
+    .quiz{
+        display: none;
+        text-align: center;
+        .quiz-choices {
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+    
+            .answer {
+                min-width: 80px;
+                padding: 20px;
+                margin: 0px 30px;
+                font-size: 2rem;
+                border:  2px solid $main-header-color;
+                box-shadow: 1px 1px $shadow;
+    
+                &:hover{
+                    cursor: pointer;
+                    color: grey;
+                    border: 2px solid grey;
+                    box-shadow: 0;
+                }
+            }
+        }
+
+        .quiz-timer {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+
+            .quiz-timer-progress{
+                margin-left: 20px;
+                border: 2px solid $main-header-color;
+                height: 30px;
+                width: 150px;
+                padding: 0;
+
+                .quiz-timer-currentProgress{
+                    padding-bottom: 5px;
+                    background-color: #2a9fda;
+                    height: 26px;
+                    width: 0px;
+                }
+            }
+        }
+    }
+   
+}

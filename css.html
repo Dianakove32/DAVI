@@ -12,23 +12,32 @@
 <body>
     <header class="header">
         <div class="wrapper  header-wrapper">
-            <div class="header__logo">
+            <!-- <div class="header__logo">
                 <a href="index.html#logo1 "> <img class="logo_img" src="src/assets/DAVI.png" alt="logo"></a>
+            </div> -->
+            <div class="mobile-menu">
+                <input type="checkbox" id="hmt" class="hidden-menu-ticker" />
+                <label class="btn-menu" for="hmt">
+                    <span class="first"></span>
+                    <span class="second"></span>
+                    <span class="third"></span>
+                </label>
+                <nav class="hidden-menu">
+                    <span class="nav_line"></span>
+                    <ul>
+                        <li><a href="index.html#html" class="burger-menu_link">main</a>
+                        </li>
+                        <li><a href="#introduction" class="burger-menu_link">Introduction </a></li>
+                        <li><a href="#workshop" class="burger-menu_link">Workshop</a></li>
+                        <li><a href="#tegs" class="burger-menu_link">Other</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="header__burger">
-                <span class="burger-menu_lines"></span>
-            </div>
-            <nav class="burger-menu">
-                <a href="index.html#html" class="burger-menu_link">main</a>
-                <a href="#introduction" class="burger-menu_link">Introduction to HTM</a>
-                <a href="#workshop" class="burger-menu_link">Workshop</a>
-                <a href="index.html" class="burger-menu_link">Other</a>
-            </nav>
             <div class="nav">
                  <nav class="header__navigation">
                 <ul class="nav-page">
                     <a class="navigation__link active" href="index.html#html">Main</a>
-                    <a class="navigation__link" href="#introduction">Introduction to HTM</a>
+                    <a class="navigation__link" href="#introduction">Introduction</a>
                     <a class="navigation__link" href="#workshop">Workshop</a>
                     <a class="navigation__link" href="index.html#other">Other</a>
                 </ul>

@@ -16,9 +16,11 @@
     font-size: 1.8rem;
     padding: 20px;
     p{
-        margin-top: 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
         text-align: justify;
     }
+
 }
 .section-image {
     margin: 0px 10px;.wrapper-workshop {
@@ -26,6 +28,9 @@
     }
     .workshop-text {
         font-size: 1.8rem;
+        @include media-laptop{
+            font-size: 1.6rem;
+        }
     }
     .workshop-tags {
         margin-bottom: 31px;
@@ -43,8 +48,10 @@
     }
     > img {
         width: 150px;
-
-        @include media-mobile {
+        @include media-laptop {
+            margin: 15px 0px;
+        }
+        @include media-surface {
             display: none;
         }
     }
@@ -65,18 +72,20 @@
        color: rgb(102, 96, 96);
         text-align: left;
 
-        padding: 0px 10px 50px 0px;
+        padding: 0px 10px 50px 10px;
         font-size: 1.6rem;
         text-align: left;
         @include media-tablet {
             max-width: 570px;
             text-align: justify;
+            padding-top:10px ;
+
         }
         @include media-surface {
             padding-right: 20px;
         }
         @include media-mobile {
-         //   max-width: 345px;
+        display: none;
          padding: 0;
          padding-right: 10px;
             height: 220px;
@@ -93,33 +102,3 @@
     }
 }
 
-// .section__img {
-//     display: flex;
-//     align-items: center;
-//     padding: 10px;
-//     @include media-surface {
-//         flex-wrap: wrap;
-//         flex-direction: column-reverse;
-//     }
-// }
-// .section__text {
-//     max-width: 800px;
-//     width: 100%;
-//     text-align: left;
-//     padding: 10px 10px 10px 0px;
-//     font-size: 1.8rem;
-//     text-align: left;
-//     @include media-tablet {
-//         max-width: 570px;
-//         text-align: justify;
-//     }
-//     @include media-surface {
-//         padding-right: 20px;
-//     }
-//     @include media-mobile {
-//         max-width: 345px;
-//         height: 96px;
-//         overflow: hidden;
-//         text-align: justify;
-//     }
-// }

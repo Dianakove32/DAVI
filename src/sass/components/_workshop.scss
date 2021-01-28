@@ -4,6 +4,7 @@
     padding-top: 50px;
     h2{
         margin-left: 13px;
+        margin-bottom: 10px;
     }
 
 }
@@ -71,7 +72,9 @@
                 font-size: 2.5 em;
             }
 
-
+            @include media-surface{
+                font-size: 1.4rem;
+            }
         }
 
         .contentTask {
@@ -90,6 +93,7 @@
             width:200px ;
                         }
         }
+
 
     }
 }

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <!-- <link rel="stylesheet" href="./src/sass/layouts/_news.scss"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" href="./src/assets/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>news</title>
+</head>
+
+<body>
+    <header class="header">
+        <!-- Прописана часть кода всплывающих карточек -->
+
+        <div class="wrapper  header-wrapper">
+            <div class="header__logo">
+                <a href="#logo1 "> <img class="logo_img" src="./src/assets/DAVI.png" alt="logo"></a>
+            </div>
+            <div class="header__burger">
+
+                <span class="burger-menu_lines"></span>
+            </div>
+            <nav class="burger-menu">
+                <a href="index.html#html" class="burger-menu_link">HTML</a>
+                <a href="index.html#css" class="burger-menu_link">CSS</a>
+                <a href="index.html#js" class="burger-menu_link">JS</a>
+                <a href="index.html#other" class="burger-menu_link">Other</a>
+            </nav>
+
+            <nav class="header__navigation">
+                <span class="nav_line"></span>
+                <ul class="navigation">
+                    <a class="navigation__link" href="index.html#html">HTML</a>
+                    <a class="navigation__link" href="index.html#css">CSS</a>
+                    <a class="navigation__link" href="index.html#js">JS</a>
+                    <a class="navigation__link" href="index.html#other">Other</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<section class="contactUs">
+    <div class="wrapper contactUs">
+        <div class=" contact">
+<h3>Let's talk! But you first!</h3>
+<div class="container_contact">
+    <form action="/action_page.php">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+  
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="australia">Belarus</option>
+        <option value="canada">France</option>
+        <option value="usa">USA</option>
+      </select>
+  
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+
+        </div>
+        </div>
+</section>
+
+<footer class="footer">
+    <div class="wrapper">
+        <ul class="footer__navigation active">
+            <li class="footer-link">
+                <a href="aboutUs.html">About Us</a>
+            </li>
+            <li class="footer-link">
+                <a href="news.html">News</a>
+            </li>
+            <li class="footer-link">
+                <a href="contactUs.html">Contact Us</a>
+            </li>
+
+        </ul>
+        <div class="flex-container_image">
+            <img class="facebook" src="../src/assets/facebook.svg" alt="Facebook-logo" />
+            <img class="icon instagram" src="../src/assets/Instagram.svg" alt="Instagram-logo" />
+            <img class="icon twitter" src="../src/assets/twitter.svg" alt="Twitter-logo" />
+        </div>
+        <p class=footer_paragraph> 2020 Minsk (c) All Rights reseved Wild code school</p>
+</footer>
+<div data-modal-window="my_modal1" class="modal">
+    <div class="modal_content">
+        <div class="modal_inner">
+            <div class="modal_title"> <code>Элемент !DOCTYPE</code></div>
+            <div class="close_modal_window">&times;</div>
+        </div>
+        <p>
+            Элемент !DOCTYPE предназначен для указания типа текущего документа — DTD (document type definition,
+            описание типа документа). Это необходимо, чтобы браузер понимал, как следует интерпретировать текущую
+            веб-страницу, поскольку HTML существует в нескольких версиях, кроме того, имеется XHTML (EXtensible
+            HyperText Markup Language, расширенный язык разметки гипертекста), похожий на HTML, но различающийся с
+            ним по синтаксису. Чтобы браузер «не путался» и понимал, согласно какому стандарту отображать
+            веб-страницу и необходимо в первой строке кода задавать
+            <!DOCTYPE>.
+
+            Существует несколько видов !DOCTYPE , они различаются в зависимости от версии языка, на которого
+            ориентированы.
+
+
+        </p>
+    </div>
+</div>
+<div data-modal-window="my_modal2" class="modal">
+    <div class="modal_content">
+        <div class="modal_inner">
+            <div class="modal_title"> Тег <span> &lt;!-- --&gt </span></div>
+            <div class="close_modal_window">&times;</div>
+        </div>
+        <p>
+            Тег <span> &lt;!-- --&gt </span> добавляет комментарий в код документа. Текст комментария не
+            отображается на странице. Разрешается внутрь комментария добавлять другие теги, вложенные комментарии
+            (когда один комментарий расположен внутри другого) недопустимы.
+
+        </p>
+    </div>
+</div>
+<div data-modal-window="my_modal3" class="modal">
+    <div class="modal_content">
+        <div class="modal_inner">
+            <div class="modal_title"> Simplest markup</div>
+            <div class="close_modal_window">&times;</div>
+        </div>
+        <p>
+
+        <pre>&lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                      &lt;head&gt;
+                        &lt;meta charset=&quot;utf-8&quot;&gt;
+                        &lt;title&gt;Формула этанола&lt;/title&gt;
+                      &lt;/head&gt;
+                      &lt;body&gt;
+                        &lt;p&gt;Формула этанола
+                        С&lt;sub&gt;2&lt;/sub&gt;Н&lt;sub&gt;5&lt;/sub&gt;ОН&lt;/p&gt;
+                      &lt;/body&gt;
+                    &lt;/html&gt;</pre>
+
+
+
+
+        </p>
+    </div>
+</div>
+<script src="./src/js/index.js"></script>
+</body>
+
+</html>
+
+
+
