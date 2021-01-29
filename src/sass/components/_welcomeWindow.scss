@@ -36,32 +36,15 @@
 
         }
 
-        .smash {
+        .welcome-statistic{
             display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            height: 70%;
-
-            .welcome-smash1 {
-                height: 180px; width: 220px;
-                background-image: url('./src/assets/smeharik1.jpg');
-                background-size: cover;
+            flex-wrap: wrap;
+            justify-content: center;
+            div {
+                padding: 10px;
             }
-            .welcome-smash1:hover {
-                cursor: pointer;
-                border: 5px solid black;
-                opacity: 0.8;
-            }
-            .welcome-smash2 {
-                width: 220px;
-                height: 180px;
-                background-image: url('./src/assets/smeh2.jpg');
-                background-size: cover;
-            }
-            .welcome-smash2:hover {
-                cursor: pointer;
-                border: 5px solid black;
-                opacity: 0.8;
+            span {
+                color: #E74C3C;
             }
         }
     }

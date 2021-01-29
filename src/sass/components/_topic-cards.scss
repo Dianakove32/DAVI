@@ -1,20 +1,20 @@
 .slider-container {
   margin-bottom: 25px;
-  display: flex;
-  grid-gap: 1em;
-  //  overflow: hidden;
-  max-width: 100%;
-  flex-wrap: wrap;
-  //align-items: center;
-  @include media-tablet {
-    // height: 369px;
-    overflow: auto;
+    display: flex;
+    grid-gap: 1em;
+    overflow: hidden;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    //align-items: center;
+    @include media-tablet {
+     // height: 369px;
+     overflow: auto;
+    }
+    @include media-mobile {
+   //   height: 369px;
+    }
   }
-  @include media-mobile {
-    //   height: 369px;
-  }
-}
-
 .cards-wrapper {
   margin-bottom: 20px;
   display: flex;
@@ -36,7 +36,8 @@
   flex-direction: column;
   background-color: #ffffff;
   border-radius: 6%;
-  width: 315px;
+ min-width: 280px;
+ max-width: 350px;
   //height: 342px;
   box-shadow: $shadow;
   margin: 9px;

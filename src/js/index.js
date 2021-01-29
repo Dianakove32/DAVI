@@ -1,4 +1,3 @@
-import welcome from './welcome_window.js'
 //modal
 let linkModal = document.querySelectorAll("*[data-modal-btn]")
 for (let i = 0; i < linkModal.length; i++) {

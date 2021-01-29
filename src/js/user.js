@@ -3,12 +3,12 @@ function user () {
     const userPageDate = new Date();
 
     function pageProgress(){
+        localStorage.setItem(`${userPageProgress}Date`, userPageDate);
         if(localStorage.getItem(`${userPageProgress}Page`) === null){
             localStorage.setItem(`${userPageProgress}Page`, 1);
         }
         else{
             localStorage[`${userPageProgress}Page`] = parseInt(localStorage[`${userPageProgress}Page`]) + 1;
-            localStorage.setItem(`${userPageProgress}Date`, userPageDate);
         }
     }
 
