@@ -106,7 +106,7 @@
 .hidden-menu li span:hover {
     border-left: 1px solid red;
 }
-.hidden-menu li a:hover {
+.hidden-menu li a:hover, .mobile-navigation li .active {
   color:rgb(42, 159, 218);
   //transform: scale(1.0);
 }

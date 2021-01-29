@@ -6,11 +6,42 @@
     list-style-type: decimal;
     margin-left: 70px;
 }
-.css-pict{
 
-}
 .css-pict-img{
   height: auto;
  width: 100%;
  object-fit: scale-down;
 }
+
+.usefull_links-wrapper{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+ .usefull_links {
+
+   background: $color-section;
+  .wrapper{
+    display: block;
+    padding-top: 30px;
+  }
+ }
+ .usefull_links-item{
+   font-size: 1.6rem;
+   text-decoration: none;
+
+       &:hover{
+    text-decoration: underline;
+
+
+   }
+
+
+ }
+ .usefull_links-container{
+   padding-top: 15px;
+  font-size: 2rem;
+  margin-left: 20px;
+  padding-bottom: 30px;
+ }

@@ -1,0 +1,27 @@
+[
+    {
+        "question": "HTML?",
+        "answers": ["commit", "add", "init", "push"],
+        "correctAnswer": "commit"
+    },
+    {
+        "question": "HTML second?",
+        "answers": ["VsCode", "Git", "Ubuntu", "JS"],
+        "correctAnswer": "Git"
+    },
+    {
+        "question": "HTML third?",
+        "answers": ["Yes", "No", "git?", "10"],
+        "correctAnswer": "No"
+    },
+    {
+        "question": "HTML four",
+        "answers": ["commit", "log", "hist", "branch"],
+        "correctAnswer": "log"
+    },
+    {
+        "question": "what command show you the list of branches",
+        "answers": ["commit", "branch", "list", "list branch"],
+        "correctAnswer": "branch"
+    }
+]

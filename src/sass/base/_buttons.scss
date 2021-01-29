@@ -35,6 +35,7 @@ label.sign-in {
   letter-spacing: 0.15rem;
   font-weight: 400;
   transition: background-color 0.3s ease-in, color 0.3s ease-in;
+  cursor: pointer;
 
   &:active{
     box-shadow: 0 2px 0 #b6c6ce;

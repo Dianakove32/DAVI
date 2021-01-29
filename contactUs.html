@@ -47,27 +47,27 @@
     </header>
 
 <section class="contactUs">
-    <div class="wrapper contactUs">
+    <div class="wrapper ">
         <div class=" contact">
 <h3>Let's talk! But you first!</h3>
 <div class="container_contact">
     <form action="/action_page.php">
       <label for="fname">First Name</label>
       <input type="text" id="fname" name="firstname" placeholder="Your name..">
-  
+
       <label for="lname">Last Name</label>
       <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-  
+
       <label for="country">Country</label>
       <select id="country" name="country">
         <option value="australia">Belarus</option>
         <option value="canada">France</option>
         <option value="usa">USA</option>
       </select>
-  
+
       <label for="subject">Subject</label>
       <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-  
+
       <input type="submit" value="Submit">
     </form>
   </div>
@@ -78,8 +78,10 @@
 </section>
 
 <footer class="footer">
-    <div class="wrapper">
-        <ul class="footer__navigation active">
+    <div class="wrapper footer-wrapper">
+        <div class="footer_content">
+
+        <ul class="footer__navigation">
             <li class="footer-link">
                 <a href="aboutUs.html">About Us</a>
             </li>
@@ -89,77 +91,84 @@
             <li class="footer-link">
                 <a href="contactUs.html">Contact Us</a>
             </li>
-
         </ul>
-        <div class="flex-container_image">
-            <img class="facebook" src="../src/assets/facebook.svg" alt="Facebook-logo" />
-            <img class="icon instagram" src="../src/assets/Instagram.svg" alt="Instagram-logo" />
-            <img class="icon twitter" src="../src/assets/twitter.svg" alt="Twitter-logo" />
+
+        <div class="footer-photo">
+
+            <div class="diana foot-im">
+                <img class="circle" src="./src/assets/dianaK_crop.jpg" alt="smart girl" width="70" />
+                <p>Diana Kovaleva</p>
+                <div class="icon_footer">
+                    <div class="gitHub">
+                        <a href="https://github.com/Dianakove32">
+                    <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                </a>
+                    </div>
+                <div class="linked"><a href="https://www.linkedin.com/in/diana-kovaleva-5347051aa/">
+                    <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
+                </a>
+
+                </div>
+                </div>
+            </div>
+
+            <div class="artur foot-im">
+                <img class="circle" src="./src/assets/arturZ_crop.jpg" alt="business man" width="70" />
+                <p>Artur Zaleuski</p>
+                <div class="icon_footer artur">
+                    <a href="https://github.com/Zalart">
+                        <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/zalart">
+                        <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="vadim foot-im"> <img class="circle" src="./src/assets/vadim_crop.jpg" alt="business man" width="70" />
+                <p>Vadim Karulin</p>
+                <div class="icon_footer vadim">
+                    <a href="https://github.com/Zolotou">
+                        <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                    </a>
+                    <a href="#">
+                        <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="irina foot-im"> <img class="circle" src="./src/assets/irina_crop.jpg" alt="business man" width="70" />
+                <p>Irina Mychko</p>
+                <div class="icon_footer irina">
+                    <a href="https://github.com/Irina-Riska">
+                        <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/ira-mytchko/">
+                        <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
+                    </a>
+                </div>
+            </div>
+
+
         </div>
-        <p class=footer_paragraph> 2020 Minsk (c) All Rights reseved Wild code school</p>
+    </div>
+
+        <div class="rights">
+            <p class=footer_paragraph> 2020 Minsk (c) All Rights reseved Wild code school</p>
+        </div>
+
+
+
+    </div>
+
 </footer>
-<div data-modal-window="my_modal1" class="modal">
-    <div class="modal_content">
-        <div class="modal_inner">
-            <div class="modal_title"> <code>Элемент !DOCTYPE</code></div>
-            <div class="close_modal_window">&times;</div>
-        </div>
-        <p>
-            Элемент !DOCTYPE предназначен для указания типа текущего документа — DTD (document type definition,
-            описание типа документа). Это необходимо, чтобы браузер понимал, как следует интерпретировать текущую
-            веб-страницу, поскольку HTML существует в нескольких версиях, кроме того, имеется XHTML (EXtensible
-            HyperText Markup Language, расширенный язык разметки гипертекста), похожий на HTML, но различающийся с
-            ним по синтаксису. Чтобы браузер «не путался» и понимал, согласно какому стандарту отображать
-            веб-страницу и необходимо в первой строке кода задавать
-            <!DOCTYPE>.
-
-            Существует несколько видов !DOCTYPE , они различаются в зависимости от версии языка, на которого
-            ориентированы.
-
-
-        </p>
-    </div>
-</div>
-<div data-modal-window="my_modal2" class="modal">
-    <div class="modal_content">
-        <div class="modal_inner">
-            <div class="modal_title"> Тег <span> &lt;!-- --&gt </span></div>
-            <div class="close_modal_window">&times;</div>
-        </div>
-        <p>
-            Тег <span> &lt;!-- --&gt </span> добавляет комментарий в код документа. Текст комментария не
-            отображается на странице. Разрешается внутрь комментария добавлять другие теги, вложенные комментарии
-            (когда один комментарий расположен внутри другого) недопустимы.
-
-        </p>
-    </div>
-</div>
-<div data-modal-window="my_modal3" class="modal">
-    <div class="modal_content">
-        <div class="modal_inner">
-            <div class="modal_title"> Simplest markup</div>
-            <div class="close_modal_window">&times;</div>
-        </div>
-        <p>
-
-        <pre>&lt;!DOCTYPE html&gt;
-                    &lt;html&gt;
-                      &lt;head&gt;
-                        &lt;meta charset=&quot;utf-8&quot;&gt;
-                        &lt;title&gt;Формула этанола&lt;/title&gt;
-                      &lt;/head&gt;
-                      &lt;body&gt;
-                        &lt;p&gt;Формула этанола
-                        С&lt;sub&gt;2&lt;/sub&gt;Н&lt;sub&gt;5&lt;/sub&gt;ОН&lt;/p&gt;
-                      &lt;/body&gt;
-                    &lt;/html&gt;</pre>
 
 
 
-
-        </p>
-    </div>
-</div>
+<script src="./src/js/contactUs.js"></script>
 <script src="./src/js/index.js"></script>
 </body>
 

@@ -39,18 +39,21 @@
                     </ul>
                 </nav>
             </div>
-            <nav class="header__navigation">
-                <ul class="nav-page">
-                    <a class="navigation__link " href="index.html#html">Main</a>
-                    <a class="navigation__link" href="introduction">Introduction </a>
-                    <!-- <a class="navigation__link active" href="index.html#js">JS</a> -->
-                    <a class="navigation__link" href="quiz">Quiz</a>
-                </ul>
-            </nav>
+
         </div>
     </header>
-    <section class="didYouKnow-section">
-        <div class="wrapper">
+    <div>
+        <nav >
+            <ul class="nav-page">
+                <a class="navigation__link-page " href="index.html#html">Main</a>
+                <a class="navigation__link-page" href="introduction">Introduction </a>
+                <!-- <a class="navigation__link active" href="index.html#js">JS</a> -->
+                <a class="navigation__link-page" href="#quiz1">Quiz</a>
+            </ul>
+        </nav>
+    </div>
+    <section class="didYouKnow-section wrapper-git">
+        <div class="wrapper  ">
             <div class="didYouKnow-card">
                 <h2>Did you know:</h2>
                 <div class="didYouKnow-choice">
@@ -266,12 +269,12 @@
                         <div class="section-image"> <img style="width: 100px;height: 90px;" src="src/assets/github.png"></div>
                     </div>
 
-
+<div id="quiz1"></div>
                 </div>
 
         </div>
     </section>
-    <section class="Game">
+    <section class="Game" >
         <div class="wraper">
             <div class="game-quiz section-card">
                 <div class="quiz-start">
@@ -297,34 +300,97 @@
         </div>
     </section>
     <footer class="footer">
-        <div class="wrapper">
-            <ul class="footer__navigation active">
+        <div class="wrapper footer-wrapper">
+            <div class="footer_content">
+
+            <ul class="footer__navigation">
                 <li class="footer-link">
-                    <a href="About.html">About Us</a>
+                    <a href="aboutUs.html">About Us</a>
                 </li>
                 <li class="footer-link">
-                    <a href="FAQ.html">FAQ</a>
+                    <a href="news.html">News</a>
                 </li>
                 <li class="footer-link">
-                    <a href="News.html">News</a>
-                </li>
-                <li class="footer-link">
-                    <a href="Contact.html">Contact Us</a>
-                </li>
-                <li class="footer-link">
-                    <a href="Privacy.html">Pivacy Policy</a>
+                    <a href="contactUs.html">Contact Us</a>
                 </li>
             </ul>
-            <div class="flex-container_image">
-                <img class="facebook" src="./src/assets/facebook.svg" alt="Facebook-logo" />
-                <img class="icon instagram" src="./src/assets/Instagram.svg" alt="Instagram-logo" />
-                <img class="icon twitter" src="./src/assets/twitter.svg" alt="Twitter-logo" />
+
+            <div class="footer-photo">
+
+                <div class="diana foot-im">
+                    <img class="circle" src="./src/assets/dianaK_crop.jpg" alt="smart girl" width="70" />
+                    <p>Diana Kovaleva</p>
+                    <div class="icon_footer">
+                        <div class="gitHub">
+                            <a href="https://github.com/Dianakove32">
+                        <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                    </a>
+                        </div>
+                    <div class="linked"><a href="https://www.linkedin.com/in/diana-kovaleva-5347051aa/">
+                        <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
+                    </a>
+
+                    </div>
+                    </div>
+                </div>
+
+                <div class="artur foot-im">
+                    <img class="circle" src="./src/assets/arturZ_crop.jpg" alt="business man" width="70" />
+                    <p>Artur Zaleuski</p>
+                    <div class="icon_footer artur">
+                        <a href="https://github.com/Zalart">
+                            <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/zalart">
+                            <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="vadim foot-im"> <img class="circle" src="./src/assets/vadim_crop.jpg" alt="business man" width="70" />
+                    <p>Vadim Karulin</p>
+                    <div class="icon_footer vadim">
+                        <a href="https://github.com/Zolotou">
+                            <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                        </a>
+                        <a href="#">
+                            <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <div class="irina foot-im"> <img class="circle" src="./src/assets/irina_crop.jpg" alt="business man" width="70" />
+                    <p>Irina Mychko</p>
+                    <div class="icon_footer irina">
+                        <a href="https://github.com/Irina-Riska">
+                            <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/ira-mytchko/">
+                            <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
+                        </a>
+                    </div>
+                </div>
+
+
             </div>
-            <p> 2020 Minsk (c) All Rights reseved Wild code school</p>
+        </div>
+
+            <div class="rights">
+                <p class=footer_paragraph> 2020 Minsk (c) All Rights reseved Wild code school</p>
+            </div>
+
+
+
+        </div>
+
     </footer>
 
+
     <!-- <script type="module" src="./src/js/index.js"></script> -->
-    <script src="./src/js/other.js"></script>
+    <script type="module" src="./src/js/other.js"></script>
     <script src="./src/js/quiz-game.js"></script>
 </body>
 

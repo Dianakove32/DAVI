@@ -56,7 +56,7 @@ export default function welcome() {
                 enterThePage("newbie");
             })
             proButton.addEventListener('click', () => {
-                enterThePage("intermidiate");
+                enterThePage("intermediate");
             })
         })
 
@@ -95,16 +95,17 @@ function checkUser() {
         <p>We do not collect or use the information you provided here.</p>
         <p>All your personal data is stored in the Local Storage of your browser of your local computer.</p>
             `);
+        getQuote();
         const paranojaButton = createEl("label", "", ["button", "beware", "welcome-reset-button"], "Delete my data and log me out");
         paranojaButton.for = "modal-css";
         modalFooter.append(paranojaButton);
         // reset the user statistic
         paranojaButton.addEventListener('click', () => {
-            setTimeout(() => {
-                localStorage.removeItem('userName');
-                localStorage.removeItem('levelofUser');
-                window.location.reload();
-            }, 1000);
+            //  setTimeout(() => {
+            localStorage.removeItem('userName');
+            localStorage.removeItem('levelofUser');
+            window.location.reload();
+            //   }, 1000);
 
         });
     }
@@ -121,4 +122,3 @@ async function getQuote() {
     const result = await data.json();
     document.querySelector('.welcome-api').textContent = result.slip.advice;
 }
-getQuote(); 

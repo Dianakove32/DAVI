@@ -1,3 +1,4 @@
+import user from './user.js';
 const contLinks = document.querySelector('.introduction-links');
 const links = document.querySelectorAll('.introduction-item');
 const outPutLinks = document.querySelectorAll('.outPut-html__info');
@@ -7,7 +8,7 @@ const outputTitle = document.getElementById('output-title')
 let arrLink = [];
 let arrOutPutLinks = [];
 
-
+user();
 
 links.forEach(element => {
 
@@ -18,6 +19,7 @@ links.forEach(element => {
             console.log(e.target.innerHTML)
 
             if (name == target) {
+                sessionStorage.setItem(e.target.innerHTML, true);
                 otputInfo.innerHTML = outPutLinks[i].outerHTML
                 outputTitle.innerText = e.target.innerText
                 break;
