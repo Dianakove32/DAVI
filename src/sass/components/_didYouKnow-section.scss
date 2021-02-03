@@ -14,11 +14,11 @@ h2{
 }
     .didYouKnow-choice{
         display: flex;
-
         .didYouKnow-button{
             margin: 0px 20px;
-            padding: 0px 20px;
+            padding: 10px 20px;
             font-size: 2rem;
+            text-align: center;
             text-decoration: none;
             color: white;
             background-color: $color-title;
@@ -31,7 +31,7 @@ h2{
         .didYouKnow-phrase {
             word-wrap: wrap;
             font-weight: 400 ;
-
+            padding-top: 10px;
         }
     }
 }

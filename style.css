@@ -419,7 +419,7 @@ ul {
   box-sizing: border-box;
 }
 
-.navigation__link, .navigation__link-page {
+.introduction-links .introduction-item, .navigation__link, .navigation__link-page {
   transition: all 0.3s ease-out;
 }
 
@@ -832,10 +832,11 @@ label.sign-in:hover {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #a5a1a1;
-  width: 500px;
+  width: 60%;
   z-index: 9999;
-  font-size: 1.7rem;
+  font-size: 2rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 400px;
   overflow-y: auto;
   text-align: left;
   color: #011D33;
@@ -847,14 +848,15 @@ label.sign-in:hover {
 @media (max-width: 768px) {
   .modal_content {
     margin-top: 120px;
-    width: 400px;
-    font-size: 1.4rem;
+    width: 80%;
+    height: 500px;
   }
 }
 @media (max-width: 526px) {
   .modal_content {
-    font-size: 1.2rem;
-    width: 300px;
+    font-size: 1.8rem;
+    width: 90%;
+    height: 500px;
   }
 }
 .modal_content .close_modal_window {
@@ -965,21 +967,27 @@ label.close {
 @media (max-width: 768px) {
   .modal-container h2 {
     font-size: 2rem;
-    margin: 1em;
+    margin: 1rem;
   }
 }
 @media (max-width: 526px) {
   .modal-container h2 {
+    font-size: 1.8rem;
+    margin: 1em;
     top: 35%;
   }
 }
 @media (max-width: 414px) {
   .modal-container h2 {
+    font-size: 1.5rem;
+    margin: 1em;
     top: 35%;
   }
 }
 @media (max-width: 320px) {
   .modal-container h2 {
+    font-size: 1.2rem;
+    margin: 1em;
     top: 30%;
     min-width: 220px;
   }
@@ -1039,6 +1047,7 @@ h3 {
   h3 {
     font-size: 1.8rem;
     margin: 0 0 1rem;
+    line-height: 2rem;
   }
 }
 @media (max-width: 526px) {
@@ -1065,14 +1074,31 @@ h3 span {
   position: relative;
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.75;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.modal-content-wrapper p {
-  margin-bottom: 5px;
+@media (max-width: 768px) {
+  .modal-content-wrapper {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 526px) {
+  .modal-content-wrapper {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 414px) {
+  .modal-content-wrapper {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 320px) {
+  .modal-content-wrapper {
+    font-size: 1rem;
+  }
 }
 
 .modal-footer {
@@ -1147,6 +1173,17 @@ h3 span {
 
 input.welcome-input[type=text] {
   width: 50%;
+}
+
+@media (max-width: 414px) {
+  .disclaimer {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 320px) {
+  .disclaimer {
+    font-size: 0.8rem;
+  }
 }
 
 .slider-track {
@@ -1737,7 +1774,7 @@ input.welcome-input[type=text] {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+span.dot.active, .dot:hover {
   background-color: #717171;
 }
 
@@ -2411,8 +2448,7 @@ code {
   flex-direction: column;
   background-color: #ffffff;
   border-radius: 6%;
-  min-width: 280px;
-  max-width: 350px;
+  width: 320px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 9px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -2502,7 +2538,7 @@ code {
   justify-content: center;
 }
 .modal-content .welcome-statistic div {
-  padding: 10px;
+  padding: 0 0 10px;
 }
 .modal-content .welcome-statistic span {
   color: #E74C3C;
@@ -2537,8 +2573,9 @@ code {
 }
 .didYouKnow-card .didYouKnow-choice .didYouKnow-button {
   margin: 0px 20px;
-  padding: 0px 20px;
+  padding: 10px 20px;
   font-size: 2rem;
+  text-align: center;
   text-decoration: none;
   color: white;
   background-color: #011D33;
@@ -2549,6 +2586,7 @@ code {
 .didYouKnow-card .didYouKnow-choice .didYouKnow-phrase {
   word-wrap: wrap;
   font-weight: 400;
+  padding-top: 10px;
 }
 
 .game-quiz .quiz-start-button {
@@ -2575,12 +2613,13 @@ code {
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .game-quiz .quiz .quiz-choices .answer {
   min-width: 80px;
   padding: 20px;
-  margin: 0px 30px;
-  font-size: 2rem;
+  margin: 10px 30px;
+  font-size: 1.8rem;
   border: 2px solid #011D33;
   box-shadow: 1px 1px 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -2668,6 +2707,7 @@ code {
 }
 .introduction-links .introduction-item:hover {
   cursor: pointer;
+  color: #F39B30;
 }
 @media (max-width: 768px) {
   .introduction-links .introduction-item {

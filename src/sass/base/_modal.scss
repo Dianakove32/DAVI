@@ -15,11 +15,11 @@
         margin: 15% auto;
         padding: 20px;
         border: 1px solid rgb(165, 161, 161);
-        width: 500px;
+        width: 60%;
         z-index: 9999;
-        font-size: 1.7rem;
+        font-size: 2rem;
         box-shadow: $shadow;
-        //height: 400px;
+        height: 400px;
         overflow-y: auto;
         text-align: left;
         color: $color-title;
@@ -32,15 +32,13 @@
         }
         @include media-tablet {
             margin-top: 120px;
-            width: 400px;
-		   // height: 500px;
-		   font-size: 1.4rem;
+            width: 80%;
+            height: 500px;
         }
         @include media-surface {
-            font-size: 1.2rem;
-            width: 300px;
-		   // height: 500px;
-
+            font-size: 1.8rem;
+            width: 90%;
+            height: 500px;
         }
         .close_modal_window {
             color: rgb(235, 20, 20);
@@ -115,11 +113,11 @@ label.close {
     transition: transform 300ms ease;
     visibility: hidden;
 	z-index: 20;
-
+	
 	@include media-laptop {
 		top: 40%;
 	}
-
+	
 	@include media-tablet {
 		top: 40%;
 	}
@@ -146,7 +144,7 @@ label.close {
 			fill: #2ecc71;
 			transform: rotate(540deg);
 		}
-
+		
 	}
 
 
@@ -162,15 +160,21 @@ label.close {
 			} */
 			@include media-tablet {
 				font-size: 2rem;
-				margin: 1em;
+				margin: 1rem;
 			}
 			@include media-surface {
+				font-size: 1.8rem;
+				margin: 1em;
 				top: 35%;
 			}
 			@include media-mobile {
+				font-size: 1.5rem;
+				margin: 1em;
 				top: 35%;
 			}
 			@include media-mobilesmall {
+				font-size: 1.2rem;
+				margin: 1em;
 				top: 30%;
 				min-width: 220px;
 			}
@@ -187,7 +191,7 @@ label.close {
 			@include media-laptop {
 				font-size: 2.5rem;
 				margin: 0 0 0 2rem;
-			}
+			} 
 			@include media-tablet {
 				font-size: 2.4rem;
 			}
@@ -221,6 +225,7 @@ label.close {
 			@include media-tablet {
 				font-size: 1.8rem;
 				margin: 0 0 1rem;
+				line-height: 2rem;
 			}
 			@include media-surface {
 				font-size: 1.8rem;
@@ -236,20 +241,29 @@ label.close {
 				color: $color-2;
 			}
 		}
-
+	
 
 	.modal-content-wrapper {
 		position: relative;
 		margin: 0;
 		padding: 0;
-		font-size: 16px;
+		font-size: 1.6rem;
 		line-height: 1.75;
 		display: flex;
     	justify-content: center;
     	align-items: center;
 
-		p {
-			margin-bottom: 5px;
+		@include media-tablet {
+			font-size: 1.5rem;
+		}
+		@include media-surface {
+			font-size: 1.3rem;
+		}
+		@include media-mobile {
+			font-size: 1rem;
+		}
+		@include media-mobilesmall {
+			font-size: 1rem;
 		}
 	}
 
@@ -342,4 +356,13 @@ label.close {
 
 input.welcome-input[type=text] {
 	width: 50%;
+  }
+  .disclaimer {
+	  
+	  @include media-mobile {
+		font-size: .8rem;
+	}
+	@include media-mobilesmall {
+		font-size: .8rem;
+	}
   }

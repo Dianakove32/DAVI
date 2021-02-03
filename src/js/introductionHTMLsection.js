@@ -1,4 +1,5 @@
 import user from './user.js';
+import welcome from './welcome_window.js';
 const contLinks = document.querySelector('.introduction-links');
 const links = document.querySelectorAll('.introduction-item');
 const outPutLinks = document.querySelectorAll('.outPut-html__info');
@@ -16,9 +17,10 @@ links.forEach(element => {
         let target = 'outPut-html__info ' + e.target.textContent.toLowerCase();
         for (let i = 0; i < outPutLinks.length; i++) {
             let name = outPutLinks[i].className
-            console.log(e.target.innerHTML)
+
 
             if (name == target) {
+                e.target.style.color = "orange";
                 sessionStorage.setItem(e.target.innerHTML, true);
                 otputInfo.innerHTML = outPutLinks[i].outerHTML
                 outputTitle.innerText = e.target.innerText

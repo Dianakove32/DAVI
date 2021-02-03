@@ -60,9 +60,11 @@ const anchors = [...laptopAnchors, ...mobileAnchors]; // объединим ма
 //smoothScroll.onClick
 anchors.forEach(anchor => {
   anchor.addEventListener('click', (event) => {
+    const addr = document.location.pathname;
+    if (addr === '/DAVI/index.html' || addr === '/DAVI/') {
+      event.preventDefault();
+    }
     hiddenMenuSwitch.checked = false;
-    //alert(`clicked an ${event.target.getAttribute('href').substr(1)}`)
-    event.preventDefault();
     anchors.forEach(el => el.classList.remove('active')); // очистим все классы элементов меню от active
     // добавим active к тому, по которому кликнули
     anchor.classList.add('active');
@@ -155,17 +157,5 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-  //еще неплоход добавить событие на mouseleave, чтобы подчеркивание возвращалось к активному элементу
-
-  /*   let navItemActive = document.querySelector('.active');
-    if (navItemActive !== undefined) {
-  
-      headerNavigationBlock.addEventListener('mouseleave', (e) => {
-        navline.style.display = `inline`;
-        navline.style.width = `${navItemActive.offsetWidth}px`;
-        navline.style.left = `${navItemActive.offsetLeft}px`;
-      })
-    } */
-
 
 })

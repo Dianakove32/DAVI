@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,18 +23,10 @@
             </p>
         </div>
     </div>
-
-    <!-- <div class="loading">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div> -->
     <header class="header">
         <div class="wrapper">
             <div class="header__logo">
-                <a href="/"> <img class="logo_img" src="src/assets/DAVI.png" alt="logo"></a>
+                <a href="/DAVI/"> <img class="logo_img" src="src/assets/DAVI.png" alt="logo"></a>
             </div>
             <div class="header-wrapper">
                 <nav class="header__navigation">
@@ -45,7 +36,7 @@
                         <li><a class="navigation__link" href="#css">CSS</a></li>
                         <li><a class="navigation__link" href="#js">JS</a></li>
                         <li><a class="navigation__link" href="#other">GIT</a></li>
-                        <li><a class="navigation__link" href="#use">USEFULL LINKS</a></li>
+                        <li><a class="navigation__link" href="#use">USEFUL LINKS</a></li>
                     </ul>
                 </nav>
                 <div class="user-area">
@@ -75,13 +66,12 @@
                             <li><a href="#css" class="burger-menu_link">CSS</a></li>
                             <li><a href="#js" class="burger-menu_link">JS</a></li>
                             <li><a href="#other" class="burger-menu_link">GIT</a></li>
-                            <li><a class="navigation__link" href="#use">USEFULL LINKS</a></li>
+                            <li><a class="navigation__link" href="#use">USEFUL LINKS</a></li>
                         </ul>
                     </nav>
                 </div>
                 <!-- Mobile menu END -->
             </div>
-
         </div>
     </header>
     <input type="checkbox" id="modal-css" />
@@ -106,20 +96,8 @@
             </div>
         </article>
         <div class="modal-footer">
-            <!--
-            <label for="modal-css"><a class="button success">I agree, so let it be</a></label>
-            <label for="modal-css" class="button beware welcome-reset-button">No, Delete my Data</label> -->
         </div>
     </div>
-
-    <!-- <section class="hello">
-        <div class="wrapper wrapper-hello">
-
-            <div class="imgDavi"> <img src="./src/assets/DAVI2.png" alt="" srcset=""> </div>
-
-        </div>
-    </section> -->
-
     <section class="HTML sectionBlue " id="html">
         <div class="wrapper">
             <div class="section-card">
@@ -199,21 +177,21 @@
                 </div>
                 <div class="slider-container">
                     <div class="cards-wrapper slider-track">
-                    <div onclick="location.href='css.html'"
-                    class="topic-card activeItemanime anim-no-hide">
-                        <img src=" ./src/assets/sec2-3.webp" alt="">
-                        <h3>Introduction to CSS </h3>
+                        <div onclick="location.href='css.html'" class="topic-card activeItemanime anim-no-hide">
+                            <img src=" ./src/assets/sec2-3.webp" alt="">
+                            <h3>Introduction to CSS </h3>
+                        </div>
+                        <div onclick="location.href='css.html#workshop'"
+                            class="topic-card activeItemanime anim-no-hide">
+                            <img src=" ./src/assets/sec2-2.jpg" alt="">
+                            <h3>Workshop</h3>
+                        </div>
+                        <div onclick="location.href='css.html#use'" class="topic-card activeItemanime anim-no-hide"><img
+                                src=" ./src/assets/sec2-3.webp" alt="">
+                            <h3>Useful links</h3>
+                        </div>
                     </div>
-                    <div onclick="location.href='css.html#workshop'" class="topic-card activeItemanime anim-no-hide">
-                        <img src=" ./src/assets/sec2-2.jpg" alt="">
-                        <h3>Workshop</h3>
-                    </div>
-                    <div onclick="location.href='css.html#use'" class="topic-card activeItemanime anim-no-hide"><img
-                            src=" ./src/assets/sec2-3.webp" alt="">
-                        <h3>Usefull links</h3>
-                    </div>
- </div>
-</div>
+                </div>
                 <button class="button" onclick="location.href='css.html'">Learn more</button>
             </div>
         </div>
@@ -243,18 +221,20 @@
                 </div>
                 <div class="slider-container">
                     <div class="cards-wrapper slider-track">
-                    <div onclick="location.href='js.html'" class="topic-card activeItemanime anim-no-hide">
-                        <img src=" ./src/assets/sec3-1.jpg" alt="">
-                        <h3>JavaScript Notes</h3>
+                        <div onclick="location.href='js.html#reference'"
+                            class="topic-card activeItemanime anim-no-hide">
+                            <img src=" ./src/assets/sec3-1.jpg" alt="">
+                            <h3>JavaScript Notes</h3>
+                        </div>
+                        <div onclick="location.href='js.html#sandbox'" class="topic-card activeItemanime anim-no-hide">
+                            <img src=" ./src/assets/sec3-2.jpg" alt="">
+                            <h3>Sandbox</h3>
+                        </div>
+                        <div onclick="location.href='js.html#quiz'" class="topic-card activeItemanime anim-no-hide"><img
+                                src=" ./src/assets/sec1-2.png" alt="">
+                            <h3>Quiz</h3>
+                        </div>
                     </div>
-                    <div onclick="location.href='js.html'" class="topic-card activeItemanime anim-no-hide"> <img
-                            src=" ./src/assets/sec3-2.jpg" alt="">
-                        <h3>Workshop</h3>
-                    </div>
-                    <div onclick="location.href='js.html'" class="topic-card activeItemanime anim-no-hide"><img src=" ./src/assets/sec1-2.png" alt="">
-                        <h3>Also this</h3>
-                    </div>
-                </div>
                 </div>
                 <button class="button hover__light" onclick="location.href='js.html'">Learn more</button>
             </div>
@@ -267,160 +247,180 @@
                     <div class="descriptionMain">
                         <h2 class="section-title">GIT</h2>
                         <div class="intro-text">
-                        <p  >
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, rem explicabo architecto
-                            debitis
-                            magnam quaerat.
-                            Possimus sunt veritatis inventore molestiae ex perferendis voluptas nobis, ratione eveniet
-                            id fugiat
-                            iste ea!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Maxime,
-                        </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, rem explicabo
+                                architecto
+                                debitis
+                                magnam quaerat.
+                                Possimus sunt veritatis inventore molestiae ex perferendis voluptas nobis, ratione
+                                eveniet
+                                id fugiat
+                                iste ea!
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, Lorem ipsum dolor sit
+                                amet
+                                consectetur adipisicing elit. Maxime,
+                            </p>
 
+                        </div>
                     </div>
-                     </div>
                 </div>
                 <div class="slider-container ">
                     <div class="cards-wrapper slider-track">
-                    <div class="topic-card activeItemanime anim-no-hide" onclick="location.href='other.html'"> <img src=" ./src/assets/sect1-1.jpg" alt="">
-                        <h3>Introduction</h3>
+
+                        <div class="topic-card activeItemanime anim-no-hide" onclick="location.href='other.html'"> <img
+                                src=" ./src/assets/sect1-1.jpg" alt="">
+                            <h3>Introduction</h3>
+                        </div>
+                        <div class="topic-card activeItemanime anim-no-hide" onclick="location.href='other.html#quiz'">
+                            <img src=" ./src/assets/sec1-2.png" alt="">
+                            <h3>Quiz</h3>
+                        </div>
+                        <div class="topic-card activeItemanime anim-no-hide" onclick="location.href='other.html'"><img
+                                src=" ./src/assets/sec1-3.jpg" alt="">
+                            <h3>Even this</h3>
+                        </div>
                     </div>
-                    <div class="topic-card activeItemanime anim-no-hide" onclick="location.href='other.html#quiz'"><img src=" ./src/assets/sec1-2.png" alt="">
-                        <h3>Quiz</h3>
-                    </div>
-                    <div class="topic-card activeItemanime anim-no-hide" onclick="location.href='other.html'"><img src=" ./src/assets/sec1-3.jpg" alt="">
-                        <h3>Even this</h3>
-                    </div>
-                </div>
+
                 </div>
                 <button class="button hover__light" onclick="location.href='other.html'">Learn more</button>
             </div>
-        </div>
     </section>
 
-    <section id="use" class="usefull_links" >
+    <section id="use" class="usefull_links">
         <div class="wrapper">
-            <h2>Usefull links</h2>
-<div class="usefull_links-wrapper">
+            <h2>Useful links</h2>
+            <div class="usefull_links-wrapper">
 
-    <ul class="usefull_links-container">
-        <h3> HTML,CSS,JS,GIT</h3>
-        <li><a class="usefull_links-item" href="https://css-tricks.com/">css-tricks</a></li>
-        <li><a class="usefull_links-item" href="https://www.w3schools.com/">w3schools</a></li>
-        <li><a class="usefull_links-item" href="https://bennettfeely.com/clippy/">CSS clip-path maker</a></li>
-        <li><a class="usefull_links-item" href="http://css.cat-in-web.ru/filters/"> CSS Filters</a></li>
-        <li><a class="usefull_links-item" href="https://html-css-js.com/css/generator/box-shadow/">Box-Shadow Generator</a></li>
-        <li><a class="usefull_links-item" href="http://htmlbook.ru/">htmlbook.ru</a></li>
-        <li><a class="usefull_links-item" href="https://exploringjs.com/"> Exploring JS</a></li>
-        <li><a class="usefull_links-item" href="https://9elements.com/bem-cheat-sheet/">BEM </a></li>
+                <ul class="usefull_links-container">
+                    <h3> HTML,CSS,JS,GIT</h3>
+                    <li><a class="usefull_links-item" href="https://css-tricks.com/">css-tricks</a></li>
+                    <li><a class="usefull_links-item" href="https://www.w3schools.com/">w3schools</a></li>
+                    <li><a class="usefull_links-item" href="https://bennettfeely.com/clippy/">CSS clip-path maker</a>
+                    </li>
+                    <li><a class="usefull_links-item" href="http://css.cat-in-web.ru/filters/"> CSS Filters</a></li>
+                    <li><a class="usefull_links-item"
+                            href="https://html-css-js.com/css/generator/box-shadow/">Box-Shadow Generator</a></li>
+                    <li><a class="usefull_links-item" href="http://htmlbook.ru/">htmlbook.ru</a></li>
+                    <li><a class="usefull_links-item" href="https://exploringjs.com/"> Exploring JS</a></li>
+                    <li><a class="usefull_links-item" href="https://9elements.com/bem-cheat-sheet/">BEM </a></li>
 
-    </ul>
+                </ul>
 
-<ul class="usefull_links-container"><h3>Learn from game</h3>
-<li><a class="usefull_links-item" href="https://learngitbranching.js.org/?locale=ru_RU">LearnGitBranching</a></li>
-<li><a class="usefull_links-item" href="https://flexboxfroggy.com/#ru">FLEXBOX FROGGY</a></li>
-<li><a class="usefull_links-item" href="http://cssgridgarden.com/#ru">GRID GARDEN</a></li>
-<li><a class="usefull_links-item" href="https://mastery.games/flexboxzombies/chapter/1/level/1">Mastery Games</a></li>
+                <ul class="usefull_links-container">
+                    <h3>Learn from game</h3>
+                    <li><a class="usefull_links-item"
+                            href="https://learngitbranching.js.org/?locale=ru_RU">LearnGitBranching</a></li>
+                    <li><a class="usefull_links-item" href="https://flexboxfroggy.com/#ru">FLEXBOX FROGGY</a></li>
+                    <li><a class="usefull_links-item" href="http://cssgridgarden.com/#ru">GRID GARDEN</a></li>
+                    <li><a class="usefull_links-item"
+                            href="https://mastery.games/flexboxzombies/chapter/1/level/1">Mastery Games</a></li>
 
-</ul>
+                </ul>
 
-<ul class="usefull_links-container">
-<h3> Beautiful animation</h3>
-<li><a class="usefull_links-item" href="https://michalsnik.github.io/aos/">AOS</a></li>
-<li><a class="usefull_links-item" href="https://www.pixijs.com/">PixiJS</a></li>
-<li><a class="usefull_links-item" href="https://soulwire.github.io/sketch.js/">Sketch.js</a></li>
-<li><a class="usefull_links-item" href="https://threejs.org/">Three.js</a></li>
-<li><a class="usefull_links-item" href="https://vdcom.net.ua/javascript-biblioteki-dlya-animacii.php">TOP 5 JAVASCRIPT LIBRARIES</a></li>
-<li><a class="usefull_links-item" href="https://bashooka.com/coding/50-javascript-libraries-for-front-end-developer/">Bashooka</a></li>
-<li><a class="usefull_links-item" href="https://threejs-bg.webflow.io/">Threejs-bg</a></li>
-<li><a class="usefull_links-item" href="https://transitive-bullshit.github.io/react-starfield-animation/">React Starfiel Animation</a></li>
-<li><a class="usefull_links-item" href="https://readyplayer.me/"> ReadyPlayerMe </a></li>
-<li><a class="usefull_links-item" href="https://vincentgarreau.com/particles.js/">Particles.js</a></li>
-</ul>
+                <ul class="usefull_links-container">
+                    <h3> Beautiful animation</h3>
+                    <li><a class="usefull_links-item" href="https://michalsnik.github.io/aos/">AOS</a></li>
+                    <li><a class="usefull_links-item" href="https://www.pixijs.com/">PixiJS</a></li>
+                    <li><a class="usefull_links-item" href="https://soulwire.github.io/sketch.js/">Sketch.js</a></li>
+                    <li><a class="usefull_links-item" href="https://threejs.org/">Three.js</a></li>
+                    <li><a class="usefull_links-item"
+                            href="https://vdcom.net.ua/javascript-biblioteki-dlya-animacii.php">TOP 5 JAVASCRIPT
+                            LIBRARIES</a></li>
+                    <li><a class="usefull_links-item"
+                            href="https://bashooka.com/coding/50-javascript-libraries-for-front-end-developer/">Bashooka</a>
+                    </li>
+                    <li><a class="usefull_links-item" href="https://threejs-bg.webflow.io/">Threejs-bg</a></li>
+                    <li><a class="usefull_links-item"
+                            href="https://transitive-bullshit.github.io/react-starfield-animation/">React Starfiel
+                            Animation</a></li>
+                    <li><a class="usefull_links-item" href="https://readyplayer.me/"> ReadyPlayerMe </a></li>
+                    <li><a class="usefull_links-item" href="https://vincentgarreau.com/particles.js/">Particles.js</a>
+                    </li>
+                </ul>
 
-</div>
+            </div>
         </div>
     </section>
-
     <footer class="footer">
         <div class="wrapper footer-wrapper">
             <div class="footer_content">
 
-            <ul class="footer__navigation">
-                <li class="footer-link">
-                    <a href="aboutUs.html">About Us</a>
-                </li>
-                <li class="footer-link">
-                    <a href="news.html">News</a>
-                </li>
-                <li class="footer-link">
-                    <a href="contactUs.html">Contact Us</a>
-                </li>
-            </ul>
+                <ul class="footer__navigation">
+                    <li class="footer-link">
+                        <a href="aboutUs.html">About Us</a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="news.html">News</a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="contactUs.html">Contact Us</a>
+                    </li>
+                </ul>
 
-            <div class="footer-photo">
+                <div class="footer-photo">
 
-                <div class="diana foot-im">
-                    <img class="circle" src="./src/assets/dianaK_crop.jpg" alt="smart girl" width="70" />
-                    <p>Diana Kovaleva</p>
-                    <div class="icon_footer">
-                        <div class="gitHub">
-                            <a href="https://github.com/Dianakove32">
-                        <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
-                    </a>
+                    <div class="diana foot-im">
+                        <img class="circle" src="./src/assets/dianaK_crop.jpg" alt="smart girl" width="70" />
+                        <p>Diana Kovaleva</p>
+                        <div class="icon_footer">
+                            <div class="gitHub">
+                                <a href="https://github.com/Dianakove32">
+                                    <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                                </a>
+                            </div>
+                            <div class="linked"><a href="https://www.linkedin.com/in/diana-kovaleva-5347051aa/">
+                                    <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%" />
+                                </a>
+
+                            </div>
                         </div>
-                    <div class="linked"><a href="https://www.linkedin.com/in/diana-kovaleva-5347051aa/">
-                        <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
-                    </a>
+                    </div>
 
+                    <div class="artur foot-im">
+                        <img class="circle" src="./src/assets/arturZ_crop.jpg" alt="business man" width="70" />
+                        <p>Artur Zaleuski</p>
+                        <div class="icon_footer artur">
+                            <a href="https://github.com/Zalart">
+                                <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/zalart">
+                                <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%" />
+                            </a>
+                        </div>
                     </div>
+
+
+                    <div class="vadim foot-im"> <img class="circle" src="./src/assets/vadim_crop.jpg" alt="business man"
+                            width="70" />
+                        <p>Vadim Karulin</p>
+                        <div class="icon_footer vadim">
+                            <a href="https://github.com/Zolotou">
+                                <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                            </a>
+                            <a href="#">
+                                <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%" />
+                            </a>
+                        </div>
                     </div>
+
+
+
+                    <div class="irina foot-im"> <img class="circle" src="./src/assets/irina_crop.jpg" alt="business man"
+                            width="70" />
+                        <p>Irina Mychko</p>
+                        <div class="icon_footer irina">
+                            <a href="https://github.com/Irina-Riska">
+                                <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/ira-mytchko/">
+                                <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%" />
+                            </a>
+                        </div>
+                    </div>
+
+
                 </div>
-
-                <div class="artur foot-im">
-                    <img class="circle" src="./src/assets/arturZ_crop.jpg" alt="business man" width="70" />
-                    <p>Artur Zaleuski</p>
-                    <div class="icon_footer artur">
-                        <a href="https://github.com/Zalart">
-                            <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
-                        </a>
-                        <a href="https://www.linkedin.com/in/zalart">
-                            <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
-                        </a>
-                    </div>
-                </div>
-
-
-                <div class="vadim foot-im"> <img class="circle" src="./src/assets/vadim_crop.jpg" alt="business man" width="70" />
-                    <p>Vadim Karulin</p>
-                    <div class="icon_footer vadim">
-                        <a href="https://github.com/Zolotou">
-                            <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
-                        </a>
-                        <a href="#">
-                            <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
-                        </a>
-                    </div>
-                </div>
-
-
-
-                <div class="irina foot-im"> <img class="circle" src="./src/assets/irina_crop.jpg" alt="business man" width="70" />
-                    <p>Irina Mychko</p>
-                    <div class="icon_footer irina">
-                        <a href="https://github.com/Irina-Riska">
-                            <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
-                        </a>
-                        <a href="https://www.linkedin.com/in/ira-mytchko/">
-                            <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
-                        </a>
-                    </div>
-                </div>
-
-
             </div>
-        </div>
 
             <div class="rights">
                 <p class=footer_paragraph> 2020 Minsk (c) All Rights reseved Wild code school</p>
@@ -431,10 +431,6 @@
         </div>
 
     </footer>
-
-
-
-
     <div data-modal-window="my_modal1" class="modal">
         <div class="modal_content">
             <div class="modal_inner">
@@ -499,4 +495,3 @@
 </body>
 
 </html>
-

@@ -1,4 +1,5 @@
 import user from './user.js';
+import welcome from './welcome_window.js';
 const arrayDidYouKnow = ["The most fast for loop is default one : for(let i=0; i<array.length; i++)", "Try sometimes this : console.log(console)",
 "if you tired of if|else statement try ternary operator (?)"].sort((a,b) => 0.5 - Math.random());
 const randomPhrase = document.querySelector('.didYouKnow-phrase');
@@ -38,6 +39,7 @@ links.forEach(element => {
             let name = outPutLinks[i].className
 
             if (name == target) {
+                e.target.style.color = "orange";
                 sessionStorage.setItem(e.target.innerHTML, true);
                 otputInfo.innerHTML = outPutLinks[i].outerHTML
                 outputTitle.innerText = e.target.innerText

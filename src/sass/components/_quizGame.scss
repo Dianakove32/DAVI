@@ -26,12 +26,13 @@
             padding: 10px;
             display: flex;
             flex-wrap: wrap;
+            justify-content: flex-start;
     
             .answer {
                 min-width: 80px;
                 padding: 20px;
-                margin: 0px 30px;
-                font-size: 2rem;
+                margin: 10px 30px;
+                font-size: 1.8rem;
                 border:  2px solid $main-header-color;
                 box-shadow: 1px 1px $shadow;
     

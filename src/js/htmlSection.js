@@ -70,7 +70,7 @@ const tegs = [
         teg: " html  ",
         descriptio: ' Defines an HTML document',
     },
-       {
+    {
         teg: 'i',
         descriptio: 'tag defines a part of text in an alternate voice or mood',
     },
@@ -237,23 +237,23 @@ divM.forEach(element => {
 const list = document.getElementsByClassName('.divMain')
 
 
-function myFunction( ){
-const searchInput = document.getElementById('search');
-      let filter=searchInput.value.toUpperCase()
-      console.log(filter )
+function myFunction() {
+    const searchInput = document.getElementById('search');
+    let filter = searchInput.value.toUpperCase()
+    console.log(filter)
     // for (let key of tegs)
 
-  //  console.log(teg )
-     divM.forEach(element =>{
-          console.log(element)
-      let targ =element.innerText
-      console.log(targ)
-      if(targ.toUpperCase().indexOf(filter)>-1){
-        element.style.display ='';
-      }else{
-        element.style.display ='none';
-      }
+    //  console.log(teg )
+    divM.forEach(element => {
+        console.log(element)
+        let targ = element.innerText
+        console.log(targ)
+        if (targ.toUpperCase().indexOf(filter) >= 0) {
+            element.style.display = '';
+        } else {
+            element.style.display = 'none';
+        }
 
-     })
-    }
+    })
+}
 

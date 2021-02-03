@@ -3,10 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="src/sass/codemirror.css">
-    <link rel="stylesheet" href="src/sass/material-darker.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" href="src/assets/favicon.ico">
     <link
@@ -17,33 +15,84 @@
 
 <body>
     <header class="header">
-        <div class="wrapper  header-wrapper">
-            <!-- <div class="header__logo">
-                <a href="index.html#logo1 "> <img class="logo_img" src="src/assets/DAVI.png" alt="logo"></a>
-            </div> -->
-            <div class="mobile-menu">
-                <input type="checkbox" id="hmt" class="hidden-menu-ticker" />
-                <label class="btn-menu" for="hmt">
-                    <span class="first"></span>
-                    <span class="second"></span>
-                    <span class="third"></span>
-                </label>
-                <nav class="hidden-menu">
+        <div class="wrapper">
+            <div class="header__logo">
+                <a href="/DAVI/"> <img class="logo_img" src="src/assets/DAVI.png" alt="logo"></a>
+            </div>
+            <div class="header-wrapper">
+                <nav class="header__navigation">
                     <span class="nav_line"></span>
-                    <ul>
-                        <li><a href="index.html#html" class="burger-menu_link">Main</a>
-                        </li>
-                        <li><a href="#introduction" class="burger-menu_link">Introduction to HTM</a></li>
-                        <!-- <li><a href="#workshop" class="burger-menu_link">Workshop</a></li> -->
-                        <li><a href="#quiz" class="burger-menu_link">Quiz</a></li>
+                    <ul class="navigation">
+                        <li><a class="navigation__link" href="HTMLpage.html">HTML</a></li>
+                        <li><a class="navigation__link" href="css.html">CSS</a></li>
+                        <li><a class="navigation__link" href="js.html">JS</a></li>
+                        <li><a class="navigation__link" href="other.html">GIT</a></li>
+                        <li><a class="navigation__link" href="index.html#use">USEFUL LINKS</a></li>
                     </ul>
                 </nav>
+                <div class="user-area">
+                    <label id="avatar" for="modal-css" style="display:none;"><svg height="30px" width="30px"
+                            id="Layer_1" version="1.1" viewBox="0 0 30 30" xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path
+                                d="M25,13c0-6.6166992-5.3828125-12-12-12S1,6.3833008,1,13c0,3.383606,1.413208,6.4386597,3.673645,8.6222534  c0.0529175,0.0689087,0.1156006,0.1247559,0.1889648,0.171814C7.0038452,23.7769165,9.8582764,25,13,25  s5.9961548-1.2230835,8.1373901-3.2059326c0.0733643-0.0470581,0.1360474-0.1029053,0.1889648-0.171814  C23.586792,19.4386597,25,16.383606,25,13z M13,2.5c5.7900391,0,10.5,4.7104492,10.5,10.5  c0,2.4549561-0.8532715,4.7108154-2.2702637,6.5008545c-0.6505127-2.0978394-2.5076294-3.7401123-5.0281372-4.4957886  c1.3735962-0.9940796,2.2720337-2.6046143,2.2720337-4.4244995c0-3.0141602-2.4550781-5.4663086-5.4736328-5.4663086  s-5.4736328,2.4521484-5.4736328,5.4663086c0,1.8198853,0.8984375,3.4304199,2.2720337,4.4244995  c-2.5205078,0.7556763-4.3776245,2.3979492-5.0281372,4.4957886C3.3532715,17.7108154,2.5,15.4549561,2.5,13  C2.5,7.2104492,7.2099609,2.5,13,2.5z M9.0263672,10.5805664c0-2.1870117,1.7822266-3.9663086,3.9736328-3.9663086  s3.9736328,1.7792969,3.9736328,3.9663086S15.1914063,14.546875,13,14.546875S9.0263672,12.7675781,9.0263672,10.5805664z   M6.0307617,20.8319702C6.2562256,18.0820313,9.1723633,16.046875,13,16.046875s6.7437744,2.0351563,6.9692383,4.7850952  C18.1130981,22.4855347,15.6757202,23.5,13,23.5S7.8869019,22.4855347,6.0307617,20.8319702z"
+                                fill="#f39b30" />
+                        </svg></label>
+                    <label id="sign-in" for="modal-css" class="button sign-in">Sign in
+                    </label>
+                </div>
+                <!-- Mobile menu START -->
+                <div class="mobile-menu">
+                    <input type="checkbox" id="hmt" class="hidden-menu-ticker" />
+                    <label class="btn-menu" for="hmt">
+                        <span class="first"></span>
+                        <span class="second"></span>
+                        <span class="third"></span>
+                    </label>
+                    <nav class="hidden-menu">
+                        <span class="nav_line"></span>
+                        <ul class="mobile-navigation">
+                            <li><a href="HTMLpage.html" class="burger-menu_link">HTML</a>
+                            </li>
+                            <li><a href="css.html" class="burger-menu_link">CSS</a></li>
+                            <li><a href="js.html" class="burger-menu_link">JS</a></li>
+                            <li><a href="other.html" class="burger-menu_link">GIT</a></li>
+                            <li><a href="index.html#use" class="burger-menu_link">USEFUL LINKS</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Mobile menu END -->
             </div>
-
         </div>
     </header>
+    <input type="checkbox" id="modal-css" />
+    <div class="modal-css-bg"> </div>
+    <label for="modal-css" class="modal-css-bg"></label>
+    <div class="modal-container">
+        <label for="modal-css" class="close">
+            <svg id="outlined" style="width:36px; height: 36px; fill: red" viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg">
+                <title />
+                <g id="Fill">o presentation, that is resized and animated to become the
+                    content of a mobile device.
+                    <path d="M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,26A12,12,0,1,1,28,16,12,12,0,0,1,16,28Z" />
+                    <polygon
+                        points="19.54 11.05 16 14.59 12.46 11.05 11.05 12.46 14.59 16 11.05 19.54 12.46 20.95 16 17.41 19.54 20.95 20.95 19.54 17.41 16 20.95 12.46 19.54 11.05" />
+                </g>
+            </svg>
+        </label>
+        <h2 class="modal-header"></h2>
+        <article class="modal-content-wrapper">
+            <div class="modal-content">
+                <h3 class="welcome-user-level"></h3>
+            </div>
+        </article>
+        <div class="modal-footer">
+        </div>
+    </div>
+
     <div>
-        <nav >
+        <nav>
             <ul class="nav-page">
                 <a class="navigation__link-page " href="index.html#html">Main</a>
                 <a class="navigation__link-page" href="introduction">Introduction </a>
@@ -78,15 +127,18 @@
                 <h2>Introduction to GIT</h2>
                 <div class="descriptionSection">
 
-                    <p class="section__text">Git is a powerful, sophisticated system for distributed version control. Gaining an understanding of its features opens to developers a new and liberating approach to source code management. The surest path to mastering Git is to immerse oneself in its utilities and operations, to experience it first-hand..
+                    <p class="section__text">Git is a powerful, sophisticated system for distributed version control.
+                        Gaining an understanding of its features opens to developers a new and liberating approach to
+                        source code management. The surest path to mastering Git is to immerse oneself in its utilities
+                        and operations, to experience it first-hand..
 
 
                         Basically: if you want work with a team in a project Git is a essential tool for you.
-</p>
+                    </p>
 
 
-                <div class="section-image"> <img style="width: 120px;height: 95px;" src="src/assets/git.png"></div>
-            </div>
+                    <div class="section-image"> <img style="width: 120px;height: 95px;" src="src/assets/git.png"></div>
+                </div>
                 <div class="introduction-container">
                     <ul class="introduction-links" id="introductionLinks">
                         <li class="introduction-item">Config</li>
@@ -95,24 +147,23 @@
                         <li class="introduction-item">Commit</li>
                         <li class="introduction-item">Status</li>
                         <li class="introduction-item">Branch</li>
-                        <li class="introduction-item">Document validation</li>
+                        <li class="introduction-item">Push</li>
                     </ul>
                     <div class="output-container">
                         <div id="output-title"></div>
                         <div id="otPutInfo">
                             <p class="p-color">
-                               <b> HTML5 is not a continuation of the hypertext markup language, but a new open platform designed to create web applications using audio, video, graphics, animation and much more.</b>
-    <p></p>
+                                <b> Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency..</b>
+                            <p></p>
                             </p>
-                         <p>
-      The basics of HTML contain the basic principles of the HTML language, a description of the structure of an HTML page, relationships in the structure of an HTML document between HTML elements.
-                         </p>
-                         <p>
-                            An HTML document is a regular text document, it can be created both in a regular text editor (Notepad) and in a specialized one with code highlighting (Notepad ++, Visual Studio Code, etc.). HTML document has a .html extension.
-                         </p>
-                         <p>
-                            An HTML document consists of a tree of HTML elements and text. Each element is identified in the source document with a start (opening) and end (closing) tag (with rare exceptions).
-                         </p>
+                            <p>
+                                Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.
+                            </p>
+                            <p>
+                                The Git feature that really makes it stand apart from nearly every other SCM out there is its branching model.
+
+Git allows and encourages you to have multiple local branches that can be entirely independent of each other. The creation, merging, and deletion of those lines of development takes seconds.
+                            </p>
                         </div>
                     </div>
 
@@ -120,282 +171,334 @@
 
 
                         <div class="outPut-html__info config">
-    <p>
-        The git config command is a convenience function that is used to set Git configuration values on a global or local project level.
-    </p>
-    <p><b> These configuration levels correspond to .gitconfig text files.</b>
-       </p>
-    <ul class="intro-ul">
-        <li>   Executing git config will modify a configuration text file. We'll be covering common configuration settings like email, username, and editor.</li>
-        <li>  We'll discuss Git aliases, which allow you to create shortcuts for frequently used Git operations.</li>
-        <li>  Becoming familiar with git config and the various Git configuration settings will help you create a powerful, customized Git workflow..</li>
-    </ul>
-        </div>
+                            <p>
+                                The git config command is a convenience function that is used to set Git configuration
+                                values on a global or local project level.
+                            </p>
+                            <p><b> These configuration levels correspond to .gitconfig text files.</b>
+                            </p>
+                            <ul class="intro-ul">
+                                <li> Executing git config will modify a configuration text file. We'll be covering
+                                    common configuration settings like email, username, and editor.</li>
+                                <li> We'll discuss Git aliases, which allow you to create shortcuts for frequently used
+                                    Git operations.</li>
+                                <li> Becoming familiar with git config and the various Git configuration settings will
+                                    help you create a powerful, customized Git workflow..</li>
+                            </ul>
+                        </div>
                         <div class="outPut-html__info init">
-      <p>
-        The git init command creates a new Git repository. It can be used to convert an existing, unversioned project to a Git repository or initialize a new, empty repository. Most other Git commands are not available outside of an initialized repository, so this is usually the first command you'll run in a new project.
-      </p>
-                <ol class="intro-ol">
-                    <li>  Executing git init creates a .git subdirectory in the current working directory, which contains all of the necessary Git metadata for the new repository. This metadata includes subdirectories for objects, refs, and template files. A HEAD file is also created which points to the currently checked out commit.</li>
-                    <li>  Aside from the .git directory, in the root directory of the project, an existing project remains unaltered (unlike SVN, Git doesn't require a .git subdirectory in every subdirectory)..</li>
-                    <li>  By default, git init will initialize the Git configuration to the .git subdirectory path. The subdirectory path can be modified and customized if you would like it to live elsewhere. You can set the $GIT_DIR environment variable to a custom path and git init will initialize the Git configuration files there. Additionally you can pass the --separate-git-dir argument for the same result. A common use case for a separate .git subdirectory is to keep your system configuration "dotfiles" (.bashrc, .vimrc, etc.) in the home directory while keeping the .git folder elsewhere.</li>
-                </ol>
-     </div>
+                            <p>
+                                The git init command creates a new Git repository. It can be used to convert an
+                                existing, unversioned project to a Git repository or initialize a new, empty repository.
+                                Most other Git commands are not available outside of an initialized repository, so this
+                                is usually the first command you'll run in a new project.
+                            </p>
+                            <ol class="intro-ol">
+                                <li> Executing git init creates a .git subdirectory in the current working directory,
+                                    which contains all of the necessary Git metadata for the new repository. This
+                                    metadata includes subdirectories for objects, refs, and template files. A HEAD file
+                                    is also created which points to the currently checked out commit.</li>
+                                <li> Aside from the .git directory, in the root directory of the project, an existing
+                                    project remains unaltered (unlike SVN, Git doesn't require a .git subdirectory in
+                                    every subdirectory)..</li>
+                                <li> By default, git init will initialize the Git configuration to the .git subdirectory
+                                    path. The subdirectory path can be modified and customized if you would like it to
+                                    live elsewhere. You can set the $GIT_DIR environment variable to a custom path and
+                                    git init will initialize the Git configuration files there. Additionally you can
+                                    pass the --separate-git-dir argument for the same result. A common use case for a
+                                    separate .git subdirectory is to keep your system configuration "dotfiles" (.bashrc,
+                                    .vimrc, etc.) in the home directory while keeping the .git folder elsewhere.</li>
+                            </ol>
+                        </div>
                         <div class="outPut-html__info add">
-     <p>
-        he git add command adds a change in the working directory to the staging area. It tells Git that you want to include updates to a particular file in the next commit. However, git add doesn't really affect the repository in any significant way—changes are not actually recorded until you run git commit.
-    </p>
-      <p>
-          In conjunction with these commands, you'll also need git status to view the state of the working directory and the staging area.
-     </p>
+                            <p>
+                                he git add command adds a change in the working directory to the staging area. It tells
+                                Git that you want to include updates to a particular file in the next commit. However,
+                                git add doesn't really affect the repository in any significant way—changes are not
+                                actually recorded until you run git commit.
+                            </p>
+                            <p>
+                                In conjunction with these commands, you'll also need git status to view the state of the
+                                working directory and the staging area.
+                            </p>
 
-     </div>
-    <div class="outPut-html__info tag atributes">
-    <p>Tag attributes expand the capabilities of the tags themselves and allow flexible control over various display settings for web page elements. The total number of attributes is quite large, but
-        their values, as a rule, can be grouped by different types, for example, specifying color, size, address, etc. Next, we will consider the main types of values.</p>
-    </div>
+                        </div>
+                        <div class="outPut-html__info tag atributes">
+                            <p>Tag attributes expand the capabilities of the tags themselves and allow flexible control
+                                over various display settings for web page elements. The total number of attributes is
+                                quite large, but
+                                their values, as a rule, can be grouped by different types, for example, specifying
+                                color, size, address, etc. Next, we will consider the main types of values.</p>
+                        </div>
 
                         <div class="outPut-html__info commit">
-     <p>
-         <i> The git commit command captures a snapshot of the project's currently staged changes.</i>
+                            <p>
+                                <i> The git commit command captures a snapshot of the project's currently staged
+                                    changes.</i>
 
-          Committed snapshots can be thought of as “safe” versions of a project—Git will never change them unless you explicitly ask it to. Prior to the execution of git commit, The git add command is used to promote or 'stage' changes to the project that will be stored in a commit. These two commands git commit and git add are two of the most frequently used.
-     </p>
-     <b> At a high-level, Git can be thought of as a timeline management utility.</b>
-    <p>
-         Commits are the core building block units of a Git project timeline. Commits can be thought of as snapshots or milestones along the timeline of a Git project. Commits are created with the git commit command to capture the state of a project at that point in time. Git Snapshots are always committed to the local repository. This is fundamentally different from SVN, wherein the working copy is committed to the central repository. In contrast, Git doesn’t force you to interact with the central repository until you’re ready. Just as the staging area is a buffer between the working directory and the project history, each developer’s local repository is a buffer between their contributions and the central repository.
-     </p>
-     <p>
-        This changes the basic development model for Git users. Instead of making a change and committing it directly to the central repo, Git developers have the opportunity to accumulate commits in their local repo. This has many advantages over SVN-style collaboration: it makes it easier to split up a feature into atomic commits, keep related commits grouped together, and clean up local history before publishing it to the central repository. It also lets developers work in an isolated environment, deferring integration until they’re at a convenient point to merge with other users. While isolation and deferred integration are individually beneficial, it is in a team's best interest to integrate frequently and in small units. For more information regarding best practices for Git team collaboration read how teams structure their Git workflow.
-     </p>
+                                Committed snapshots can be thought of as “safe” versions of a project—Git will never
+                                change them unless you explicitly ask it to. Prior to the execution of git commit, The
+                                git add command is used to promote or 'stage' changes to the project that will be stored
+                                in a commit. These two commands git commit and git add are two of the most frequently
+                                used.
+                            </p>
+                            <b> At a high-level, Git can be thought of as a timeline management utility.</b>
+                            <p>
+                                Commits are the core building block units of a Git project timeline. Commits can be
+                                thought of as snapshots or milestones along the timeline of a Git project. Commits are
+                                created with the git commit command to capture the state of a project at that point in
+                                time. Git Snapshots are always committed to the local repository. This is fundamentally
+                                different from SVN, wherein the working copy is committed to the central repository. In
+                                contrast, Git doesn’t force you to interact with the central repository until you’re
+                                ready. Just as the staging area is a buffer between the working directory and the
+                                project history, each developer’s local repository is a buffer between their
+                                contributions and the central repository.
+                            </p>
+                            <p>
+                                This changes the basic development model for Git users. Instead of making a change and
+                                committing it directly to the central repo, Git developers have the opportunity to
+                                accumulate commits in their local repo. This has many advantages over SVN-style
+                                collaboration: it makes it easier to split up a feature into atomic commits, keep
+                                related commits grouped together, and clean up local history before publishing it to the
+                                central repository. It also lets developers work in an isolated environment, deferring
+                                integration until they’re at a convenient point to merge with other users. While
+                                isolation and deferred integration are individually beneficial, it is in a team's best
+                                interest to integrate frequently and in small units. For more information regarding best
+                                practices for Git team collaboration read how teams structure their Git workflow.
+                            </p>
                         </div>
-    <div class="outPut-html__info status">
-    <p>
-        Links are the backbone of hypertext documents and allow you to navigate from one web page to another. Their peculiarity is that the link itself can lead not only to HTML files, but also to a file of any type, and this file can be placed on a completely different site. The main thing is that the referenced document has access. In other words, if the path to the file can be specified in the address bar of the browser, and the file will be opened, then a link can be made to it.
-    </p>
-    <p>
-        To create a link, you must tell the browser what the link is, and also indicate the address of the document to which the link should be made. Both actions are performed using the a tag.
-    </p>
-    <p>
-        The href attribute defines a URL (Universal Resource Locator), in other words, the address of the document to navigate to, and the contents of container a> are a link. The text between the a> and / a> tags is blue and underlined by default.
-    </p>
-    <p>
-        If a link is specified to a file that does not exist, for example, its name in the href attribute is typed with an error, then such a link is called broken. Broken links should be strictly avoided as they mislead website visitors.
-    </p>
-    <p>
-        Naturally, such a message will differ in browsers, but the meaning remains the same - the document to which the link leads cannot be opened. To avoid such errors, test all links for their performance and immediately eliminate the existing errors.
-    </p>
-    <p>
-        A linked file opens in a browser window only if the browser knows the type of document. However, since the link can be made to any type of file, the browser cannot always display the document. This displays a message on how to process the file - open it or save it to the specified folder.
-    </p>
-    </div>
-    <div class="outPut-html__info branch">
-      <p>
-        An anchor is a bookmark with a unique name at a specific place on a web page, designed to create a link to it. It is convenient to use anchors in large documents so that you can quickly jump to the desired section.
-      </p>
-      <p>
-        To create an anchor, you must first make a bookmark in the appropriate place and give it a name using the name attribute of the a> tag
-      </p>
-      <p>
-        One feature of the browser is associated with anchors. After moving to the specified anchor, pressing the "Back" button returns not to the previous viewed page, but to the link from which the transition to the anchor was made. It turns out that to go to the previous document, you need to press the "Back" button two times.
-      </p>
-      <p>
-        The link can also be made to a bookmark located on another web page or even another site. To do this, in the href attribute of the a> tag, you must specify the address of the document and at the end add the hash symbol # and the bookmark name
-      </p>
-     <p>
-        If the web page contains a link to an anchor, but the anchor itself is not, then no error will occur.
-     </p>
-    </div>
-        <div class="outPut-html__info document validation">
-    <p>
-        Validation will mean checking a document for compliance with web standards and identifying existing errors. Accordingly, a web document that has gone through a similar procedure and has no comments on the code is valid. The code of a web page must obey certain rules called a specification, which is developed by the W3 Consortium (www.w3c.org) with the support of the browser developers.
-     </p>
-    <p>
-        At first glance, it seems that validation is necessary, because we are talking about reducing the number of developers' mistakes and writing "correct" code. In fact, everything is much more complicated, and around validation there is still heated debate about its relevance. In order to objectively reveal this issue, we will further consider the pros and cons of such a check.
-    </p>
-    <p>
-        <b> Pros of validation</b>
+                        <div class="outPut-html__info status">
+                            <p>
+                                Displays paths that have differences between the index file and the current HEAD commit, paths that have differences between the working tree and the index file, and paths in the working tree that are not tracked by Git (and are not ignored by gitignore[5]). The first are what you would commit by running git commit; the second and third are what you could commit by running git add before running git commit
+                            </p>
+                            <p>
+                                The command checks the status and reports that there’s nothing to commit, meaning the repository stores the current state of the working directory, and there are no changes to record.
 
-        Although HTML code has a fairly simple hierarchical structure, it is easy to get confused in the code as the size of the document grows, therefore, it is easy to make a mistake. Browsers, despite obviously incorrect code, will try to render the web page anyway. But since there is no single regulation on how a "crooked" document should be displayed, each browser tries to do it differently. And this, in turn, leads to the fact that the same document may look different in popular browsers. Correction of obvious mistakes and systematization of the code leads, as a rule, to a stable result.
-    </p>
-    <p>
-        <b> Trends</b>
+                                We will use the git status command to keep monitoring the states of both the working directory and the repository.
+                            </p>
+                            <p>
+                                When in doubt, run git status. This is always a good idea. The git status command only outputs information, it won't modify commits or changes in your local repository.
 
-        The days when browser makers added unique features to their product contrary to all standards are starting to fade into the past. Each new version of the browser increasingly supports specifications and displays documents with minimal or no errors. Developers of sites that also adhere to the canons of web standards, thus comply with modern trends in the development of web technologies.
-    </p>
-    <p>
-        Don't forget about XML (eXtensible Markup Language). This language is becoming the de facto standard for storing data and exchanging information between different applications. XML syntax is stricter than HTML and does not forgive the slightest mistakes. In a sense, XML is like programming languages in which the program won't compile until the code is debugged. HTML is the first step to learning XML, so by accustoming yourself to write code according to all the rules, it will be easier to move to the next stage of HTML development.
-    </p>
-    <p>
-        <b>Indirect benefits</b>
-
-        Compliance with standards provides many benefits, which show up in the smallest detail and become visible when a certain critical mass is reached. In particular, the amount of code becomes smaller, more compact, and more readable. Accordingly, the loading speed of the site as a whole increases for users.
-    </p>
-    <p>
-        <b>Cons of validation</b>
-
-        Sites, of course, are made so that people visit them. It is the visitors who are the measure of the site's work, and they are interested in information and the way to obtain it. The user wants the site to display correctly in his favorite browser, load quickly and contain the materials he needs. Note that there is nothing in this list about the document code and its validity, visitors are simply not interested. Therefore, a completely invalid site, but made with soul, filled with interesting materials will attract more visitors than an empty resource, but made according to all the "rules".
-    </p>
-    <p>
-        <b>Browsers</b>
-
-        Browser developers do not always follow the specification and in some cases interpret the code not according to the given rules, but in their own way. Ultimately, this leads to the fact that a web page that is displayed correctly (that is, as intended by the developers) in one browser is displayed with errors in another. Following the specification in such cases is likely to scare off some browser users. For example, Internet Explorer (IE) currently holds the leading position among browsers, but it supports the HTML and CSS specification worse than Firefox and Opera. Obviously, IE users, when visiting a site made according to all standards, but not taking into account the specifics of this browser, will see an unsightly picture.
-    </p>
-    <p>
-        Site customers, as well as their developers, do not like this situation, so when faced with a choice: standards or a browser, they mostly choose a browser.
-    </p>
-    It turns out a disappointing picture - there is no particular need to spend time debugging the code to comply with the specification. It is better to devote this time to making the document work without problems in different browsers - this is how web developers mostly think.
-    </div>
-    <p>
-        <b>Summary</b>
-
-        So is it worth validating documents and doing this step when writing web pages? Definitely yes. It will help someone to identify the existing shortcomings, to others it will help to write correct code. Fixing errors, achieving full compliance with standards, or leaving them for the sake of compatibility with different browsers - here everyone decides for himself what goals he pursues and what is more important for him.
-    </p>
-    <div class="outPut-html__info   "></div>
-    </div>
-            </div>
-    </section>
-    <section class="Git sectionBlue">
-        <div class="wrapper git-section-text">
-
-                    <div class="descriptionSection">
+A useful feature of git status is that it will provide helpful information depending on your current situation.
+                            </p>
+                        </div>
+                        <div class="outPut-html__info branch">
+                            <p>
+                                An anchor is a bookmark with a unique name at a specific place on a web page, designed
+                                to create a link to it. It is convenient to use anchors in large documents so that you
+                                can quickly jump to the desired section.
+                            </p>
+                            <p>
+                                To create an anchor, you must first make a bookmark in the appropriate place and give it
+                                a name using the name attribute of the a> tag
+                            </p>
+                            <p>
+                                One feature of the browser is associated with anchors. After moving to the specified
+                                anchor, pressing the "Back" button returns not to the previous viewed page, but to the
+                                link from which the transition to the anchor was made. It turns out that to go to the
+                                previous document, you need to press the "Back" button two times.
+                            </p>
+                            <p>
+                                The link can also be made to a bookmark located on another web page or even another
+                                site. To do this, in the href attribute of the a> tag, you must specify the address of
+                                the document and at the end add the hash symbol # and the bookmark name
+                            </p>
+                            <p>
+                                If the web page contains a link to an anchor, but the anchor itself is not, then no
+                                error will occur.
+                            </p>
+                        </div>
+                        <div class="outPut-html__info push">
+                            <p>
+                                The "push" command is used to publish new local commits on a remote server.
+                            </p>
+                            <p>
+                                The source (i.e. which branch the data should be uploaded from) is always the currently checked out HEAD branch.
+                            </p>
+                            <p>
 
 
-                        <p class="section__text">GitHub is a for-profit company that offers a cloud-based Git repository hosting service. Essentially, it makes it a lot easier for individuals and teams to use Git for version control and collaboration.
+                                The <b>target</b> (i.e. which branch the data should be uploaded to) can be specified in the command's options. These options can be omitted, however, if a tracking relationship with a remote branch is set up.
+                            </p>
+                            <p>
+                                <b>Note that the "push" command can also be used to delete a remote branch </b>
 
+                                
+                            </p>
+                            
+                        </div>
+                        <p>
+                            <b>Summary</b>
 
-                            GitHub’s interface is user-friendly enough so even novice coders can take advantage of Git. Without GitHub, using Git generally requires a bit more technical savvy and use of the command line
+                            So is it worth validating documents and doing this step when writing web pages? Definitely
+                            yes. It will help someone to identify the existing shortcomings, to others it will help to
+                            write correct code. Fixing errors, achieving full compliance with standards, or leaving them
+                            for the sake of compatibility with different browsers - here everyone decides for himself
+                            what goals he pursues and what is more important for him.
                         </p>
-                        <div class="section-image"> <img style="width: 100px;height: 90px;" src="src/assets/github.png"></div>
+                        <div class="outPut-html__info   "></div>
                     </div>
+                </div>
+        </section>
+        <section class="Git sectionBlue">
+            <div class="wrapper git-section-text">
 
-<div id="quiz1"></div>
+                <div class="descriptionSection">
+
+
+                    <p class="section__text">GitHub is a for-profit company that offers a cloud-based Git repository
+                        hosting service. Essentially, it makes it a lot easier for individuals and teams to use Git for
+                        version control and collaboration.
+
+
+                        GitHub’s interface is user-friendly enough so even novice coders can take advantage of Git.
+                        Without GitHub, using Git generally requires a bit more technical savvy and use of the command
+                        line
+                    </p>
+                    <div class="section-image"> <img style="width: 100px;height: 90px;" src="src/assets/github.png">
+                    </div>
                 </div>
 
-        </div>
-    </section>
-    <section class="Game" >
-        <div class="wraper">
-            <div class="game-quiz section-card">
-                <div class="quiz-start">
-                    <h3 class="quiz-start-button">Start quiz!</h3>
-                    <h4 class="quiz-start-score"></h4>
-                </div>
-                <div class="quiz">
-                    <div class="quiz-question"></div>
-                    <div class="quiz-choices">
-                        <div id="0" class="answer"></div>
-                        <div id="1" class="answer"></div>
-                        <div id="2" class="answer"></div>
-                        <div id="3" class="answer"></div>
+
+                <div id="quiz1"></div>
+            </div>
+
+            </div>
+        </section>
+        <section class="Game">
+            <div class="wrapper">
+                <div class="game-quiz section-card">
+                    <div class="quiz-start">
+                        <h3 class="quiz-start-button">Start quiz!</h3>
+                        <h4 class="quiz-start-score"></h4>
                     </div>
-                    <div class="quiz-timer">
-                        <div class="quiz-timer-counter"></div>
-                        <div class="quiz-timer-progress">
-                            <div class=quiz-timer-currentProgress></div>
+                    <div class="quiz">
+                        <div class="quiz-question"></div>
+                        <div class="quiz-choices">
+                            <div id="0" class="answer"></div>
+                            <div id="1" class="answer"></div>
+                            <div id="2" class="answer"></div>
+                            <div id="3" class="answer"></div>
+                        </div>
+                        <div class="quiz">
+                            <div class="quiz-question"></div>
+                            <div class="quiz-choices">
+                                <div id="0" class="answer"></div>
+                                <div id="1" class="answer"></div>
+                                <div id="2" class="answer"></div>
+                                <div id="3" class="answer"></div>
+                            </div>
+                            <div class="quiz-timer">
+                                <div class="quiz-timer-counter"></div>
+                                <div class="quiz-timer-progress">
+                                    <div class=quiz-timer-currentProgress></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="wrapper footer-wrapper">
-            <div class="footer_content">
+        </section>
+        <footer class="footer">
+            <div class="wrapper footer-wrapper">
+                <div class="footer_content">
 
-            <ul class="footer__navigation">
-                <li class="footer-link">
-                    <a href="aboutUs.html">About Us</a>
-                </li>
-                <li class="footer-link">
-                    <a href="news.html">News</a>
-                </li>
-                <li class="footer-link">
-                    <a href="contactUs.html">Contact Us</a>
-                </li>
-            </ul>
+                    <ul class="footer__navigation">
+                        <li class="footer-link">
+                            <a href="aboutUs.html">About Us</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="news.html">News</a>
+                        </li>
+                        <li class="footer-link">
+                            <a href="contactUs.html">Contact Us</a>
+                        </li>
+                    </ul>
 
-            <div class="footer-photo">
+                    <div class="footer-photo">
 
-                <div class="diana foot-im">
-                    <img class="circle" src="./src/assets/dianaK_crop.jpg" alt="smart girl" width="70" />
-                    <p>Diana Kovaleva</p>
-                    <div class="icon_footer">
-                        <div class="gitHub">
-                            <a href="https://github.com/Dianakove32">
-                        <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
-                    </a>
+                        <div class="diana foot-im">
+                            <img class="circle" src="./src/assets/dianaK_crop.jpg" alt="smart girl" width="70" />
+                            <p>Diana Kovaleva</p>
+                            <div class="icon_footer">
+                                <div class="gitHub">
+                                    <a href="https://github.com/Dianakove32">
+                                        <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                                    </a>
+                                </div>
+                                <div class="linked"><a href="https://www.linkedin.com/in/diana-kovaleva-5347051aa/">
+                                        <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%" />
+                                    </a>
+
+                                </div>
+                            </div>
                         </div>
-                    <div class="linked"><a href="https://www.linkedin.com/in/diana-kovaleva-5347051aa/">
-                        <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
-                    </a>
 
-                    </div>
+                        <div class="artur foot-im">
+                            <img class="circle" src="./src/assets/arturZ_crop.jpg" alt="business man" width="70" />
+                            <p>Artur Zaleuski</p>
+                            <div class="icon_footer artur">
+                                <a href="https://github.com/Zalart">
+                                    <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                                </a>
+                                <a href="https://www.linkedin.com/in/zalart">
+                                    <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%" />
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="vadim foot-im"> <img class="circle" src="./src/assets/vadim_crop.jpg"
+                                alt="business man" width="70" />
+                            <p>Vadim Karulin</p>
+                            <div class="icon_footer vadim">
+                                <a href="https://github.com/Zolotou">
+                                    <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                                </a>
+                                <a href="#">
+                                    <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%" />
+                                </a>
+                            </div>
+                        </div>
+
+
+
+                        <div class="irina foot-im"> <img class="circle" src="./src/assets/irina_crop.jpg"
+                                alt="business man" width="70" />
+                            <p>Irina Mychko</p>
+                            <div class="icon_footer irina">
+                                <a href="https://github.com/Irina-Riska">
+                                    <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                                </a>
+                                <a href="https://www.linkedin.com/in/ira-mytchko/">
+                                    <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%" />
+                                </a>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
 
-                <div class="artur foot-im">
-                    <img class="circle" src="./src/assets/arturZ_crop.jpg" alt="business man" width="70" />
-                    <p>Artur Zaleuski</p>
-                    <div class="icon_footer artur">
-                        <a href="https://github.com/Zalart">
-                            <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
-                        </a>
-                        <a href="https://www.linkedin.com/in/zalart">
-                            <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
-                        </a>
-                    </div>
+                <div class="rights">
+                    <p class=footer_paragraph> 2020 Minsk (c) All Rights reseved Wild code school</p>
                 </div>
 
-
-                <div class="vadim foot-im"> <img class="circle" src="./src/assets/vadim_crop.jpg" alt="business man" width="70" />
-                    <p>Vadim Karulin</p>
-                    <div class="icon_footer vadim">
-                        <a href="https://github.com/Zolotou">
-                            <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
-                        </a>
-                        <a href="#">
-                            <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
-                        </a>
-                    </div>
-                </div>
-
-
-
-                <div class="irina foot-im"> <img class="circle" src="./src/assets/irina_crop.jpg" alt="business man" width="70" />
-                    <p>Irina Mychko</p>
-                    <div class="icon_footer irina">
-                        <a href="https://github.com/Irina-Riska">
-                            <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
-                        </a>
-                        <a href="https://www.linkedin.com/in/ira-mytchko/">
-                            <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
-                        </a>
-                    </div>
-                </div>
 
 
             </div>
-        </div>
 
-            <div class="rights">
-                <p class=footer_paragraph> 2020 Minsk (c) All Rights reseved Wild code school</p>
-            </div>
+        </footer>
 
 
 
-        </div>
+        <!-- <script type="module" src="./src/js/index.js"></script> -->
 
-    </footer>
+        <script src="./src/js/index.js"></script>
 
-
-
-    <!-- <script type="module" src="./src/js/index.js"></script> -->
-
-    <script src="./src/js/index.js"></script>
-
-    <script type="module" src="./src/js/other.js"></script>
-    <script src="./src/js/quiz-game.js"></script>
+        <script type="module" src="./src/js/other.js"></script>
+        <script src="./src/js/quiz-game.js"></script>
 </body>
 
 </html>

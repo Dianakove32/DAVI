@@ -241,16 +241,21 @@ function appendSandboxCase(jsonData, title) {
 }
 listCases(caseLibrary);
 const triggerCase = document.querySelectorAll('.instance');
-triggerCase.forEach(element => {
-  element.addEventListener('click', () => {
+for (let i = 0; i < triggerCase.length; i++) {
+  appendSandboxCase(caseLibrary, triggerCase[0].textContent);
+  triggerCase[i].addEventListener('click', () => {
     const selectedInstances = document.querySelectorAll('.selected');
-    appendSandboxCase(caseLibrary, element.textContent);
+    appendSandboxCase(caseLibrary, triggerCase[i].textContent);
     selectedInstances.forEach(instance => {
       instance.classList.remove("selected");
     })
-    element.classList.add("selected");
+    triggerCase[i].classList.add("selected");
   })
-});
+
+}
+/* triggerCase.forEach(element => {
+
+}); */
 
 // Accordion
 const acc = document.getElementsByClassName("accordion");

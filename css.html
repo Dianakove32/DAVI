@@ -3,61 +3,124 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=0"> -->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" href="src/assets/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>CSS</title>
 </head>
 
 <body>
     <header class="header">
-        <div class="wrapper  header-wrapper">
-            <!-- <div class="header__logo">
-                <a href="index.html#logo1 "> <img class="logo_img" src="src/assets/DAVI.png" alt="logo"></a>
-            </div> -->
-            <div class="mobile-menu">
-                <input type="checkbox" id="hmt" class="hidden-menu-ticker" />
-                <label class="btn-menu" for="hmt">
-                    <span class="first"></span>
-                    <span class="second"></span>
-                    <span class="third"></span>
-                </label>
-                <nav class="hidden-menu">
+        <div class="wrapper">
+            <div class="header__logo">
+                <a href="/DAVI/"> <img class="logo_img" src="src/assets/DAVI.png" alt="logo"></a>
+            </div>
+            <div class="header-wrapper">
+                <nav class="header__navigation">
                     <span class="nav_line"></span>
-                    <ul>
-                        <li><a href="index.html#html" class="burger-menu_link">main</a>
-                        </li>
-                        <li><a href="#introduction" class="burger-menu_link">Introduction </a></li>
-                        <li><a href="#workshop" class="burger-menu_link">Workshop</a></li>
-                        <li><a href="#tegs" class="burger-menu_link">Other</a></li>
+                    <ul class="navigation">
+                        <li><a class="navigation__link" href="HTMLpage.html">HTML</a></li>
+                        <li><a class="navigation__link" href="css.html">CSS</a></li>
+                        <li><a class="navigation__link" href="js.html">JS</a></li>
+                        <li><a class="navigation__link" href="other.html">GIT</a></li>
+                        <li><a class="navigation__link" href="index.html#use">USEFUL LINKS</a></li>
                     </ul>
                 </nav>
+                <div class="user-area">
+                    <label id="avatar" for="modal-css" style="display:none;"><svg height="30px" width="30px"
+                            id="Layer_1" version="1.1" viewBox="0 0 30 30" xml:space="preserve"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path
+                                d="M25,13c0-6.6166992-5.3828125-12-12-12S1,6.3833008,1,13c0,3.383606,1.413208,6.4386597,3.673645,8.6222534  c0.0529175,0.0689087,0.1156006,0.1247559,0.1889648,0.171814C7.0038452,23.7769165,9.8582764,25,13,25  s5.9961548-1.2230835,8.1373901-3.2059326c0.0733643-0.0470581,0.1360474-0.1029053,0.1889648-0.171814  C23.586792,19.4386597,25,16.383606,25,13z M13,2.5c5.7900391,0,10.5,4.7104492,10.5,10.5  c0,2.4549561-0.8532715,4.7108154-2.2702637,6.5008545c-0.6505127-2.0978394-2.5076294-3.7401123-5.0281372-4.4957886  c1.3735962-0.9940796,2.2720337-2.6046143,2.2720337-4.4244995c0-3.0141602-2.4550781-5.4663086-5.4736328-5.4663086  s-5.4736328,2.4521484-5.4736328,5.4663086c0,1.8198853,0.8984375,3.4304199,2.2720337,4.4244995  c-2.5205078,0.7556763-4.3776245,2.3979492-5.0281372,4.4957886C3.3532715,17.7108154,2.5,15.4549561,2.5,13  C2.5,7.2104492,7.2099609,2.5,13,2.5z M9.0263672,10.5805664c0-2.1870117,1.7822266-3.9663086,3.9736328-3.9663086  s3.9736328,1.7792969,3.9736328,3.9663086S15.1914063,14.546875,13,14.546875S9.0263672,12.7675781,9.0263672,10.5805664z   M6.0307617,20.8319702C6.2562256,18.0820313,9.1723633,16.046875,13,16.046875s6.7437744,2.0351563,6.9692383,4.7850952  C18.1130981,22.4855347,15.6757202,23.5,13,23.5S7.8869019,22.4855347,6.0307617,20.8319702z"
+                                fill="#f39b30" />
+                        </svg></label>
+                    <label id="sign-in" for="modal-css" class="button sign-in">Sign in
+                    </label>
+                </div>
+                <!-- Mobile menu START -->
+                <div class="mobile-menu">
+                    <input type="checkbox" id="hmt" class="hidden-menu-ticker" />
+                    <label class="btn-menu" for="hmt">
+                        <span class="first"></span>
+                        <span class="second"></span>
+                        <span class="third"></span>
+                    </label>
+                    <nav class="hidden-menu">
+                        <span class="nav_line"></span>
+                        <ul class="mobile-navigation">
+                            <li><a href="HTMLpage.html" class="burger-menu_link">HTML</a>
+                            </li>
+                            <li><a href="css.html" class="burger-menu_link">CSS</a></li>
+                            <li><a href="js.html" class="burger-menu_link">JS</a></li>
+                            <li><a href="other.html" class="burger-menu_link">GIT</a></li>
+                            <li><a href="index.html#use" class="burger-menu_link">USEFUL LINKS</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Mobile menu END -->
             </div>
-
-
-            </div>
-
         </div>
-
     </header>
-    <div  >
-        <nav  >
-       <ul class="nav-page">
-           <a class="navigation__link-page" href="index.html#html">Main</a>
-           <a class="navigation__link-page" href="#introduction">Introduction</a>
-           <a class="navigation__link-page" href="#workshop">Workshop</a>
-           <a class="navigation__link-page" href="#use">Usefull liks</a>
-       </ul>
-   </nav>
+    <input type="checkbox" id="modal-css" />
+    <div class="modal-css-bg"></div>
+    <label for="modal-css" class="modal-css-bg"></label>
+    <div class="modal-container">
+        <label for="modal-css" class="close">
+            <svg id="outlined" style="width:36px; height: 36px; fill: red" viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg">
+                <title />
+                <g id="Fill">o presentation, that is resized and animated to become the
+                    content of a mobile device.
+                    <path d="M16,2A14,14,0,1,0,30,16,14,14,0,0,0,16,2Zm0,26A12,12,0,1,1,28,16,12,12,0,0,1,16,28Z" />
+                    <polygon
+                        points="19.54 11.05 16 14.59 12.46 11.05 11.05 12.46 14.59 16 11.05 19.54 12.46 20.95 16 17.41 19.54 20.95 20.95 19.54 17.41 16 20.95 12.46 19.54 11.05" />
+                </g>
+            </svg>
+        </label>
+        <h2 class="modal-header"></h2>
+        <article class="modal-content-wrapper">
+            <div class="modal-content">
+                <h3 class="welcome-user-level"></h3>
+            </div>
+        </article>
+        <div class="modal-footer">
+        </div>
+    </div>
+    <div>
+        <nav>
+            <ul class="nav-page">
+                <a class="navigation__link-page" href="#introduction">Introduction</a>
+                <a class="navigation__link-page" href="#workshop">Workshop</a>
+            </ul>
+        </nav>
+    </div>
+    <section class="didYouKnow-section wrapper-git">
+        <div class="wrapper  ">
+            <div class="didYouKnow-card">
+                <h2>Did you know:</h2>
+                <div class="didYouKnow-choice">
+                    <a href="#" class="didYouKnow-button">&laquo</a>
+                    <h3 class="didYouKnow-phrase"></h3>
+                    <a href="#" class="didYouKnow-button">&raquo</a>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="introduction" class="Html-inform">
         <div class="wrapper HTML-wrapper">
             <h2>Introduction to CSS</h2>
             <div class="descriptionSection">
-                      <p class="section__text activeItemanime">
-                <b>Cascading Style Sheets (CSS)</b>
-                 is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript
-                                        </p>
-                    <div class="section-image activeItemanime"> <img src=" ./src/assets/csslog.png"></div>
+                <p class="section__text activeItemanime">
+                    <b>Cascading Style Sheets (CSS)</b>
+                    is a style sheet language used for describing the presentation of a document written in a markup
+                    language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and
+                    JavaScript
+                </p>
+                <div class="section-image activeItemanime"> <img src=" ./src/assets/csslog.png"></div>
             </div>
 
             <div class="introduction-container">
@@ -79,13 +142,15 @@
                     <div id="output-title"></div>
                     <div id="otPutInfo">
                         <p class="p-color">
-                           <b>What is CSS? </b>
-                           <ul class="intro-ul">
-                               <li> CSS stands for Cascading Style Sheets</li>
-                               <li> CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
-                               <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
-                               <li>External stylesheets are stored in CSS files</li>
-                           </ul>
+                            <b>What is CSS? </b>
+                        <ul class="intro-ul">
+                            <li> CSS stands for Cascading Style Sheets</li>
+                            <li> CSS describes how HTML elements are to be displayed on screen, paper, or in other
+                                media</li>
+                            <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once
+                            </li>
+                            <li>External stylesheets are stored in CSS files</li>
+                        </ul>
 
 
 
@@ -97,497 +162,552 @@
 
 
                     <div class="outPut-html__info syntax">
-<p>
-    A CSS rule-set consists of a selector and a declaration block:
-</p>
-<div class="css-pict">
-    <img class="css-pict-img"  src="./src/assets/css1.png" >
-      </div>
+                        <p>
+                            A CSS rule-set consists of a selector and a declaration block:
+                        </p>
+                        <div class="css-pict">
+                            <img class="css-pict-img" src="./src/assets/css1.png">
+                        </div>
 
-<p>
-    The selector points to the HTML element you want to style.
+                        <p>
+                            The selector points to the HTML element you want to style.
 
-The declaration block contains one or more declarations separated by semicolons.
+                            The declaration block contains one or more declarations separated by semicolons.
 
-Each declaration includes a CSS property name and a value, separated by a colon.
+                            Each declaration includes a CSS property name and a value, separated by a colon.
 
-Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
-</p>
-    </div>
+                            Multiple CSS declarations are separated with semicolons, and declaration blocks are
+                            surrounded by curly braces.
+                        </p>
+                    </div>
                     <div class="outPut-html__info selectors">
-  <p>
-    CSS selectors are used to "find" (or select) the HTML elements you want to style.
-  </p>
-  <p>We can divide CSS selectors into five categories:</p>
-<ul class="intro-ul">
-    <li> Simple selectors (select elements based on name, id, class)</li>
-<li> Combinator selectors (select elements based on a specific relationship between them)</li>
-<li>  Pseudo-class selectors (select elements based on a certain state)</li>
-<li>  Pseudo-elements selectors (select and style a part of an element)</li>
-<li>  Attribute selectors (select elements based on an attribute or attribute value)</li></ul>
-<p><b>The CSS id Selector</b></p>
-<p>
-    The id selector uses the id attribute of an HTML element to select a specific element.
+                        <p>
+                            CSS selectors are used to "find" (or select) the HTML elements you want to style.
+                        </p>
+                        <p>We can divide CSS selectors into five categories:</p>
+                        <ul class="intro-ul">
+                            <li> Simple selectors (select elements based on name, id, class)</li>
+                            <li> Combinator selectors (select elements based on a specific relationship between
+                                them)</li>
+                            <li> Pseudo-class selectors (select elements based on a certain state)</li>
+                            <li> Pseudo-elements selectors (select and style a part of an element)</li>
+                            <li> Attribute selectors (select elements based on an attribute or attribute value)</li>
+                        </ul>
+                        <p><b>The CSS id Selector</b></p>
+                        <p>
+                            The id selector uses the id attribute of an HTML element to select a specific element.
 
-    The id of an element is unique within a page, so the id selector is used to select one unique element!
+                            The id of an element is unique within a page, so the id selector is used to select one
+                            unique element!
 
-    To select an element with a specific id, write a hash (#) character, followed by the id of the element.
-</p>
-<p><b>The CSS class Selector</b></p>
-<p>
-    The class selector selects HTML elements with a specific class attribute.
+                            To select an element with a specific id, write a hash (#) character, followed by the id
+                            of the element.
+                        </p>
+                        <p><b>The CSS class Selector</b></p>
+                        <p>
+                            The class selector selects HTML elements with a specific class attribute.
 
-    To select elements with a specific class, write a period (.) character, followed by the class name.
-</p>
-<p><b>The CSS Universal Selector</b></p>
-<p>
-    The universal selector (*) selects all HTML elements on the page.
-</p>
-<p><b>The CSS Grouping Selector</b></p>
-<p>The grouping selector selects all the HTML elements with the same style definitions.
-    It will be better to group the selectors, to minimize the code.
+                            To select elements with a specific class, write a period (.) character, followed by the
+                            class name.
+                        </p>
+                        <p><b>The CSS Universal Selector</b></p>
+                        <p>
+                            The universal selector (*) selects all HTML elements on the page.
+                        </p>
+                        <p><b>The CSS Grouping Selector</b></p>
+                        <p>The grouping selector selects all the HTML elements with the same style definitions.
+                            It will be better to group the selectors, to minimize the code.
 
-To group selectors, separate each selector with a comma.
-</p>
-<div class="css-pict">
- <img class="css-pict-img" src="./src/assets/selectorScc.png"  >
-</div>
+                            To group selectors, separate each selector with a comma.
+                        </p>
+                        <div class="css-pict">
+                            <img class="css-pict-img" src="./src/assets/selectorScc.png">
+                        </div>
 
- </div>
+                    </div>
                     <div class="outPut-html__info how to add css">
- <p>
-    When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet.
-</p>
-<p><b>Three Ways to Insert CSS</b></p>
+                        <p>
+                            When a browser reads a style sheet, it will format the HTML document according to the
+                            information in the style sheet.
+                        </p>
+                        <p><b>Three Ways to Insert CSS</b></p>
 
-  <p>   There are three ways of inserting a style sheet: </p>
-  <ol class="intro-ol">
-      <li>External CSS</li>
-      <li>Internal CSS</li>
-      <li>Inline CSS</li>
-  </ol>
-  <p><b>External CSS</b></p>
-  <p>With an external style sheet, you can change the look of an entire website by changing just one file!
+                        <p> There are three ways of inserting a style sheet: </p>
+                        <ol class="intro-ol">
+                            <li>External CSS</li>
+                            <li>Internal CSS</li>
+                            <li>Inline CSS</li>
+                        </ol>
+                        <p><b>External CSS</b></p>
+                        <p>With an external style sheet, you can change the look of an entire website by changing
+                            just one file!
 
-    Each HTML page must include a reference to the external style sheet file inside the <i>link</i>   element, inside the head section.
-</p>
-<p>An external style sheet can be written in any text editor, and must be saved with a .css extension.
+                            Each HTML page must include a reference to the external style sheet file inside the
+                            <i>link</i> element, inside the head section.
+                        </p>
+                        <p>An external style sheet can be written in any text editor, and must be saved with a .css
+                            extension.
 
-    The external .css file should not contain any HTML tags.</p>
-    <p><b>Internal CSS</b></p>
-    <p>
-        An internal style sheet may be used if one single HTML page has a unique style.
+                            The external .css file should not contain any HTML tags.</p>
+                        <p><b>Internal CSS</b></p>
+                        <p>
+                            An internal style sheet may be used if one single HTML page has a unique style.
 
-        The internal style is defined inside the <i>style</i>  element, inside the head section.
-    </p>
-    <p><b>Inline  CSS</b></p>
-    <p>An inline style may be used to apply a unique style for a single element.
+                            The internal style is defined inside the <i>style</i> element, inside the head section.
+                        </p>
+                        <p><b>Inline CSS</b></p>
+                        <p>An inline style may be used to apply a unique style for a single element.
 
-        To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
-        <p><b>Multiple Style Sheets</b></p>
-        <p>
-            If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used.
-        </p>
- </div>
-<div class="outPut-html__info comments">
-    <p><b> CSS Comments</b></p>
+                            To use inline styles, add the style attribute to the relevant element. The style
+                            attribute can contain any CSS property.</p>
+                        <p><b>Multiple Style Sheets</b></p>
+                        <p>
+                            If some properties have been defined for the same selector (element) in different style
+                            sheets, the value from the last read style sheet will be used.
+                        </p>
+                    </div>
+                    <div class="outPut-html__info comments">
+                        <p><b> CSS Comments</b></p>
 
-<p>Comments are used to explain the code, and may help when you edit the source code at a later date.
+                        <p>Comments are used to explain the code, and may help when you edit the source code at a
+                            later date.
 
-    Comments are ignored by browsers.
+                            Comments are ignored by browsers.
 
-    A CSS comment is placed inside the <i>style</i>   element, and starts with <i>/*</i>  and ends with <i>*/</i> </p>
-    <p><b> HTML and CSS Comments</b></p>
-    <p>
-        From the HTML tutorial, you learned that you can add comments to your HTML source by using the  <span> &lt;!-- --&gt </span>  syntax.
-    </p>
-</div>
+                            A CSS comment is placed inside the <i>style</i> element, and starts with <i>/*</i> and
+                            ends with <i>*/</i> </p>
+                        <p><b> HTML and CSS Comments</b></p>
+                        <p>
+                            From the HTML tutorial, you learned that you can add comments to your HTML source by
+                            using the <span> &lt;!-- --&gt </span> syntax.
+                        </p>
+                    </div>
 
                     <div class="outPut-html__info colors">
-                        <p>Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.</p>
- <p ><b> CSS Color Names</b> </p>
- <p style="text-align: left; margin-bottom: 30px;">
-    In CSS, a color can be specified by using a predefined color name:
-  </p>
-  <div class="css-pict">
-<img class="css-pict-img" src="./src/assets/colorCSS.png"  >
-  </div>
+                        <p>Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.
+                        </p>
+                        <p><b> CSS Color Names</b> </p>
+                        <p style="text-align: left; margin-bottom: 30px;">
+                            In CSS, a color can be specified by using a predefined color name:
+                        </p>
+                        <div class="css-pict">
+                            <img class="css-pict-img" src="./src/assets/colorCSS.png">
+                        </div>
 
 
 
-<p><b> CSS Background Color </b></p>
+                        <p><b> CSS Background Color </b></p>
 
-<p style="text-align: left; margin-bottom: 30px;">
-    You can set the background color for HTML elements:
-  </p>
-  <div class="css-pict">
-    <img class="css-pict-img"  src="./src/assets/bgCss.png" >
-      </div>
+                        <p style="text-align: left; margin-bottom: 30px;">
+                            You can set the background color for HTML elements:
+                        </p>
+                        <div class="css-pict">
+                            <img class="css-pict-img" src="./src/assets/bgCss.png">
+                        </div>
 
 
- <p>
-     <b> CSS Text Color</b>
- </p>
+                        <p>
+                            <b> CSS Text Color</b>
+                        </p>
 
-  <p style="text-align: left; margin-bottom: 30px;">
-    You can set the color of text:
- </p>
- <p style="color:Tomato;">
-    Hello World
- </p>
- <p style="color:DodgerBlue;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
- <p style="color:MediumSeaGreen;">
-    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
- </p>
- <p>
-    <b> CSS  Border Color</b>
-    </p>
-    <h1 style="border:2px solid Tomato;">Hello World</h1>
-<h1 style="border:2px solid DodgerBlue;">Hello World</h1>
-<h1 style="border:2px solid Violet;">Hello World</h1>
+                        <p style="text-align: left; margin-bottom: 30px;">
+                            You can set the color of text:
+                        </p>
+                        <p style="color:Tomato;">
+                            Hello World
+                        </p>
+                        <p style="color:DodgerBlue;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                            diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <p style="color:MediumSeaGreen;">
+                            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                            nisl ut aliquip ex ea commodo consequat.
+                        </p>
+                        <p>
+                            <b> CSS Border Color</b>
+                        </p>
+                        <h1 style="border:2px solid Tomato;">Hello World</h1>
+                        <h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+                        <h1 style="border:2px solid Violet;">Hello World</h1>
                     </div>
-<div class="outPut-html__info backgrounds">
-    <div class="css-pict">
-        <img class="css-pict-img" src="./src/assets/bg.png"  >
-    </div>
+                    <div class="outPut-html__info backgrounds">
+                        <div class="css-pict">
+                            <img class="css-pict-img" src="./src/assets/bg.png">
+                        </div>
 
-<p><b>CSS background-color</b> </p>
-<p>
-    The background-color property specifies the background color of an element.
-</p>
-<p>
-    With CSS, a color is most often specified by:
-</p>
-<ul class="intro-ul">
-    <li>a valid color name - like "red"</li>
-    <li>a HEX value - like "#ff0000"</li>
-    <li>an RGB value - like "rgb(255,0,0)"</li>
-</ul>
-<p>
-  <b>Opacity / Transparency</b>
-</p>
-<p>
-    The opacity property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. The lower value, the more transparent:
-</p>
-<div class="css-pict">
-    <img class="css-pict-img" src="./src/assets/opacity.png" >
-</div>
+                        <p><b>CSS background-color</b> </p>
+                        <p>
+                            The background-color property specifies the background color of an element.
+                        </p>
+                        <p>
+                            With CSS, a color is most often specified by:
+                        </p>
+                        <ul class="intro-ul">
+                            <li>a valid color name - like "red"</li>
+                            <li>a HEX value - like "#ff0000"</li>
+                            <li>an RGB value - like "rgb(255,0,0)"</li>
+                        </ul>
+                        <p>
+                            <b>Opacity / Transparency</b>
+                        </p>
+                        <p>
+                            The opacity property specifies the opacity/transparency of an element. It can take a
+                            value from 0.0 - 1.0. The lower value, the more transparent:
+                        </p>
+                        <div class="css-pict">
+                            <img class="css-pict-img" src="./src/assets/opacity.png">
+                        </div>
 
-<p>
-  <b>Transparency using RGBA</b>
-</p>
-<div class="css-pict">
-    <img class="css-pict-img" src="./src/assets/transOpacity.png" >
-</div>
+                        <p>
+                            <b>Transparency using RGBA</b>
+                        </p>
+                        <div class="css-pict">
+                            <img class="css-pict-img" src="./src/assets/transOpacity.png">
+                        </div>
 
-</div>
-<div class="outPut-html__info borders">
-  <p>
-    <b>CSS Border Properties</b>
-  </p>
-  <p>
-    The CSS border properties allow you to specify the style, width, and color of an element's border.
-  </p>
-  <div class="css-pict">
-    <img class="css-pict-img" src="./src/assets/border.png" >
-</div>
+                    </div>
+                    <div class="outPut-html__info borders">
+                        <p>
+                            <b>CSS Border Properties</b>
+                        </p>
+                        <p>
+                            The CSS border properties allow you to specify the style, width, and color of an
+                            element's border.
+                        </p>
+                        <div class="css-pict">
+                            <img class="css-pict-img" src="./src/assets/border.png">
+                        </div>
 
-  <p>
-    <b>CSS Border Style </b>
-  </p>
+                        <p>
+                            <b>CSS Border Style </b>
+                        </p>
 
-  <p>
-    The <i>border-style</i>  property specifies what kind of border to display.
-  </p>
- <p>
-    The following values are allowed:
- </p>
- <ul class="intro-ul">
-     <li> <i>dotted</i>  - Defines a dotted border</li>
-     <li> <i>dashed</i>  - Defines a dashed border</li>
-     <li> <i>solid</i>  - Defines a solid border</li>
-     <li> <i>double</i>  - Defines a double border</li>
-     <li> <i>groove</i>  - Defines a 3D grooved border. The effect depends on the border-color value</li>
-     <li> <i>ridge</i>  - Defines a 3D ridged border. The effect depends on the border-color value</li>
-     <li> <i>inset</i>  - Defines a 3D inset border. The effect depends on the border-color value</li>
-     <li> <i>outset</i>  - Defines a 3D outset border. The effect depends on the border-color value</li>
-     <li> <i>none</i>  - Defines no border</li>
-     <li> <i>hidden</i>  - Defines a hidden border</li>
- </ul>
- <p>The <i>border-style</i> border-style property can have from one to four values (for the top border, right border, bottom border, and the left border).</p>
-</div>
-<div class="outPut-html__info margins">
-    <p>The CSS <i>margin</i>  properties are used to create space around elements, outside of any defined borders.
+                        <p>
+                            The <i>border-style</i> property specifies what kind of border to display.
+                        </p>
+                        <p>
+                            The following values are allowed:
+                        </p>
+                        <ul class="intro-ul">
+                            <li> <i>dotted</i> - Defines a dotted border</li>
+                            <li> <i>dashed</i> - Defines a dashed border</li>
+                            <li> <i>solid</i> - Defines a solid border</li>
+                            <li> <i>double</i> - Defines a double border</li>
+                            <li> <i>groove</i> - Defines a 3D grooved border. The effect depends on the border-color
+                                value</li>
+                            <li> <i>ridge</i> - Defines a 3D ridged border. The effect depends on the border-color
+                                value</li>
+                            <li> <i>inset</i> - Defines a 3D inset border. The effect depends on the border-color
+                                value</li>
+                            <li> <i>outset</i> - Defines a 3D outset border. The effect depends on the border-color
+                                value</li>
+                            <li> <i>none</i> - Defines no border</li>
+                            <li> <i>hidden</i> - Defines a hidden border</li>
+                        </ul>
+                        <p>The <i>border-style</i> border-style property can have from one to four values (for the
+                            top border, right border, bottom border, and the left border).</p>
+                    </div>
+                    <div class="outPut-html__info margins">
+                        <p>The CSS <i>margin</i> properties are used to create space around elements, outside of any
+                            defined borders.
 
-        With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left).</p>
-  <p>
-     <b>Margin - Individual Sides</b>
-  </p>
-<p>CSS has properties for specifying the margin for each side of an element:
+                            With CSS, you have full control over the margins. There are properties for setting the
+                            margin for each side of an element (top, right, bottom, and left).</p>
+                        <p>
+                            <b>Margin - Individual Sides</b>
+                        </p>
+                        <p>CSS has properties for specifying the margin for each side of an element:
 
-</p>
-<ul class="intro-ul">
-    <li> <i>margin-top</i> </li>
-    <li> <i>margin-right</i>  </li>
-    <li> <i>margin-bottom</i>   </li>
-    <li> <i>margin-left</i>   </li>
+                        </p>
+                        <ul class="intro-ul">
+                            <li> <i>margin-top</i> </li>
+                            <li> <i>margin-right</i> </li>
+                            <li> <i>margin-bottom</i> </li>
+                            <li> <i>margin-left</i> </li>
 
-</ul>
-<p>All the margin properties can have the following values:</p>
-<ul class="intro-ul">
-    <li> <i>auto </i> - the browser calculates the margin </li>
-    <li> <i>length</i>   - specifies a margin in px, pt, cm, etc.</li>
-    <li> <i>%</i> - specifies a margin in % of the width of the containing element  </li>
-    <li> <i>inherit</i>  - specifies that the padding should be inherited from the parent element  </li>
+                        </ul>
+                        <p>All the margin properties can have the following values:</p>
+                        <ul class="intro-ul">
+                            <li> <i>auto </i> - the browser calculates the margin </li>
+                            <li> <i>length</i> - specifies a margin in px, pt, cm, etc.</li>
+                            <li> <i>%</i> - specifies a margin in % of the width of the containing element </li>
+                            <li> <i>inherit</i> - specifies that the padding should be inherited from the parent
+                                element </li>
 
-</ul>
-<p><b>Tip: Negative values are allowed.</b></p>
-</div>
-<div  class="outPut-html__info padding">
-  <p>
-   <b>CSS Padding</b>
-  </p>
-  <p>
-    The CSS <i>padding</i>  properties are used to generate space around an element's content, inside of any defined borders.
+                        </ul>
+                        <p><b>Tip: Negative values are allowed.</b></p>
+                    </div>
+                    <div class="outPut-html__info padding">
+                        <p>
+                            <b>CSS Padding</b>
+                        </p>
+                        <p>
+                            The CSS <i>padding</i> properties are used to generate space around an element's
+                            content, inside of any defined borders.
 
-    With CSS, you have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).
-  </p>
-  <p><b>Padding - Individual Sides</b></p>
-  <p>CSS has properties for specifying the padding for each side of an element:</p>
-  <ul class="intro-ul">
-    <li> <i>padding-top</i> </li>
-    <li> <i>padding-right</i>  </li>
-    <li> <i>padding-bottom</i>   </li>
-    <li> <i>padding-left</i>   </li>
+                            With CSS, you have full control over the padding. There are properties for setting the
+                            padding for each side of an element (top, right, bottom, and left).
+                        </p>
+                        <p><b>Padding - Individual Sides</b></p>
+                        <p>CSS has properties for specifying the padding for each side of an element:</p>
+                        <ul class="intro-ul">
+                            <li> <i>padding-top</i> </li>
+                            <li> <i>padding-right</i> </li>
+                            <li> <i>padding-bottom</i> </li>
+                            <li> <i>padding-left</i> </li>
 
-</ul>
-<p>All the padding properties can have the following values:</p>
-<ul class="intro-ul">
+                        </ul>
+                        <p>All the padding properties can have the following values:</p>
+                        <ul class="intro-ul">
 
-    <li> <i>length</i>   - specifies a padding in px, pt, cm, etc.</li>
-    <li> <i>%</i> - specifies a margin in % of the width of the containing element  </li>
-    <li> <i>inherit</i>  - specifies that the margin should be inherited from the parent element  </li>
+                            <li> <i>length</i> - specifies a padding in px, pt, cm, etc.</li>
+                            <li> <i>%</i> - specifies a margin in % of the width of the containing element </li>
+                            <li> <i>inherit</i> - specifies that the margin should be inherited from the parent
+                                element </li>
 
-</ul>
-<p><b>Tip: Negative values are allowed.</b></p>
-</div>
-<div class="outPut-html__info height and width">
-<p>
-   <b>CSS Setting height and width</b>
-</p>
-<p>
-    The <i> height and width</i> properties are used to set the height and width of an element.
+                        </ul>
+                        <p><b>Tip: Negative values are allowed.</b></p>
+                    </div>
+                    <div class="outPut-html__info height and width">
+                        <p>
+                            <b>CSS Setting height and width</b>
+                        </p>
+                        <p>
+                            The <i> height and width</i> properties are used to set the height and width of an
+                            element.
 
-    The height and width properties do not include padding, borders, or margins. It sets the height/width of the area inside the padding, border, and margin of the element.
-</p>
-<p>
-  <b>CSS height and width Values</b>
-</p>
-<p>The height and width properties may have the following values:</p>
-<ul class="intro-ul">
-    <li> <i>auto </i> - This is default. The browser calculates the height and width </li>
-    <li> <i>length</i>   - Defines the height/width in px, cm etc.</li>
-    <li> <i>%</i> - Defines the height/width in percent of the containing block</li>
-    <li> <i>inherit</i>  - Defines the height/width in percent of the containing block  </li>
+                            The height and width properties do not include padding, borders, or margins. It sets the
+                            height/width of the area inside the padding, border, and margin of the element.
+                        </p>
+                        <p>
+                            <b>CSS height and width Values</b>
+                        </p>
+                        <p>The height and width properties may have the following values:</p>
+                        <ul class="intro-ul">
+                            <li> <i>auto </i> - This is default. The browser calculates the height and width </li>
+                            <li> <i>length</i> - Defines the height/width in px, cm etc.</li>
+                            <li> <i>%</i> - Defines the height/width in percent of the containing block</li>
+                            <li> <i>inherit</i> - Defines the height/width in percent of the containing block </li>
 
-</ul>
-<p><b>Setting max-width</b></p>
-<p>The max-width property is used to set the maximum width of an element.
+                        </ul>
+                        <p><b>Setting max-width</b></p>
+                        <p>The max-width property is used to set the maximum width of an element.
 
-    The max-width can be specified in length values, like px, cm, etc., or in percent (%) of the containing block, or set to none (this is default. Means that there is no maximum width).
+                            The max-width can be specified in length values, like px, cm, etc., or in percent (%) of
+                            the containing block, or set to none (this is default. Means that there is no maximum
+                            width).
 
-    The problem with the <div> above occurs when the browser window is smaller than the width of the element (500px). The browser then adds a horizontal scrollbar to the page.
+                            The problem with the
+                        <div> above occurs when the browser window is smaller than the width of the element (500px).
+                            The browser then adds a horizontal scrollbar to the page.
 
-    Using max-width instead, in this situation, will improve the browser's handling of small windows.</p>
-    <p><b>Tip: Drag the browser window to smaller than 500px wide, to see the difference between the two divs!</b></p>
-    <div class="css-pict">
-        <img class="css-pict-img" src="./src/assets/width.png" alt="">
-    </div>
+                            Using max-width instead, in this situation, will improve the browser's handling of small
+                            windows.</p>
+                            <p><b>Tip: Drag the browser window to smaller than 500px wide, to see the difference
+                                    between the two divs!</b></p>
+                            <div class="css-pict">
+                                <img class="css-pict-img" src="./src/assets/width.png" alt="">
+                            </div>
 
-    <p><b>Note: </b> The value of the max-width property overrides width.</p>
+                            <p><b>Note: </b> The value of the max-width property overrides width.</p>
 
-</div>
-<div class="outPut-html__info outline">
- <p>
-    An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out".
- </p>
- <div class="css-pict">
-   <img class="css-pict-img" src="./src/assets/outline.png" alt="">
- </div>
+                        </div>
+                        <div class="outPut-html__info outline">
+                            <p>
+                                An outline is a line that is drawn around elements, OUTSIDE the borders, to make the
+                                element "stand out".
+                            </p>
+                            <div class="css-pict">
+                                <img class="css-pict-img" src="./src/assets/outline.png" alt="">
+                            </div>
 
-<p>CSS has the following outline properties:</p>
-<ul class="intro-ul">
-    <li>outline-style</li>
-    <li>outline-color</li>
-    <li>outline-width</li>
-    <li>outline-offset</li>
-    <li>outline </li>
-</ul>
-<p><b>Note:</b> Outline differs from borders! Unlike border, the outline is drawn outside the element's border, and may overlap other content. Also, the outline is NOT a part of the element's dimensions; the element's total width and height is not affected by the width of the outline.</p>
-<p><b>CSS Outline Style</b></p>
-<ul class="intro-ul">
-    <li> <i>dotted</i>  - Defines a dotted outline</li>
-    <li> <i>dashed</i>  - Defines a dashed outline</li>
-    <li> <i>solid</i>  - Defines a solid outline</li>
-    <li> <i>double</i>  - Defines a double outline</li>
-    <li> <i>groove</i>  - Defines a 3D grooved outline</li>
-    <li> <i>ridge</i>  - Defines a 3D ridged outline</li>
-    <li> <i>inset</i>  - Defines a 3D inset outline</li>
-    <li> <i>outset</i>  - Defines a 3D outset outline</li>
-    <li> <i>none</i>  - Defines no outline</li>
-    <li> <i>hidden</i>  - Defines a hidden outline</li>
-</ul>
-<p><b>Example</b></p>
-<div class="css-pict">
-  <img class="css-pict-img" src="./src/assets/outlEx.png" alt="">
-</div>
+                            <p>CSS has the following outline properties:</p>
+                            <ul class="intro-ul">
+                                <li>outline-style</li>
+                                <li>outline-color</li>
+                                <li>outline-width</li>
+                                <li>outline-offset</li>
+                                <li>outline </li>
+                            </ul>
+                            <p><b>Note:</b> Outline differs from borders! Unlike border, the outline is drawn
+                                outside the element's border, and may overlap other content. Also, the outline is
+                                NOT a part of the element's dimensions; the element's total width and height is not
+                                affected by the width of the outline.</p>
+                            <p><b>CSS Outline Style</b></p>
+                            <ul class="intro-ul">
+                                <li> <i>dotted</i> - Defines a dotted outline</li>
+                                <li> <i>dashed</i> - Defines a dashed outline</li>
+                                <li> <i>solid</i> - Defines a solid outline</li>
+                                <li> <i>double</i> - Defines a double outline</li>
+                                <li> <i>groove</i> - Defines a 3D grooved outline</li>
+                                <li> <i>ridge</i> - Defines a 3D ridged outline</li>
+                                <li> <i>inset</i> - Defines a 3D inset outline</li>
+                                <li> <i>outset</i> - Defines a 3D outset outline</li>
+                                <li> <i>none</i> - Defines no outline</li>
+                                <li> <i>hidden</i> - Defines a hidden outline</li>
+                            </ul>
+                            <p><b>Example</b></p>
+                            <div class="css-pict">
+                                <img class="css-pict-img" src="./src/assets/outlEx.png" alt="">
+                            </div>
 
-<p><b>Note:</b> None of the other outline properties (which you will learn more about in the next chapters) will have ANY effect unless the outline-style property is set!</p>
-</div>
-<div class="outPut-html__info fonts">
-<p>
-   <i>Choosing the right font for your website is important!</i>
- </p>
-<p>
-   <b>Font Selection is Important</b>
-</p>
-<p>
-    Choosing the right font has a huge impact on how the readers experience a website.
+                            <p><b>Note:</b> None of the other outline properties (which you will learn more about in
+                                the next chapters) will have ANY effect unless the outline-style property is set!
+                            </p>
+                        </div>
+                        <div class="outPut-html__info fonts">
+                            <p>
+                                <i>Choosing the right font for your website is important!</i>
+                            </p>
+                            <p>
+                                <b>Font Selection is Important</b>
+                            </p>
+                            <p>
+                                Choosing the right font has a huge impact on how the readers experience a website.
 
-    The right font can create a strong identity for your brand.
+                                The right font can create a strong identity for your brand.
 
-    Using a font that is easy to read is important. The font adds value to your text. It is also important to choose the correct color and text size for the font.
-</p>
-<p>
-    <b> Generic Font Families</b>
+                                Using a font that is easy to read is important. The font adds value to your text. It
+                                is also important to choose the correct color and text size for the font.
+                            </p>
+                            <p>
+                                <b> Generic Font Families</b>
 
-   </p>
-<p>
-    In CSS there are five generic font families:
-</p>
-<ol class="intro-ol">
-    <li>Serif fonts have a small stroke at the edges of each letter. They create a sense of formality and elegance.</li>
-    <li>Sans-serif fonts have clean lines (no small strokes attached). They create a modern and minimalistic look.</li>
-    <li>Monospace fonts - here all the letters have the same fixed width. They create a mechanical look. </li>
-    <li>Cursive fonts imitate human handwriting.</li>
-    <li>Fantasy fonts are decorative/playful fonts.</li>
-</ol>
-<p>All the different font names belong to one of the generic font families.</p>
-<div class="css-pict"><img class="css-pict-img"src="./src/assets/font.png" alt=""></div>
+                            </p>
+                            <p>
+                                In CSS there are five generic font families:
+                            </p>
+                            <ol class="intro-ol">
+                                <li>Serif fonts have a small stroke at the edges of each letter. They create a sense
+                                    of formality and elegance.</li>
+                                <li>Sans-serif fonts have clean lines (no small strokes attached). They create a
+                                    modern and minimalistic look.</li>
+                                <li>Monospace fonts - here all the letters have the same fixed width. They create a
+                                    mechanical look. </li>
+                                <li>Cursive fonts imitate human handwriting.</li>
+                                <li>Fantasy fonts are decorative/playful fonts.</li>
+                            </ol>
+                            <p>All the different font names belong to one of the generic font families.</p>
+                            <div class="css-pict"><img class="css-pict-img" src="./src/assets/font.png" alt="">
+                            </div>
 
-<p>
-    <b>Note:  </b>On computer screens, sans-serif fonts are considered easier to read than serif fonts.
+                            <p>
+                                <b>Note: </b>On computer screens, sans-serif fonts are considered easier to read
+                                than serif fonts.
 
 
-</p>
-</div>
-<div class="outPut-html__info   "></div>
+                            </p>
+                        </div>
+                        <div class="outPut-html__info   "></div>
 
-        </div>
+                    </div>
     </section>
     <section id="workshop" class="workshop">
-<div class="wrapper wrapper-workshop">
-    <h2>Workshop</h2>
-    <p class="workshop-text">
-        This section is intended for self-solving tasks related to HTML and CSS of web pages
-    </p>
-    <div class="workshop-tags tags">
-        <span class="tag tag_selected">All</span>
-        <span class="tag tag_bordered">Low compl</span>
-        <span class="tag tag_bordered">Medium</span>
-        <span class="tag tag_bordered">High compl</span>
+        <div class="wrapper wrapper-workshop">
+            <h2>Workshop</h2>
+            <p class="workshop-text">
+                This section is intended for self-solving tasks related to HTML and CSS of web pages
+            </p>
+            <div class="workshop-tags tags">
+                <span class="tag tag_selected">All</span>
+                <span class="tag tag_bordered">Low compl</span>
+                <span class="tag tag_bordered">Medium</span>
+                <span class="tag tag_bordered">High compl</span>
 
-    </div>
-
-
-    <div class="outPut__workshop">
+            </div>
 
 
+            <div class="outPut__workshop">
+                <div class="contentBt">
+                    <div class="label">Image in the shadows L</div>
+                    <div class="contentTask">
+                        Display the image so that there is a shadow around it</div>
 
+                    <div class="strategy__tags tags">
+                        <span class="tag tag_colored">Low compl</span>
+                    </div>
+                </div>
+                <div class="contentBt">
+                    <div class="label">Nested lists L</div>
+                    <div class="contentTask">Using tag nesting, make a list </div>
+                    <div class="strategy__tags tags">
+                        <span class="tag tag_colored">Low compl</span>
+                    </div>
+                </div>
+                <div class="contentBt">
+                    <div class="label"> Concatenate table cells L</div>
+                    <div class="contentTask">Create a table </div>
+                    <div class="strategy__tags tags">
+                        <span class="tag tag_colored">Low compl</span>
+                    </div>
+                </div>
+                <div class="contentBt">
+                    <div class="label"> Hand drawn frame L</div>
+                    <div class="contentTask">Use the attached frame picture to make a width-scalable box with a
+                        hand-drawn border </div>
+                    <div class="strategy__tags tags">
+                        <span class="tag tag_colored">Low compl</span>
+                    </div>
+                </div>
+                <div class="contentBt">
+                    <div class="label">Cut corners M</div>
+                    <div class="contentTask">Add small square corners to the block </div>
+                    <div class="strategy__tags tags">
+                        <span class="tag tag_colored">Medium</span>
+                    </div>
+                </div>
+                <div class="contentBt">
+                    <div class="label">Search field M</div>
+                    <div class="contentTask">Create a search box for Chrome and Safari browsers. If the field is not
+                        active, text is displayed in it; when focus is received, the text inside the field
+                        disappears. When typing, the text is displayed in red. </div>
+                    <div class="strategy__tags tags">
+                        <span class="tag tag_colored">Medium</span>
+                    </div>
+                </div>
+                <div class="contentBt">
+                    <div class="label">Registration form M </div>
+                    <div class="contentTask">Make up the registration form. The width of the form and its fields is
+                        fixed. </div>
+                    <div class="strategy__tags tags">
+                        <span class="tag tag_colored">Medium</span>
+                    </div>
+                </div>
+                <div class="contentBt">
+                    <div class="label">Frame around text H</div>
+                    <div class="contentTask"> </div>
+                    <div class="strategy__tags tags">
+                        <span class="tag tag_colored">High compl</span>
+                    </div>
+                </div>
+                <div class="contentBt">
+                    <div class="label">Gradient block H</div>
+                    <div class="contentTask">Make a block. The block contains a semi-transparent gradient box with a
+                        gradient background under the title and a small pointer. The background on the page is given
+                        only for clarity of the translucency effect, you can specify any of your own images. The
+                        minimum block height is 100px. </div>
+                    <div class="strategy__tags tags">
+                        <span class="tag tag_colored">High compl</span>
+                    </div>
+                </div>
+                <div class="contentBt">
+                    <div class="label">Frame around text H</div>
+                    <div class="contentTask">Think of five ways to create a border around a paragraph of free text
+                        (the <p> tag). You cannot change or modify the HTML code, all changes are made only through
+                            styles. Cross-browser compatibility can be ignored. </div>
+                    <div class="strategy__tags tags">
+                        <span class="tag tag_colored">High compl</span>
+                    </div>
+                </div>
+            </div>
 
-
-<div class="contentBt">
-    <div class="label">Image  in the shadows L</div>
-    <div class="contentTask">
-         Display the image so that there is a shadow around it</div>
-
-<div class="strategy__tags tags">
-    <span class="tag tag_colored">Low compl</span>
-</div>
-       </div>
-<div class="contentBt">
-    <div class="label">Nested lists L</div>
-    <div class="contentTask">Using tag nesting, make a list </div>
-    <div class="strategy__tags tags">
-        <span class="tag tag_colored">Low compl</span>
-    </div>
-</div>
-<div class="contentBt">
-    <div class="label"> Concatenate table cells L</div>
-    <div class="contentTask">Create a table </div>
-    <div class="strategy__tags tags">
-        <span class="tag tag_colored">Low compl</span>
-    </div>
-</div>
-<div class="contentBt">
-    <div class="label"> Hand drawn frame L</div>
-    <div class="contentTask">Use the attached frame picture to make a width-scalable box with a hand-drawn border </div>
-    <div class="strategy__tags tags">
-        <span class="tag tag_colored">Low compl</span>
-    </div>
-</div>
-<div class="contentBt">
-    <div class="label">Cut corners M</div>
-    <div class="contentTask">Add small square corners to the block </div>
-    <div class="strategy__tags tags">
-        <span class="tag tag_colored">Medium</span>
-    </div>
-</div>
-<div class="contentBt">
-    <div class="label">Search field M</div>
-    <div class="contentTask">Create a search box for Chrome and Safari browsers. If the field is not active, text is displayed in it; when focus is received, the text inside the field disappears. When typing, the text is displayed in red. </div>
-    <div class="strategy__tags tags">
-        <span class="tag tag_colored">Medium</span>
-    </div>
-</div>
-<div class="contentBt">
-    <div class="label">Registration form  M </div>
-    <div class="contentTask">Make up the registration form. The width of the form and its fields is fixed. </div>
-    <div class="strategy__tags tags">
-        <span class="tag tag_colored">Medium</span>
-    </div>
-</div>
-<div class="contentBt">
-    <div class="label">Frame around text H</div>
-    <div class="contentTask"> </div>
-    <div class="strategy__tags tags">
-        <span class="tag tag_colored">High compl</span>
-    </div>
-</div>
-<div class="contentBt">
-    <div class="label">Gradient block H</div>
-    <div class="contentTask">Make a block. The block contains a semi-transparent gradient box with a gradient background under the title and a small pointer. The background on the page is given only for clarity of the translucency effect, you can specify any of your own images. The minimum block height is 100px. </div>
-    <div class="strategy__tags tags">
-        <span class="tag tag_colored">High compl</span>
-    </div>
-</div>
-<div class="contentBt">
-    <div class="label">Frame around text H</div>
-    <div class="contentTask">Think of five ways to create a border around a paragraph of free text (the <p> tag). You cannot change or modify the HTML code, all changes are made only through styles. Cross-browser compatibility can be ignored. </div>
-        <div class="strategy__tags tags">
-            <span class="tag tag_colored">High compl</span>
         </div>
-    </div>
+
         </div>
-
-    </div>
-
-</div>
-<div id="use"></div>
-    </section >
+        <div id="use"></div>
+    </section>
 
     <section class="Game">
-        <div class="wraper">
+        <div class="wrapper">
             <div class="game-quiz section-card">
                 <div class="quiz-start">
                     <h3 class="quiz-start-button">Start quiz!</h3>
@@ -615,80 +735,82 @@ To group selectors, separate each selector with a comma.
         <div class="wrapper footer-wrapper">
             <div class="footer_content">
 
-            <ul class="footer__navigation">
-                <li class="footer-link">
-                    <a href="aboutUs.html">About Us</a>
-                </li>
-                <li class="footer-link">
-                    <a href="news.html">News</a>
-                </li>
-                <li class="footer-link">
-                    <a href="contactUs.html">Contact Us</a>
-                </li>
-            </ul>
+                <ul class="footer__navigation">
+                    <li class="footer-link">
+                        <a href="aboutUs.html">About Us</a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="news.html">News</a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="contactUs.html">Contact Us</a>
+                    </li>
+                </ul>
 
-            <div class="footer-photo">
+                <div class="footer-photo">
 
-                <div class="diana foot-im">
-                    <img class="circle" src="./src/assets/dianaK_crop.jpg" alt="smart girl" width="70" />
-                    <p>Diana Kovaleva</p>
-                    <div class="icon_footer">
-                        <div class="gitHub">
-                            <a href="https://github.com/Dianakove32">
-                        <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
-                    </a>
+                    <div class="diana foot-im">
+                        <img class="circle" src="./src/assets/dianaK_crop.jpg" alt="smart girl" width="70" />
+                        <p>Diana Kovaleva</p>
+                        <div class="icon_footer">
+                            <div class="gitHub">
+                                <a href="https://github.com/Dianakove32">
+                                    <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                                </a>
+                            </div>
+                            <div class="linked"><a href="https://www.linkedin.com/in/diana-kovaleva-5347051aa/">
+                                    <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%" />
+                                </a>
+
+                            </div>
                         </div>
-                    <div class="linked"><a href="https://www.linkedin.com/in/diana-kovaleva-5347051aa/">
-                        <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
-                    </a>
+                    </div>
 
+                    <div class="artur foot-im">
+                        <img class="circle" src="./src/assets/arturZ_crop.jpg" alt="business man" width="70" />
+                        <p>Artur Zaleuski</p>
+                        <div class="icon_footer artur">
+                            <a href="https://github.com/Zalart">
+                                <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/zalart">
+                                <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%" />
+                            </a>
+                        </div>
                     </div>
+
+
+                    <div class="vadim foot-im"> <img class="circle" src="./src/assets/vadim_crop.jpg" alt="business man"
+                            width="70" />
+                        <p>Vadim Karulin</p>
+                        <div class="icon_footer vadim">
+                            <a href="https://github.com/Zolotou">
+                                <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                            </a>
+                            <a href="#">
+                                <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%" />
+                            </a>
+                        </div>
                     </div>
+
+
+
+                    <div class="irina foot-im"> <img class="circle" src="./src/assets/irina_crop.jpg" alt="business man"
+                            width="70" />
+                        <p>Irina Mychko</p>
+                        <div class="icon_footer irina">
+                            <a href="https://github.com/Irina-Riska">
+                                <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/ira-mytchko/">
+                                <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%" />
+                            </a>
+                        </div>
+                    </div>
+
+
                 </div>
-
-                <div class="artur foot-im">
-                    <img class="circle" src="./src/assets/arturZ_crop.jpg" alt="business man" width="70" />
-                    <p>Artur Zaleuski</p>
-                    <div class="icon_footer artur">
-                        <a href="https://github.com/Zalart">
-                            <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
-                        </a>
-                        <a href="https://www.linkedin.com/in/zalart">
-                            <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
-                        </a>
-                    </div>
-                </div>
-
-
-                <div class="vadim foot-im"> <img class="circle" src="./src/assets/vadim_crop.jpg" alt="business man" width="70" />
-                    <p>Vadim Karulin</p>
-                    <div class="icon_footer vadim">
-                        <a href="https://github.com/Zolotou">
-                            <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
-                        </a>
-                        <a href="#">
-                            <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
-                        </a>
-                    </div>
-                </div>
-
-
-
-                <div class="irina foot-im"> <img class="circle" src="./src/assets/irina_crop.jpg" alt="business man" width="70" />
-                    <p>Irina Mychko</p>
-                    <div class="icon_footer irina">
-                        <a href="https://github.com/Irina-Riska">
-                            <img src="./src/assets/git1_footer.png" alt="GitHub-logo" width="100%" />
-                        </a>
-                        <a href="https://www.linkedin.com/in/ira-mytchko/">
-                            <img src="./src/assets/LinIn_footer.png" alt="LinkedIn-logo" width="100%"/>
-                        </a>
-                    </div>
-                </div>
-
-
             </div>
-        </div>
 
             <div class="rights">
                 <p class=footer_paragraph> 2020 Minsk (c) All Rights reseved Wild code school</p>
@@ -704,8 +826,7 @@ To group selectors, separate each selector with a comma.
     <script type="module" src="src/js/introductionHTMLsection.js"></script>
     <script src="src/js/index.js"></script>
     <script src="./src/js/quiz-game.js"></script>
-
+    <script src="./src/js/css.js"></script>
 </body>
 
 </html>
-<!DOCTYPE html>

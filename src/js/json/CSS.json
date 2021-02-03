@@ -1,27 +1,27 @@
 [
     {
-        "question": "CSS?",
-        "answers": ["commit", "add", "init", "push"],
-        "correctAnswer": "commit"
+        "question": "Choose the right answer for adjusting color of div",
+        "answers": ["#ZZZ", "div-color:orange", "background-color: white", "color: black-div"],
+        "correctAnswer": "background-color: white"
     },
     {
-        "question": "CSS second?",
-        "answers": ["VsCode", "Git", "Ubuntu", "JS"],
-        "correctAnswer": "Git"
+        "question": "How to implement flexbox?",
+        "answers": ["grid:flexbox", "flexbox:flexbox", "implement:flexbox", "display:flex"],
+        "correctAnswer": "display:flex"
     },
     {
-        "question": "CSS third?",
-        "answers": ["Yes", "No", "git?", "10"],
-        "correctAnswer": "No"
+        "question": "What does 'C' in CSS stand for?",
+        "answers": ["Computer", "Colorful", "Cascading", "Creative"],
+        "correctAnswer": "Cascading"
     },
     {
-        "question": "CSS four",
-        "answers": ["commit", "log", "hist", "branch"],
-        "correctAnswer": "log"
+        "question": "Where in an HTML document is the correct place to refer to an external CSS",
+        "answers": ["after html", "in body seciton", "in head section", "in title section"],
+        "correctAnswer": "in head section"
     },
     {
-        "question": "CSS command show you the list of branches",
-        "answers": ["commit", "branch", "list", "list branch"],
-        "correctAnswer": "branch"
+        "question": "Which word is used to define an internal style sheet?",
+        "answers": ["style", "css", "script", "link"],
+        "correctAnswer": "style"
     }
 ]

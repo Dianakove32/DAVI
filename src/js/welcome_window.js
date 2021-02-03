@@ -84,10 +84,9 @@ function checkUser() {
         document.getElementById("sign-in").style.display = "none";
         modalHeader.innerHTML = `Welcome, <span>${localStorage.getItem('userName')}</span>`;
         modalContent.innerHTML = "";
-        modalContent.insertAdjacentHTML('afterbegin', `<h3>Check this quote: <i class="welcome-api"></i></h3><h3 class="welcome-user-level"> let's see your <span>statistic:</span></h3>
+        modalContent.insertAdjacentHTML('afterbegin', `<h3>Check this quote: <i class="welcome-api"></i></h3><h3 class="welcome-user-level"> let's see your <span>statistics:</span></h3>
         <div class="welcome-statistic"></div>
-        <p>We do not collect or use the information you provided here.</p>
-        <p>All your personal data is stored in the Local Storage of your browser on your local computer.</p>
+        <p class="disclaimer">We do not collect or use the information you provided here. All your personal data is stored in the browser's local storage on your computer.</p>
             `);
         getQuote();
         getUserStatistic();
@@ -110,17 +109,17 @@ function checkUser() {
 }
 
 // add statistic in modal Window
-function getUserStatistic(){
+function getUserStatistic() {
     const welcomeStatictic = document.querySelector('.welcome-statistic');
-    for(let i of pagesNames){
-        let date = localStorage[i+"Date"];
-        let visitPage = localStorage[i+"Page"];
-        let scoreQuiz = localStorage[i+"Quiz"];
-        scoreQuiz = scoreQuiz == undefined ? "0": scoreQuiz;
-        date = date == undefined ? "-": date.slice(0,24);
+    for (let i of pagesNames) {
+        let date = localStorage[i + "Date"];
+        let visitPage = localStorage[i + "Page"];
+        let scoreQuiz = localStorage[i + "Quiz"];
+        scoreQuiz = scoreQuiz == undefined ? "0" : scoreQuiz;
+        date = date == undefined ? "-" : date.slice(0, 24);
         visitPage = visitPage == undefined ? "0" : visitPage;
         welcomeStatictic.insertAdjacentHTML('beforeend', `<div><p><b>${i}</b> visits: <span>${visitPage}<span></p>
-        <p><b>last</b> visit: ${date}</p>
+        <p><b>last</b> visit: <span style="font-size: 10px; color: #000; margin-right: 10px">${date}</span></p>
         <p><b>Quiz</b> records: ${scoreQuiz} points</p></div>`)
     }
 }
